@@ -1,151 +1,389 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import Mascot from '@/components/Mascot';
 import TTSBar from '@/components/TTSBar';
 
 const categories = [
-    { key: 'tv',          slug: 'tv',          label: 'Television',      bg: '#EEF2FF', border: '#C7D2FE', text: '#3730A3', icon: (
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <rect x="3" y="6" width="30" height="20" rx="3" fill="#6366F1"/>
-                <rect x="6" y="9" width="24" height="13" rx="1" fill="#EEF2FF"/>
-                <rect x="14" y="27" width="8" height="4" rx="2" fill="#4338CA"/>
-                <circle cx="18" cy="24" r="1.5" fill="#fff"/>
-            </svg>
-        )},
-    { key: 'kitchen',     slug: 'kitchen',     label: 'Oven & Kitchen',  bg: '#FEF3C7', border: '#FCD34D', text: '#92400E', icon: (
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <rect x="5" y="10" width="26" height="18" rx="3" fill="#F59E0B"/>
-                <rect x="8" y="14" width="20" height="10" rx="1" fill="#FEF3C7"/>
-                <rect x="11" y="7" width="14" height="5" rx="2" fill="#D97706"/>
-                <circle cx="18" cy="19" r="3" fill="#F59E0B"/>
-            </svg>
-        )},
-    { key: 'laundry',     slug: 'laundry',     label: 'Laundry',         bg: '#D1FAE5', border: '#6EE7B7', text: '#065F46', icon: (
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <rect x="6" y="5" width="24" height="28" rx="4" fill="#10B981"/>
-                <circle cx="18" cy="20" r="8" fill="#D1FAE5"/>
-                <circle cx="18" cy="20" r="4" fill="#10B981"/>
-                <rect x="12" y="8" width="12" height="4" rx="2" fill="#D1FAE5"/>
-            </svg>
-        )},
-    { key: 'hearing',     slug: 'hearing',     label: 'Hearing Aids',    bg: '#EDE9FE', border: '#DDD6FE', text: '#4C1D95', icon: (
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <ellipse cx="18" cy="23" rx="12" ry="7" fill="#8B5CF6"/>
-                <path d="M11 23 Q18 11 25 23" fill="#A78BFA"/>
-                <circle cx="18" cy="15" r="4" fill="#EDE9FE"/>
-                <rect x="16" y="28" width="4" height="5" rx="2" fill="#7C3AED"/>
-            </svg>
-        )},
-    { key: 'hvac',        slug: 'hvac',        label: 'Heating & Cooling',bg: '#E0F2FE', border: '#7DD3FC', text: '#075985', icon: (
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <rect x="4" y="10" width="28" height="18" rx="4" fill="#0EA5E9"/>
-                <rect x="7" y="14" width="22" height="10" rx="2" fill="#E0F2FE"/>
-                <rect x="10" y="17" width="16" height="4" rx="2" fill="#0EA5E9" opacity="0.4"/>
-            </svg>
-        )},
-    { key: 'electronics', slug: 'electronics', label: 'Small Electronics',bg: '#FCE7F3', border: '#F9A8D4', text: '#9D174D', icon: (
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <rect x="10" y="4" width="16" height="28" rx="4" fill="#EC4899"/>
-                <rect x="13" y="8" width="10" height="16" rx="1" fill="#FCE7F3"/>
-                <circle cx="18" cy="28" r="2" fill="#FCE7F3"/>
-            </svg>
-        )},
-    { key: 'walking',     slug: 'walking',     label: 'Walking Aids',    bg: '#FEF9C3', border: '#FDE047', text: '#713F12', icon: (
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <path d="M18 4 C18 4 14 12 14 20 L14 32" stroke="#CA8A04" strokeWidth="4" strokeLinecap="round" fill="none"/>
-                <path d="M14 20 L8 28" stroke="#CA8A04" strokeWidth="3" strokeLinecap="round" fill="none"/>
-                <circle cx="18" cy="4" r="3" fill="#EAB308"/>
-            </svg>
-        )},
+    {
+        key: 'tv',
+        slug: 'tv',
+        emoji: '📺',
+        bg: '#EFF6FF',
+        strip: '#3B82F6',
+        count: '8 brands · 60+ models',
+    },
+    {
+        key: 'kitchen',
+        slug: 'kitchen',
+        emoji: '🍳',
+        bg: '#FFF1F1',
+        strip: '#EF4444',
+        count: '12 brands · 80+ models',
+    },
+    {
+        key: 'laundry',
+        slug: 'laundry',
+        emoji: '🫧',
+        bg: '#F0FDF4',
+        strip: '#10B981',
+        count: '6 brands · 40+ models',
+    },
+    {
+        key: 'hearing',
+        slug: 'hearing',
+        emoji: '🦻',
+        bg: '#FAF5FF',
+        strip: '#8B5CF6',
+        count: '5 brands · 20+ models',
+    },
+    {
+        key: 'hvac',
+        slug: 'hvac',
+        emoji: '❄️',
+        bg: '#F0F9FF',
+        strip: '#0EA5E9',
+        count: '7 brands · 35+ models',
+    },
+    {
+        key: 'electronics',
+        slug: 'electronics',
+        emoji: '🔌',
+        bg: '#FDF2F8',
+        strip: '#EC4899',
+        count: '10 brands · 50+ models',
+    },
+    {
+        key: 'walking',
+        slug: 'walking',
+        emoji: '🦯',
+        bg: '#FEFCE8',
+        strip: '#EAB308',
+        count: '4 brands · 15+ models',
+    },
 ];
 
-export default function HomePage({ params }: { params: { locale: string } }) {
+export default function HomePage({
+                                     params,
+                                 }: {
+    params: Promise<{ locale: string }>;
+}) {
     const t = useTranslations();
+
     const ttsText = `Welcome to HomeGuide. ${t('home.subtitle')}. Choose a category to get started.`;
 
     return (
-        <div className="page-wrapper">
-            <div style={{ background: '#EEF2FF', padding: '20px 16px 16px' }}>
-                <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 16 }}>
-                    <Mascot size={72} />
-                    <div>
-                        <h1 style={{ fontSize: 22, fontWeight: 700, color: 'var(--dark)', lineHeight: 1.2, marginBottom: 4 }}>
-                            {t('home.title')}
-                        </h1>
-                        <p style={{ fontSize: 14, color: 'var(--gray)', lineHeight: 1.4 }}>
-                            {t('home.subtitle')}
-                        </p>
+        <div style={{ background: '#F5A623', minHeight: '100vh' }}>
+
+            {/* Hero */}
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                padding: '20px 40px 0',
+                alignItems: 'end',
+                gap: 20,
+            }}>
+                <div style={{ paddingBottom: 32 }}>
+                    <div style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        background: '#fff',
+                        border: '2px solid #1A1A1A',
+                        borderRadius: 20,
+                        padding: '4px 14px',
+                        fontSize: 12,
+                        fontWeight: 600,
+                        color: '#1A1A1A',
+                        marginBottom: 16,
+                    }}>
+                        <div style={{
+                            width: 8,
+                            height: 8,
+                            borderRadius: '50%',
+                            background: '#22C55E',
+                        }} />
+                        {t('home.tag')}
+                    </div>
+
+                    <h1 style={{
+                        fontSize: 48,
+                        fontWeight: 800,
+                        color: '#1A1A1A',
+                        lineHeight: 1.1,
+                        marginBottom: 12,
+                        letterSpacing: '-1.5px',
+                    }}>
+                        {t('home.titleLine1')}<br />
+                        <span style={{
+                            background: '#1A1A1A',
+                            color: '#F5A623',
+                            padding: '0 12px',
+                            borderRadius: 10,
+                            display: 'inline-block',
+                        }}>
+              {t('home.titleLine2')}
+            </span><br />
+                        {t('home.titleLine3')}
+                    </h1>
+
+                    <p style={{
+                        fontSize: 15,
+                        color: '#4A3000',
+                        lineHeight: 1.6,
+                        marginBottom: 24,
+                        maxWidth: 380,
+                    }}>
+                        {t('home.subtitle')}
+                    </p>
+
+                    <div style={{
+                        display: 'flex',
+                        background: '#fff',
+                        border: '2.5px solid #1A1A1A',
+                        borderRadius: 50,
+                        overflow: 'hidden',
+                        maxWidth: 420,
+                        boxShadow: '4px 4px 0 #1A1A1A',
+                    }}>
+                        <input
+                            type="text"
+                            placeholder={t('home.searchPlaceholder')}
+                            style={{
+                                flex: 1,
+                                border: 'none',
+                                padding: '14px 20px',
+                                fontSize: 14,
+                                outline: 'none',
+                                background: 'transparent',
+                                fontWeight: 500,
+                            }}
+                        />
+                        <button style={{
+                            background: '#1A1A1A',
+                            color: '#F5A623',
+                            border: 'none',
+                            padding: '14px 24px',
+                            fontSize: 14,
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                        }}>
+                            {t('home.search')} ↗
+                        </button>
                     </div>
                 </div>
+
+                {/* Cartoon Illustration */}
                 <div style={{
                     display: 'flex',
-                    background: '#fff',
-                    borderRadius: 30,
-                    border: '2px solid var(--primary)',
-                    overflow: 'hidden',
+                    justifyContent: 'center',
+                    alignItems: 'flex-end',
                 }}>
-                    <input
-                        type="text"
-                        placeholder="Search e.g. microwave, Samsung TV..."
-                        style={{
-                            flex: 1,
-                            border: 'none',
-                            padding: '12px 16px',
-                            fontSize: 14,
-                            outline: 'none',
-                            background: 'transparent',
-                            color: 'var(--dark)',
-                        }}
-                    />
-                    <button style={{
-                        background: 'var(--primary)',
-                        color: '#fff',
-                        border: 'none',
-                        padding: '12px 20px',
-                        fontSize: 14,
-                        fontWeight: 500,
-                        cursor: 'pointer',
-                    }}>
-                        Search
-                    </button>
+                    <svg width="360" height="300" viewBox="0 0 360 300" fill="none">
+                        {/* Main screen/frame */}
+                        <rect x="60" y="20" width="240" height="180" rx="14"
+                              fill="#fff" stroke="#1A1A1A" strokeWidth="3"/>
+
+                        {/* Screen grid - 4 tiles */}
+                        <rect x="75" y="35" width="100" height="75" rx="8"
+                              fill="#DBEAFE" stroke="#1A1A1A" strokeWidth="2"/>
+                        <rect x="185" y="35" width="100" height="75" rx="8"
+                              fill="#FCE7F3" stroke="#1A1A1A" strokeWidth="2"/>
+                        <rect x="75" y="120" width="100" height="65" rx="8"
+                              fill="#D1FAE5" stroke="#1A1A1A" strokeWidth="2"/>
+                        <rect x="185" y="120" width="100" height="65" rx="8"
+                              fill="#FEF3C7" stroke="#1A1A1A" strokeWidth="2"/>
+
+                        {/* TV icon in tile 1 */}
+                        <rect x="95" y="52" width="60" height="38" rx="4"
+                              fill="#3B82F6" stroke="#1A1A1A" strokeWidth="1.5"/>
+                        <rect x="99" y="56" width="52" height="28" rx="2" fill="#93C5FD"/>
+                        <rect x="113" y="91" width="22" height="6" rx="3" fill="#1A1A1A"/>
+
+                        {/* Oven icon in tile 2 */}
+                        <rect x="200" y="52" width="68" height="42" rx="4"
+                              fill="#EF4444" stroke="#1A1A1A" strokeWidth="1.5"/>
+                        <rect x="206" y="60" width="56" height="26" rx="2" fill="#FCA5A5"/>
+                        <circle cx="234" cy="73" r="8" fill="#EF4444" stroke="#1A1A1A" strokeWidth="1.5"/>
+
+                        {/* Washing machine in tile 3 */}
+                        <rect x="87" y="130" width="76" height="46" rx="6"
+                              fill="#10B981" stroke="#1A1A1A" strokeWidth="1.5"/>
+                        <circle cx="125" cy="153" r="14" fill="#D1FAE5" stroke="#1A1A1A" strokeWidth="1.5"/>
+                        <circle cx="125" cy="153" r="6" fill="#10B981"/>
+
+                        {/* AC in tile 4 */}
+                        <rect x="196" y="130" width="78" height="34" rx="6"
+                              fill="#0EA5E9" stroke="#1A1A1A" strokeWidth="1.5"/>
+                        <rect x="202" y="138" width="66" height="18" rx="3" fill="#BAE6FD"/>
+
+                        {/* Stand */}
+                        <rect x="155" y="200" width="50" height="10" rx="3" fill="#1A1A1A"/>
+                        <rect x="140" y="210" width="80" height="8" rx="4" fill="#1A1A1A"/>
+
+                        {/* Cartoon character */}
+                        <circle cx="180" cy="260" r="28" fill="#1A1A1A"/>
+                        <circle cx="170" cy="254" r="4" fill="#fff"/>
+                        <circle cx="190" cy="254" r="4" fill="#fff"/>
+                        <path d="M170 266 Q180 274 190 266"
+                              stroke="#fff" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                        <ellipse cx="160" cy="259" rx="5" ry="3" fill="#F87171" opacity="0.7"/>
+                        <ellipse cx="200" cy="259" rx="5" ry="3" fill="#F87171" opacity="0.7"/>
+
+                        {/* Arms */}
+                        <path d="M152 255 Q140 245 132 258"
+                              stroke="#1A1A1A" strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+                        <path d="M208 255 Q220 245 228 258"
+                              stroke="#1A1A1A" strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+
+                        {/* Body */}
+                        <rect x="162" y="228" width="36" height="28" rx="8" fill="#1A1A1A"/>
+
+                        {/* Decorative squiggles */}
+                        <path d="M30 80 Q20 65 35 55"
+                              stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4"/>
+                        <circle cx="28" cy="83" r="3.5" fill="#1A1A1A" opacity="0.4"/>
+                        <path d="M330 120 Q345 105 335 90"
+                              stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4"/>
+                        <circle cx="332" cy="123" r="3.5" fill="#1A1A1A" opacity="0.4"/>
+
+                        {/* Stars/sparkles */}
+                        <path d="M40 150 L43 144 L46 150 L52 153 L46 156 L43 162 L40 156 L34 153 Z"
+                              fill="#1A1A1A" opacity="0.2"/>
+                        <path d="M318 60 L320 56 L322 60 L326 62 L322 64 L320 68 L318 64 L314 62 Z"
+                              fill="#1A1A1A" opacity="0.2"/>
+                    </svg>
                 </div>
             </div>
 
+            {/* TTS Bar */}
             <TTSBar text={ttsText} />
 
-            <div style={{ padding: '16px 16px 32px' }}>
-                <h2 style={{ fontSize: 16, fontWeight: 600, color: 'var(--dark)', marginBottom: 12 }}>
-                    {t('home.categories')}
-                </h2>
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: 10,
+            {/* Category Section */}
+            <div style={{ padding: '20px 40px 8px' }}>
+                <p style={{
+                    fontSize: 12,
+                    fontWeight: 700,
+                    color: '#4A3000',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
                 }}>
-                    {categories.map((cat) => (
-                        <Link
-                            key={cat.key}
-                            href={`/${params.locale}/${cat.slug}`}
-                            style={{ textDecoration: 'none' }}
-                        >
-                            <div className="category-card" style={{
-                                background: cat.bg,
-                                border: `1.5px solid ${cat.border}`,
-                                borderRadius: 16,
-                                padding: '16px 12px',
-                                textAlign: 'center',
+                    {t('home.categories')}
+                </p>
+            </div>
+
+            {/* Category Grid */}
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: 14,
+                padding: '0 40px 40px',
+            }}>
+                {categories.map((cat) => (
+                    <Link
+                        key={cat.key}
+                        href={`/en/${cat.slug}`}
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <div
+                            className="card-hover"
+                            style={{
+                                background: '#fff',
+                                border: '2.5px solid #1A1A1A',
+                                borderRadius: 20,
+                                overflow: 'hidden',
                                 cursor: 'pointer',
+                                transition: 'transform 0.15s, box-shadow 0.15s',
+                                boxShadow: '4px 4px 0 #1A1A1A',
+                                position: 'relative',
                             }}
-                            >
-                                <div style={{ marginBottom: 8, display: 'flex', justifyContent: 'center' }}>
-                                    {cat.icon}
+                        >
+                            {/* Color strip */}
+                            <div style={{
+                                height: 6,
+                                background: cat.strip,
+                                width: '100%',
+                            }} />
+
+                            {/* Arrow */}
+                            <div style={{
+                                position: 'absolute',
+                                top: 14,
+                                right: 12,
+                                width: 24,
+                                height: 24,
+                                borderRadius: '50%',
+                                background: '#F5A623',
+                                border: '2px solid #1A1A1A',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontSize: 12,
+                                fontWeight: 800,
+                                color: '#1A1A1A',
+                            }}>
+                                ↗
+                            </div>
+
+                            {/* Emoji image */}
+                            <div style={{
+                                height: 110,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                background: cat.bg,
+                                fontSize: 72,
+                                filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.15))',
+                            }}>
+                                {cat.emoji}
+                            </div>
+
+                            {/* Card body */}
+                            <div style={{
+                                padding: '10px 14px 14px',
+                                borderTop: '2px solid #1A1A1A',
+                            }}>
+                                <div style={{
+                                    fontSize: 14,
+                                    fontWeight: 800,
+                                    color: '#1A1A1A',
+                                    marginBottom: 3,
+                                }}>
+                                    {t(`categories.${cat.key}`)}
                                 </div>
-                                <div style={{ fontSize: 13, fontWeight: 600, color: cat.text, lineHeight: 1.3 }}>
-                                    {t(`categories.${cat.key}`) || cat.label}
+                                <div style={{
+                                    fontSize: 11,
+                                    fontWeight: 600,
+                                    color: '#888',
+                                }}>
+                                    {cat.count}
                                 </div>
                             </div>
-                        </Link>
-                    ))}
+                        </div>
+                    </Link>
+                ))}
+
+                {/* Coming soon card */}
+                <div style={{
+                    background: '#fff',
+                    border: '2.5px dashed #D1D5DB',
+                    borderRadius: 20,
+                    overflow: 'hidden',
+                    opacity: 0.5,
+                }}>
+                    <div style={{ height: 6, background: '#D1D5DB' }} />
+                    <div style={{
+                        height: 110,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: '#F9FAFB',
+                        fontSize: 56,
+                    }}>
+                        ➕
+                    </div>
+                    <div style={{ padding: '10px 14px 14px', borderTop: '2px dashed #D1D5DB' }}>
+                        <div style={{ fontSize: 14, fontWeight: 800, color: '#9CA3AF' }}>More soon</div>
+                        <div style={{ fontSize: 11, fontWeight: 600, color: '#D1D5DB' }}>coming soon</div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,14 +5,19 @@
     "search": "Buscar"
   },
   "home": {
-    "title": "Guía de Electrodomésticos",
-    "subtitle": "Guías simples paso a paso para tus electrodomésticos",
-    "categories": "Ver Categorías"
+    "tag": "Guías simples para todos",
+    "titleLine1": "Tu Guía de",
+    "titleLine2": "Electrodomésticos",
+    "titleLine3": "en Casa",
+    "subtitle": "Guías de video paso a paso para cada electrodoméstico. Fácil de seguir, en 4 idiomas.",
+    "searchPlaceholder": "Buscar ej. Samsung TV, microondas...",
+    "search": "Buscar",
+    "categories": "Elige una categoría"
   },
   "categories": {
-    "kitchen": "Electrodomésticos de Cocina",
-    "laundry": "Lavandería y Limpieza",
-    "hvac": "Calefacción y Refrigeración",
+    "kitchen": "Horno & Cocina",
+    "laundry": "Lavandería",
+    "hvac": "Calefacción & Refrigeración",
     "electronics": "Pequeños Electrodomésticos",
     "tv": "Televisión",
     "hearing": "Audífonos",

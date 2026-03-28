@@ -5,9 +5,14 @@
     "search": "Search"
   },
   "home": {
-    "title": "How can we help you today?",
-    "subtitle": "Simple step-by-step guides for every appliance in your home",
-    "categories": "Choose a category"
+    "tag": "Simple guides for everyone",
+    "titleLine1": "Your Home",
+    "titleLine2": "Appliance",
+    "titleLine3": "Helper",
+    "subtitle": "Step-by-step video guides for every appliance in your home. Easy to follow, in 4 languages.",
+    "searchPlaceholder": "Search e.g. Samsung TV, microwave...",
+    "search": "Search",
+    "categories": "Choose your appliance category"
   },
   "categories": {
     "kitchen": "Oven & Kitchen",

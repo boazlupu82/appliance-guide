@@ -21,33 +21,33 @@ export default function TTSBar({ text }: { text: string }) {
 
     return (
         <div style={{
-            background: 'var(--accent-light)',
-            padding: '8px 16px',
+            margin: '0 40px',
+            background: '#fff',
+            border: '2px solid #1A1A1A',
+            borderRadius: 12,
+            padding: '10px 18px',
             display: 'flex',
             alignItems: 'center',
-            gap: 10,
-            borderBottom: '1px solid #FCD34D',
+            gap: 12,
+            boxShadow: '3px 3px 0 #1A1A1A',
         }}>
             <button
                 onClick={speak}
                 style={{
-                    background: speaking ? '#EF4444' : 'var(--accent)',
-                    color: '#fff',
+                    background: speaking ? '#EF4444' : '#1A1A1A',
+                    color: speaking ? '#fff' : '#F5A623',
                     border: 'none',
                     borderRadius: 20,
-                    padding: '5px 12px',
+                    padding: '6px 16px',
                     fontSize: 12,
-                    fontWeight: 500,
+                    fontWeight: 700,
                     cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 4,
                 }}
             >
                 {speaking ? '■ Stop' : '▶ Read aloud'}
             </button>
-            <span style={{ fontSize: 11, color: '#92400E' }}>
-        Tap to hear this page read to you
+            <span style={{ fontSize: 12, color: '#4A3000', fontWeight: 500 }}>
+        Click to hear this page read to you
       </span>
         </div>
     );

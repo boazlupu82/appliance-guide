@@ -5,15 +5,20 @@
     "search": "Rechercher"
   },
   "home": {
-    "title": "Guide des Appareils Ménagers",
-    "subtitle": "Des guides simples étape par étape pour vos appareils ménagers",
-    "categories": "Parcourir les Catégories"
+    "tag": "Guides simples pour tous",
+    "titleLine1": "Votre Guide",
+    "titleLine2": "Électroménager",
+    "titleLine3": "à la Maison",
+    "subtitle": "Guides vidéo étape par étape pour chaque appareil. Facile à suivre, en 4 langues.",
+    "searchPlaceholder": "Rechercher ex. Samsung TV, micro-ondes...",
+    "search": "Chercher",
+    "categories": "Choisissez une catégorie"
   },
   "categories": {
-    "kitchen": "Appareils de Cuisine",
-    "laundry": "Lessive et Nettoyage",
-    "hvac": "Chauffage et Climatisation",
-    "electronics": "Petits Appareils Électroniques",
+    "kitchen": "Four & Cuisine",
+    "laundry": "Lessive",
+    "hvac": "Chauffage & Climatisation",
+    "electronics": "Petits Appareils",
     "tv": "Télévision",
     "hearing": "Aides Auditives",
     "walking": "Aides à la Marche"

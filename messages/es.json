@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "categories": "Categorías",
+    "search": "Buscar"
+  },
+  "home": {
+    "title": "Guía de Electrodomésticos",
+    "subtitle": "Guías simples paso a paso para tus electrodomésticos",
+    "categories": "Ver Categorías"
+  },
+  "categories": {
+    "kitchen": "Electrodomésticos de Cocina",
+    "laundry": "Lavandería y Limpieza",
+    "hvac": "Calefacción y Refrigeración",
+    "electronics": "Pequeños Electrodomésticos",
+    "tv": "Televisión",
+    "hearing": "Audífonos",
+    "walking": "Ayudas para Caminar"
+  }
+}

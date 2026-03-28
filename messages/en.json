@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "search": "Search"
+  },
+  "home": {
+    "title": "How can we help you today?",
+    "subtitle": "Simple step-by-step guides for every appliance in your home",
+    "categories": "Choose a category"
+  },
+  "categories": {
+    "kitchen": "Oven & Kitchen",
+    "laundry": "Laundry",
+    "hvac": "Heating & Cooling",
+    "electronics": "Small Electronics",
+    "tv": "Television",
+    "hearing": "Hearing Aids",
+    "walking": "Walking Aids"
+  }
+}

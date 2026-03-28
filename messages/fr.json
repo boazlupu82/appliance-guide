@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "categories": "Catégories",
+    "search": "Rechercher"
+  },
+  "home": {
+    "title": "Guide des Appareils Ménagers",
+    "subtitle": "Des guides simples étape par étape pour vos appareils ménagers",
+    "categories": "Parcourir les Catégories"
+  },
+  "categories": {
+    "kitchen": "Appareils de Cuisine",
+    "laundry": "Lessive et Nettoyage",
+    "hvac": "Chauffage et Climatisation",
+    "electronics": "Petits Appareils Électroniques",
+    "tv": "Télévision",
+    "hearing": "Aides Auditives",
+    "walking": "Aides à la Marche"
+  }
+}

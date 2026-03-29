@@ -21,6 +21,236 @@
     "electronics": "Petits Appareils",
     "tv": "Télévision",
     "hearing": "Aides Auditives",
-    "walking": "Aides à la Marche"
+    "walking": "Aides à la Marche",
+    "vacuum": "Aspirateurs"
+  },
+  "brand": {
+    "category": "Catégorie",
+    "selectModel": "Sélectionnez votre modèle",
+    "models": "modèles",
+    "selectBelow": "choisissez ci-dessous",
+    "steps": "Instructions étape par étape",
+    "comingSoon": "Bientôt disponible",
+    "comingSoonDesc": "Nous ajoutons des modèles. Revenez bientôt!",
+    "videoComingSoon": "Vidéo bientôt disponible",
+    "notFound": "Vous n'avez pas trouvé votre appareil?",
+    "notFoundDesc": "Vous ne trouvez pas votre marque ou modèle? Contactez-nous et nous l'ajouterons!",
+    "contactUs": "Contactez-nous",
+    "disclaimer": "Toutes les vidéos sont intégrées depuis YouTube et appartiennent à leurs propriétaires. Les noms de marques sont des marques déposées. HomeGuide n'est pas affilié à aucune marque listée sur ce site."
+  },
+  "instructions": {
+    "tv": {
+      "samsung": {
+        "frame55": [
+          "Connectez le câble d'alimentation à l'arrière du téléviseur",
+          "Appuyez sur le bouton d'alimentation de la télécommande",
+          "Suivez l'assistant de configuration pour vous connecter au WiFi",
+          "Utilisez le bouton Home pour accéder aux fonctions Smart TV",
+          "Ajustez les paramètres d'image via Menu → Image → Paramètres experts"
+        ],
+        "crystal43": [
+          "Connectez le câble HDMI de votre appareil au port HDMI du téléviseur",
+          "Appuyez sur Source pour sélectionner la bonne entrée",
+          "Utilisez les boutons de volume sur le côté du téléviseur",
+          "Accédez au mode image via Paramètres → Général → Accessibilité",
+          "Configurez les sous-titres via Menu → Général → Accessibilité"
+        ],
+        "neoqled65": [
+          "Montez le téléviseur au mur avec le support VESA inclus",
+          "Connectez la boîte One Connect avec le câble fourni",
+          "Allumez et complétez la configuration Smart Hub",
+          "Connectez-vous à Bixby en maintenant le bouton microphone",
+          "Utilisez Multi View pour regarder deux sources simultanément"
+        ]
+      },
+      "lg": {
+        "oledc3": [
+          "Fixez le support en l'alignant avec le bas du téléviseur",
+          "Connectez l'alimentation et appuyez sur le bouton marche",
+          "Suivez la configuration initiale pour vous connecter au réseau",
+          "Accédez à webOS Home en appuyant sur le bouton Home",
+          "Activez les fonctions ThinQ AI dans les paramètres"
+        ],
+        "nanocell50": [
+          "Placez le téléviseur sur le support et connectez le câble d'alimentation",
+          "Appuyez sur marche de la télécommande",
+          "Sélectionnez votre langue et région",
+          "Connectez-vous au réseau WiFi",
+          "Connectez-vous au compte LG pour accès complet"
+        ]
+      },
+      "sony": {
+        "bravia55": [
+          "Connectez le cordon d'alimentation et tous les câbles avant d'allumer",
+          "Appuyez sur le bouton d'alimentation de la télécommande",
+          "Sélectionnez votre langue sur l'écran d'accueil",
+          "Connectez-vous à votre réseau WiFi",
+          "Connectez-vous à votre compte Google pour Android TV"
+        ]
+      }
+    },
+    "kitchen": {
+      "bosch": {
+        "serie6oven": [
+          "Avant la première utilisation, chauffez le four vide à 250C pendant 1 heure",
+          "Tournez le sélecteur de fonction pour choisir le mode de cuisson",
+          "Réglez la température avec le bouton température",
+          "Appuyez sur le bouton horloge pour régler la durée de cuisson",
+          "Le four bipe quand il atteint la température réglée"
+        ],
+        "serie4microwave": [
+          "Placez les aliments dans un récipient adapté au micro-ondes",
+          "Réglez la puissance avec le bouton de puissance",
+          "Entrez le temps de cuisson avec le pavé numérique",
+          "Appuyez sur Démarrer pour commencer la cuisson",
+          "Laissez les aliments reposer 1-2 minutes avant de servir"
+        ]
+      },
+      "samsung": {
+        "bespokefridge": [
+          "Laissez le réfrigérateur debout 2 heures avant de brancher",
+          "Réglez la température à 4C pour le réfrigérateur et -18C pour le congélateur",
+          "Connectez-vous au WiFi via l'écran Family Hub",
+          "Utilisez le machine à glaçons en appuyant sur le bouton type de glace",
+          "Nettoyez le filtre à eau tous les 6 mois"
+        ]
+      }
+    },
+    "laundry": {
+      "bosch": {
+        "serie6washing": [
+          "Triez le linge par couleur et type de tissu",
+          "Chargez le linge sans trop remplir",
+          "Ajoutez la lessive dans le bon compartiment du tiroir",
+          "Sélectionnez le programme de lavage avec le cadran",
+          "Appuyez sur Démarrer/Pause pour commencer le cycle"
+        ]
+      },
+      "samsung": {
+        "ecobubble": [
+          "Chargez les vêtements sans trop remplir le tambour",
+          "Ajoutez la lessive dans le tiroir à lessive",
+          "Sélectionnez la température et la vitesse d'essorage",
+          "Choisissez votre cycle de lavage",
+          "Appuyez sur Démarrer pour commencer le lavage"
+        ]
+      }
+    },
+    "hvac": {
+      "daikin": {
+        "perfera": [
+          "Pointez la télécommande vers l'unité et appuyez sur ON/OFF",
+          "Appuyez sur MODE pour sélectionner Froid, Chaud, Ventilateur ou Sec",
+          "Utilisez les flèches température pour régler la température souhaitée",
+          "Appuyez sur FAN pour ajuster la vitesse du ventilateur",
+          "Utilisez TIMER pour programmer les heures marche/arrêt"
+        ]
+      },
+      "mitsubishi": {
+        "mszap": [
+          "Appuyez sur le bouton ON/OFF de la télécommande pour démarrer",
+          "Sélectionnez le mode de fonctionnement avec le bouton MODE",
+          "Ajustez la température avec les boutons TEMP",
+          "Appuyez sur FAN pour changer la vitesse du ventilateur",
+          "Utilisez le WEEKLY TIMER pour une opération programmée"
+        ]
+      }
+    },
+    "hearing": {
+      "phonak": {
+        "audeo": [
+          "Ouvrez le couvercle de la pile pour éteindre quand non utilisé",
+          "Insérez une pile de taille 312 côté plat vers le haut",
+          "Fermez doucement le couvercle pour allumer",
+          "Attendez 1 minute avant d'insérer dans l'oreille",
+          "Nettoyez quotidiennement avec le chiffon sec fourni"
+        ]
+      },
+      "oticon": {
+        "more1": [
+          "Placez l'appareil auditif sur le chargeur chaque nuit",
+          "La lumière verte indique une charge complète",
+          "Insérez dans l'oreille avec le dôme pointant vers le canal auditif",
+          "Appuyez une fois sur le bouton pour changer de programme",
+          "Utilisez l'appli Oticon ON pour régler le volume"
+        ]
+      }
+    },
+    "electronics": {
+      "apple": {
+        "iphone15": [
+          "Appuyez longuement sur le bouton latéral pour allumer",
+          "Suivez l'assistant de configuration pour la langue et le WiFi",
+          "Connectez-vous avec votre Apple ID ou créez-en un",
+          "Activez Face ID en suivant les instructions à l'écran",
+          "Restaurez depuis une sauvegarde ou configurez comme nouvel appareil"
+        ]
+      },
+      "samsung": {
+        "galaxys23": [
+          "Appuyez longuement sur la touche latérale pour allumer",
+          "Suivez l'assistant de configuration",
+          "Connectez-vous à votre réseau WiFi",
+          "Connectez-vous à vos comptes Samsung et Google",
+          "Transférez les données de l'ancien téléphone avec Smart Switch"
+        ]
+      }
+    },
+    "walking": {
+      "drivemedical": {
+        "nitro": [
+          "Dépliez le déambulateur en tirant le siège vers le haut",
+          "Ajustez la hauteur des poignées au niveau du poignet",
+          "Serrez les poignées de frein pour ralentir ou s'arrêter",
+          "Bloquez les freins en poussant les poignées vers le bas en position assise",
+          "Pliez en soulevant le siège et en poussant le cadre vers le bas"
+        ]
+      },
+      "invacare": {
+        "alurehab": [
+          "Ouvrez en tirant les deux côtés l'un de l'autre",
+          "Réglez la hauteur des poignées avec les boutons d'ajustement",
+          "Marchez à un rythme confortable derrière le déambulateur",
+          "Utilisez les freins à boucle pour contrôler la vitesse en pente",
+          "Rangez les articles dans le panier fourni"
+        ]
+      }
+    },
+    "vacuum": {
+      "dyson": {
+        "v15": [
+          "Chargez l'aspirateur complètement avant la première utilisation (4.5 heures)",
+          "Fixez la tête de nettoyage adaptée à votre type de sol",
+          "Appuyez une fois sur le bouton d'alimentation pour démarrer",
+          "Utilisez le bouton MAX pour une aspiration puissante",
+          "Videz le bac quand l'indicateur rouge indique qu'il est plein"
+        ],
+        "v12": [
+          "Chargez complètement avant la première utilisation",
+          "Cliquez la tige dans le corps principal",
+          "Sélectionnez votre mode de nettoyage préféré",
+          "Guidez la tête aspirante sur le sol",
+          "Appuyez sur la libération du bac pour vider après utilisation"
+        ]
+      },
+      "miele": {
+        "completec3": [
+          "Déroulez complètement le cordon avant utilisation",
+          "Sélectionnez la bonne brosse pour votre surface",
+          "Utilisez le sélecteur rotatif pour régler la puissance d'aspiration",
+          "Guidez l'aspirateur lentement pour de meilleurs résultats",
+          "Changez le sac quand l'indicateur devient rouge"
+        ]
+      },
+      "irobot": {
+        "roombaj7": [
+          "Placez la base de charge contre un mur avec de l'espace libre",
+          "Chargez le Roomba pendant 3 heures avant la première utilisation",
+          "Appuyez sur CLEAN pour démarrer un nettoyage",
+          "Utilisez l'appli iRobot pour programmer le nettoyage automatique",
+          "Videz le bac après chaque 1-2 sessions de nettoyage"
+        ]
+      }
+    }
   }
 }

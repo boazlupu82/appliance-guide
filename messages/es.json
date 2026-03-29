@@ -21,6 +21,236 @@
     "electronics": "Pequeños Electrodomésticos",
     "tv": "Televisión",
     "hearing": "Audífonos",
-    "walking": "Ayudas para Caminar"
+    "walking": "Ayudas para Caminar",
+    "vacuum": "Aspiradoras"
+  },
+  "brand": {
+    "category": "Categoría",
+    "selectModel": "Selecciona tu modelo",
+    "models": "modelos",
+    "selectBelow": "elige el tuyo abajo",
+    "steps": "Instrucciones paso a paso",
+    "comingSoon": "Próximamente",
+    "comingSoonDesc": "Estamos añadiendo modelos. ¡Vuelve pronto!",
+    "videoComingSoon": "Video próximamente",
+    "notFound": "¿No encontraste tu electrodoméstico?",
+    "notFoundDesc": "¿No encuentras tu marca o modelo? ¡Contáctanos y lo añadiremos!",
+    "contactUs": "Contáctanos",
+    "disclaimer": "Todos los videos están incrustados desde YouTube y pertenecen a sus propietarios. Los nombres de marcas son marcas registradas. HomeGuide no está afiliado a ninguna marca listada en este sitio."
+  },
+  "instructions": {
+    "tv": {
+      "samsung": {
+        "frame55": [
+          "Conecta el cable de alimentación a la parte trasera del televisor",
+          "Presiona el botón de encendido en el control remoto",
+          "Sigue el asistente de configuración para conectarte al WiFi",
+          "Usa el botón Home para acceder a las funciones Smart TV",
+          "Ajusta la configuración de imagen en Menú → Imagen → Configuración experta"
+        ],
+        "crystal43": [
+          "Conecta el cable HDMI de tu dispositivo al puerto HDMI del televisor",
+          "Presiona Fuente en el control remoto para seleccionar la entrada correcta",
+          "Usa los botones de volumen en el lado del televisor o el control",
+          "Accede al modo de imagen en Configuración → General → Accesibilidad",
+          "Configura subtítulos en Menú → General → Accesibilidad → Configuración de subtítulos"
+        ],
+        "neoqled65": [
+          "Monta el televisor en la pared con el soporte VESA incluido",
+          "Conecta la caja One Connect con el cable suministrado",
+          "Enciende y completa la configuración de Smart Hub",
+          "Conecta con el asistente de voz Bixby manteniendo el botón micrófono",
+          "Usa Multi View para ver dos fuentes simultáneamente"
+        ]
+      },
+      "lg": {
+        "oledc3": [
+          "Fija el soporte alineándolo con la parte inferior del televisor",
+          "Conecta la alimentación y presiona el botón de encendido",
+          "Sigue la configuración inicial para conectarte a tu red",
+          "Accede a webOS Home presionando el botón Home",
+          "Activa las funciones ThinQ AI en el menú de configuración"
+        ],
+        "nanocell50": [
+          "Coloca el televisor en el soporte y conecta el cable de alimentación",
+          "Presiona encendido en el control remoto",
+          "Selecciona tu idioma y región",
+          "Conéctate a la red WiFi",
+          "Inicia sesión en la cuenta LG para acceso completo"
+        ]
+      },
+      "sony": {
+        "bravia55": [
+          "Conecta el cable de alimentación y todos los cables antes de encender",
+          "Presiona el botón de encendido en el control remoto",
+          "Selecciona tu idioma en la pantalla de bienvenida",
+          "Conéctate a tu red WiFi",
+          "Inicia sesión en tu cuenta Google para funciones Android TV"
+        ]
+      }
+    },
+    "kitchen": {
+      "bosch": {
+        "serie6oven": [
+          "Antes del primer uso, calienta el horno vacío a 250C durante 1 hora",
+          "Gira el selector de función para elegir el modo de cocción",
+          "Ajusta la temperatura con el mando de temperatura",
+          "Presiona el botón del reloj para establecer la duración de cocción",
+          "El horno pitará cuando alcance la temperatura establecida"
+        ],
+        "serie4microwave": [
+          "Coloca la comida en un recipiente apto para microondas",
+          "Ajusta la potencia con el botón de potencia",
+          "Introduce el tiempo de cocción con el teclado numérico",
+          "Presiona Iniciar para comenzar la cocción",
+          "Deja reposar la comida 1-2 minutos antes de servir"
+        ]
+      },
+      "samsung": {
+        "bespokefridge": [
+          "Deja el refrigerador en posición vertical 2 horas antes de enchufar",
+          "Ajusta la temperatura a 4C para el refrigerador y -18C para el congelador",
+          "Conéctate al WiFi a través de la pantalla Family Hub",
+          "Usa la máquina de hielo presionando el botón de tipo de hielo",
+          "Limpia el filtro de agua cada 6 meses"
+        ]
+      }
+    },
+    "laundry": {
+      "bosch": {
+        "serie6washing": [
+          "Clasifica la ropa por color y tipo de tela",
+          "Carga la ropa sin llenar demasiado",
+          "Añade detergente en el compartimento correcto del cajón",
+          "Selecciona el programa de lavado con el dial",
+          "Presiona el botón Inicio/Pausa para comenzar el ciclo"
+        ]
+      },
+      "samsung": {
+        "ecobubble": [
+          "Carga la ropa en el tambor sin llenarlo demasiado",
+          "Añade detergente en el cajón de detergente",
+          "Selecciona temperatura y velocidad de centrifugado",
+          "Elige tu ciclo de lavado",
+          "Presiona Inicio para comenzar el lavado"
+        ]
+      }
+    },
+    "hvac": {
+      "daikin": {
+        "perfera": [
+          "Apunta el control remoto a la unidad y presiona ON/OFF",
+          "Presiona MODE para seleccionar Frío, Calor, Ventilador o Seco",
+          "Usa las flechas de temperatura para ajustar la temperatura deseada",
+          "Presiona FAN para ajustar la velocidad del ventilador",
+          "Usa TIMER para programar tiempos automáticos de encendido/apagado"
+        ]
+      },
+      "mitsubishi": {
+        "mszap": [
+          "Presiona el botón ON/OFF del control remoto para iniciar",
+          "Selecciona el modo de operación con el botón MODE",
+          "Ajusta la temperatura con los botones TEMP",
+          "Presiona FAN para cambiar la velocidad del ventilador",
+          "Usa el WEEKLY TIMER para operación programada"
+        ]
+      }
+    },
+    "hearing": {
+      "phonak": {
+        "audeo": [
+          "Abre la puerta de la batería para apagar cuando no se use",
+          "Inserta una batería tamaño 312 con el lado plano hacia arriba",
+          "Cierra suavemente la puerta para encender",
+          "Espera 1 minuto antes de insertar en el oído",
+          "Limpia diariamente con el paño seco proporcionado"
+        ]
+      },
+      "oticon": {
+        "more1": [
+          "Coloca el audífono en el cargador cada noche",
+          "La luz verde indica carga completa",
+          "Inserta en el oído con el domo apuntando al canal auditivo",
+          "Presiona el botón una vez para cambiar de programa",
+          "Usa la app Oticon ON para ajustar el volumen"
+        ]
+      }
+    },
+    "electronics": {
+      "apple": {
+        "iphone15": [
+          "Mantén presionado el botón lateral para encender",
+          "Sigue el asistente de configuración para idioma y WiFi",
+          "Inicia sesión con tu Apple ID o crea uno nuevo",
+          "Activa Face ID siguiendo las instrucciones en pantalla",
+          "Restaura desde copia de seguridad o configura como dispositivo nuevo"
+        ]
+      },
+      "samsung": {
+        "galaxys23": [
+          "Mantén presionada la tecla lateral para encender",
+          "Sigue el asistente de configuración",
+          "Conéctate a tu red WiFi",
+          "Inicia sesión en tus cuentas Samsung y Google",
+          "Transfiere datos del teléfono antiguo con Smart Switch"
+        ]
+      }
+    },
+    "walking": {
+      "drivemedical": {
+        "nitro": [
+          "Despliega el andador tirando del asiento hacia arriba",
+          "Ajusta la altura de los mangos al nivel de la muñeca de pie",
+          "Aprieta los mangos de freno para frenar o detenerse",
+          "Bloquea los frenos empujando los mangos hacia abajo al sentarse",
+          "Dobla levantando el asiento y empujando el marco hacia abajo"
+        ]
+      },
+      "invacare": {
+        "alurehab": [
+          "Abre tirando los dos lados separados",
+          "Ajusta la altura de los mangos con los botones de ajuste",
+          "Camina a un ritmo cómodo detrás del andador",
+          "Usa los frenos de bucle para controlar la velocidad en pendientes",
+          "Guarda artículos en la cesta proporcionada"
+        ]
+      }
+    },
+    "vacuum": {
+      "dyson": {
+        "v15": [
+          "Carga la aspiradora completamente antes del primer uso (4.5 horas)",
+          "Coloca el cabezal de limpieza adecuado para tu tipo de suelo",
+          "Presiona el botón de encendido una vez para comenzar",
+          "Usa el botón MAX para succión potente en suciedad difícil",
+          "Vacía el depósito cuando el indicador rojo muestre que está lleno"
+        ],
+        "v12": [
+          "Carga completamente antes del primer uso",
+          "Encaja la varilla en el cuerpo principal",
+          "Selecciona tu modo de limpieza preferido",
+          "Guía el cabezal limpiador por el suelo",
+          "Presiona la liberación del depósito para vaciar después del uso"
+        ]
+      },
+      "miele": {
+        "completec3": [
+          "Desenrolla el cable de alimentación completamente antes del uso",
+          "Selecciona el cabezal correcto para tu superficie",
+          "Usa el dial rotatorio para ajustar la potencia de succión",
+          "Guía la aspiradora lentamente para mejores resultados",
+          "Cambia la bolsa cuando el indicador se vuelva rojo"
+        ]
+      },
+      "irobot": {
+        "roombaj7": [
+          "Coloca la base de carga junto a una pared con espacio libre",
+          "Carga el Roomba durante 3 horas antes del primer uso",
+          "Presiona CLEAN para iniciar una limpieza",
+          "Usa la app iRobot para programar limpieza automática",
+          "Vacía el depósito después de cada 1-2 sesiones de limpieza"
+        ]
+      }
+    }
   }
 }

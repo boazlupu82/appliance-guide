@@ -108,13 +108,14 @@ export default async function CategoryPage({
         <div style={{ background: '#F5A623', minHeight: '100vh', paddingBottom: 40 }}>
 
             {/* Breadcrumb */}
-            <div style={{
-                padding: '12px 40px',
+            <div className="page-pad" style={{
+                paddingTop: 12, paddingBottom: 12,
                 display: 'flex',
                 alignItems: 'center',
                 gap: 8,
                 fontSize: 13,
                 fontWeight: 600,
+                flexWrap: 'wrap' as const,
             }}>
                 <Link href={`/${locale}`} style={{
                     color: '#1A1A1A', textDecoration: 'none',
@@ -130,42 +131,47 @@ export default async function CategoryPage({
             </div>
 
             {/* Header card */}
-            <div style={{
-                margin: '0 40px 24px',
-                background: '#fff',
-                border: '2.5px solid #1A1A1A',
-                borderRadius: 20,
-                padding: '20px 28px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 20,
-                boxShadow: '4px 4px 0 #1A1A1A',
-            }}>
+            <div className="page-pad" style={{ marginBottom: 24 }}>
                 <div style={{
-                    fontSize: 56, lineHeight: 1,
-                    filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.15))',
+                    background: '#fff',
+                    border: '2.5px solid #1A1A1A',
+                    borderRadius: 20,
+                    padding: '20px 28px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 20,
+                    boxShadow: '4px 4px 0 #1A1A1A',
                 }}>
-                    {emoji}
-                </div>
-                <div>
                     <div style={{
-                        fontSize: 11, fontWeight: 700, color: '#888',
-                        textTransform: 'uppercase' as const,
-                        letterSpacing: '0.1em', marginBottom: 4,
+                        fontSize: 56, lineHeight: 1,
+                        filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.15))',
+                        flexShrink: 0,
                     }}>
-                        {t('brand.category')}
+                        {emoji}
                     </div>
-                    <div style={{ fontSize: 26, fontWeight: 800, color: '#1A1A1A', marginBottom: 4 }}>
-                        {categoryName}
-                    </div>
-                    <div style={{ fontSize: 13, color: '#666', fontWeight: 500 }}>
-                        {brands.length} {t('brand.models')} — {t('brand.selectBelow')}
+                    <div>
+                        <div style={{
+                            fontSize: 11, fontWeight: 700, color: '#888',
+                            textTransform: 'uppercase' as const,
+                            letterSpacing: '0.1em', marginBottom: 4,
+                        }}>
+                            {t('brand.category')}
+                        </div>
+                        <div style={{
+                            fontSize: 'clamp(18px, 3vw, 26px)',
+                            fontWeight: 800, color: '#1A1A1A', marginBottom: 4,
+                        }}>
+                            {categoryName}
+                        </div>
+                        <div style={{ fontSize: 13, color: '#666', fontWeight: 500 }}>
+                            {brands.length} {t('brand.models')} — {t('brand.selectBelow')}
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* Section label */}
-            <div style={{ padding: '0 40px 12px' }}>
+            <div className="page-pad" style={{ paddingBottom: 12 }}>
                 <p style={{
                     fontSize: 12, fontWeight: 700, color: '#4A3000',
                     textTransform: 'uppercase' as const, letterSpacing: '0.1em',
@@ -175,12 +181,7 @@ export default async function CategoryPage({
             </div>
 
             {/* Brand Grid */}
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: 14,
-                padding: '0 40px',
-            }}>
+            <div className="brand-grid page-pad">
                 {brands.map((brand) => (
                     <Link
                         key={brand.name}
@@ -192,7 +193,7 @@ export default async function CategoryPage({
                             style={{
                                 background: '#fff',
                                 border: '2.5px solid #1A1A1A',
-                                borderRadius: 20,
+                                borderRadius: 16,
                                 overflow: 'hidden',
                                 cursor: 'pointer',
                                 transition: 'transform 0.15s, box-shadow 0.15s',
@@ -203,27 +204,31 @@ export default async function CategoryPage({
                             <div style={{ height: 6, background: strip }} />
 
                             <div style={{
-                                position: 'absolute', top: 14, right: 12,
-                                width: 24, height: 24, borderRadius: '50%',
+                                position: 'absolute', top: 10, right: 8,
+                                width: 22, height: 22, borderRadius: '50%',
                                 background: '#F5A623', border: '2px solid #1A1A1A',
                                 display: 'flex', alignItems: 'center',
                                 justifyContent: 'center',
-                                fontSize: 12, fontWeight: 800, color: '#1A1A1A',
+                                fontSize: 11, fontWeight: 800, color: '#1A1A1A',
                             }}>↗</div>
 
                             <BrandLogo brand={brand} />
 
                             <div style={{
-                                padding: '10px 14px 14px',
+                                padding: '8px 10px 12px',
                                 borderTop: '2px solid #1A1A1A',
                             }}>
                                 <div style={{
-                                    fontSize: 15, fontWeight: 800,
+                                    fontSize: 'clamp(12px, 1.5vw, 15px)',
+                                    fontWeight: 800,
                                     color: '#1A1A1A', marginBottom: 3,
                                 }}>
                                     {brand.name}
                                 </div>
-                                <div style={{ fontSize: 11, fontWeight: 600, color: '#888' }}>
+                                <div style={{
+                                    fontSize: 'clamp(10px, 1.2vw, 11px)',
+                                    fontWeight: 600, color: '#888',
+                                }}>
                                     {brand.models} {t('brand.models')}
                                 </div>
                             </div>

@@ -21,7 +21,7 @@ export default function TTSBar({ text }: { text: string }) {
 
     return (
         <div style={{
-            margin: '14px 40px 0',
+            margin: '14px clamp(12px, 4vw, 40px) 0',
             background: '#fff',
             border: '2px solid #1A1A1A',
             borderRadius: 10,
@@ -42,6 +42,7 @@ export default function TTSBar({ text }: { text: string }) {
                     fontSize: 12,
                     fontWeight: 700,
                     cursor: 'pointer',
+                    whiteSpace: 'nowrap',
                 }}
             >
                 {speaking ? '■ Stop' : '▶ Read aloud'}

@@ -28,24 +28,28 @@ export default function ContactBanner() {
     return (
         <div style={{
             background: '#1A1A1A',
-            padding: '8px 40px',
+            padding: '8px clamp(12px, 4vw, 40px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: 10,
+            gap: 8,
             position: 'sticky',
             top: 0,
             zIndex: 300,
         }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            {/* Left — hidden on very small screens */}
+            <div className="contact-banner-msg" style={{
+                display: 'flex', alignItems: 'center', gap: 6,
+            }}>
                 <span style={{ fontSize: 13 }}>🔍</span>
                 <span style={{ fontSize: 12, color: '#9CA3AF', fontWeight: 500 }}>
           {t('brand.notFound')}
         </span>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            {/* Right — always visible */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginLeft: 'auto' }}>
                 {locales.map((l) => (
                     <button
                         key={l.code}
@@ -53,7 +57,7 @@ export default function ContactBanner() {
                         style={{
                             fontSize: 11,
                             fontWeight: 700,
-                            padding: '3px 9px',
+                            padding: '3px 8px',
                             borderRadius: 12,
                             border: `1.5px solid ${locale === l.code ? '#F5A623' : '#374151'}`,
                             background: locale === l.code ? '#F5A623' : 'transparent',
@@ -77,7 +81,7 @@ export default function ContactBanner() {
                         background: '#F5A623',
                         color: '#1A1A1A',
                         borderRadius: 12,
-                        padding: '4px 12px',
+                        padding: '4px 10px',
                         fontSize: 11,
                         fontWeight: 800,
                         textDecoration: 'none',

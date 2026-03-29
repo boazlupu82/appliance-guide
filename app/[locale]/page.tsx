@@ -26,13 +26,7 @@ export default async function HomePage({
         <div style={{ background: '#F5A623', minHeight: '100vh' }}>
 
             {/* Hero */}
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                padding: '20px 40px 0',
-                alignItems: 'end',
-                gap: 20,
-            }}>
+            <div className="hero-grid page-pad" style={{ paddingTop: 20 }}>
                 <div style={{ paddingBottom: 32 }}>
                     <div style={{
                         display: 'inline-flex', alignItems: 'center', gap: 6,
@@ -49,8 +43,10 @@ export default async function HomePage({
                     </div>
 
                     <h1 style={{
-                        fontSize: 48, fontWeight: 800, color: '#1A1A1A',
-                        lineHeight: 1.1, marginBottom: 12, letterSpacing: '-1.5px',
+                        fontSize: 'clamp(32px, 5vw, 48px)',
+                        fontWeight: 800, color: '#1A1A1A',
+                        lineHeight: 1.1, marginBottom: 12,
+                        letterSpacing: '-1.5px',
                     }}>
                         {t('home.titleLine1')}<br />
                         <span style={{
@@ -64,8 +60,9 @@ export default async function HomePage({
                     </h1>
 
                     <p style={{
-                        fontSize: 15, color: '#4A3000',
-                        lineHeight: 1.6, marginBottom: 24, maxWidth: 380,
+                        fontSize: 'clamp(13px, 2vw, 15px)',
+                        color: '#4A3000', lineHeight: 1.6,
+                        marginBottom: 24, maxWidth: 380,
                     }}>
                         {t('home.subtitle')}
                     </p>
@@ -73,30 +70,35 @@ export default async function HomePage({
                     <div style={{
                         display: 'flex', background: '#fff',
                         border: '2.5px solid #1A1A1A', borderRadius: 50,
-                        overflow: 'hidden', maxWidth: 420,
+                        overflow: 'hidden',
+                        maxWidth: '100%',
                         boxShadow: '4px 4px 0 #1A1A1A',
                     }}>
                         <input
                             type="text"
                             placeholder={t('home.searchPlaceholder')}
                             style={{
-                                flex: 1, border: 'none', padding: '14px 20px',
+                                flex: 1, border: 'none',
+                                padding: '12px 16px',
                                 fontSize: 14, outline: 'none',
-                                background: 'transparent', fontWeight: 500,
+                                background: 'transparent',
+                                fontWeight: 500,
+                                minWidth: 0,
                             }}
                         />
                         <button style={{
                             background: '#1A1A1A', color: '#F5A623',
-                            border: 'none', padding: '14px 24px',
-                            fontSize: 14, fontWeight: 700, cursor: 'pointer',
+                            border: 'none', padding: '12px 18px',
+                            fontSize: 14, fontWeight: 700,
+                            cursor: 'pointer', flexShrink: 0,
                         }}>
                             {t('home.search')} ↗
                         </button>
                     </div>
                 </div>
 
-                {/* Cartoon Illustration */}
-                <div style={{
+                {/* Cartoon Illustration — hidden on mobile */}
+                <div className="hero-illustration" style={{
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'flex-end',
@@ -137,7 +139,7 @@ export default async function HomePage({
             <TTSBar text={ttsText} />
 
             {/* Section label */}
-            <div style={{ padding: '20px 40px 8px' }}>
+            <div className="page-pad" style={{ paddingTop: 20, paddingBottom: 8 }}>
                 <p style={{
                     fontSize: 12, fontWeight: 700, color: '#4A3000',
                     textTransform: 'uppercase' as const, letterSpacing: '0.1em',
@@ -147,12 +149,7 @@ export default async function HomePage({
             </div>
 
             {/* Category Grid */}
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: 14,
-                padding: '0 40px 40px',
-            }}>
+            <div className="cat-grid page-pad" style={{ paddingBottom: 40 }}>
                 {categories.map((cat) => (
                     <Link
                         key={cat.key}
@@ -164,7 +161,7 @@ export default async function HomePage({
                             style={{
                                 background: '#fff',
                                 border: '2.5px solid #1A1A1A',
-                                borderRadius: 20,
+                                borderRadius: 16,
                                 overflow: 'hidden',
                                 cursor: 'pointer',
                                 transition: 'transform 0.15s, box-shadow 0.15s',
@@ -174,35 +171,39 @@ export default async function HomePage({
                         >
                             <div style={{ height: 6, background: cat.strip }} />
                             <div style={{
-                                position: 'absolute', top: 14, right: 12,
-                                width: 24, height: 24, borderRadius: '50%',
+                                position: 'absolute', top: 10, right: 8,
+                                width: 22, height: 22, borderRadius: '50%',
                                 background: '#F5A623', border: '2px solid #1A1A1A',
                                 display: 'flex', alignItems: 'center',
                                 justifyContent: 'center',
-                                fontSize: 12, fontWeight: 800, color: '#1A1A1A',
+                                fontSize: 11, fontWeight: 800, color: '#1A1A1A',
                             }}>↗</div>
                             <div style={{
-                                height: 110,
+                                height: 'clamp(80px, 12vw, 110px)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 background: cat.bg,
-                                fontSize: 72,
+                                fontSize: 'clamp(48px, 8vw, 72px)',
                                 filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.15))',
                             }}>
                                 {cat.emoji}
                             </div>
                             <div style={{
-                                padding: '10px 14px 14px',
+                                padding: '8px 10px 12px',
                                 borderTop: '2px solid #1A1A1A',
                             }}>
                                 <div style={{
-                                    fontSize: 14, fontWeight: 800,
-                                    color: '#1A1A1A', marginBottom: 3,
+                                    fontSize: 'clamp(11px, 1.5vw, 14px)',
+                                    fontWeight: 800,
+                                    color: '#1A1A1A', marginBottom: 2,
                                 }}>
                                     {t(`categories.${cat.key}`)}
                                 </div>
-                                <div style={{ fontSize: 11, fontWeight: 600, color: '#888' }}>
+                                <div style={{
+                                    fontSize: 'clamp(9px, 1.2vw, 11px)',
+                                    fontWeight: 600, color: '#888',
+                                }}>
                                     {cat.count}
                                 </div>
                             </div>
@@ -214,21 +215,24 @@ export default async function HomePage({
                 <div style={{
                     background: '#fff',
                     border: '2.5px dashed #D1D5DB',
-                    borderRadius: 20,
+                    borderRadius: 16,
                     overflow: 'hidden',
                     opacity: 0.5,
                 }}>
                     <div style={{ height: 6, background: '#D1D5DB' }} />
                     <div style={{
-                        height: 110, display: 'flex',
-                        alignItems: 'center', justifyContent: 'center',
-                        background: '#F9FAFB', fontSize: 56,
+                        height: 'clamp(80px, 12vw, 110px)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: '#F9FAFB',
+                        fontSize: 'clamp(36px, 6vw, 56px)',
                     }}>➕</div>
                     <div style={{
-                        padding: '10px 14px 14px',
+                        padding: '8px 10px 12px',
                         borderTop: '2px dashed #D1D5DB',
                     }}>
-                        <div style={{ fontSize: 14, fontWeight: 800, color: '#9CA3AF' }}>
+                        <div style={{ fontSize: 13, fontWeight: 800, color: '#9CA3AF' }}>
                             More soon
                         </div>
                         <div style={{ fontSize: 11, fontWeight: 600, color: '#D1D5DB' }}>

@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import type { Metadata } from 'next';
 import './globals.css';
+import AccessibilityBar from '@/components/AccessibilityBar';
 import ContactBanner from '@/components/ContactBanner';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Link from 'next/link';
@@ -26,6 +27,9 @@ export default async function LocaleLayout({
         <body style={{ margin: 0, padding: 0 }}>
         <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
+
+            {/* Accessibility bar — floating left side */}
+            <AccessibilityBar />
 
             {/* Sticky contact + language bar */}
             <ContactBanner />

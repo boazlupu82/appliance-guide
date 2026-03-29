@@ -1,15 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, use } from 'react';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 
 export default function ContactPage({
                                         params,
                                     }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
-    const { locale } = params;
+    const { locale } = use(params);
 
     const [form, setForm] = useState({
         name: '',

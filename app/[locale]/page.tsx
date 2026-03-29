@@ -3,39 +3,14 @@ import Link from 'next/link';
 import TTSBar from '@/components/TTSBar';
 
 const categories = [
-    { key: 'tv', slug: 'tv', emoji: '📺', bg: '#EFF6FF', strip: '#3B82F6', count: '8 brands · 60+ models', svg: null },
-    { key: 'kitchen', slug: 'kitchen', emoji: '🍳', bg: '#FFF1F1', strip: '#EF4444', count: '12 brands · 80+ models', svg: null },
-    { key: 'laundry', slug: 'laundry', emoji: '🫧', bg: '#F0FDF4', strip: '#10B981', count: '6 brands · 40+ models', svg: null },
-    {
-        key: 'vacuum',
-        slug: 'vacuum',
-        emoji: '',
-        bg: '#F0FDF4',
-        strip: '#6366F1',
-        count: '6 brands · 30+ models',
-        svg: (
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                <ellipse cx="32" cy="58" rx="22" ry="10" fill="#2D2D2D"/>
-                <ellipse cx="32" cy="55" rx="22" ry="10" fill="#3D3D3D"/>
-                <ellipse cx="32" cy="55" rx="18" ry="7" fill="#4CAF50"/>
-                <ellipse cx="32" cy="52" rx="18" ry="7" fill="#66BB6A"/>
-                <ellipse cx="32" cy="52" rx="14" ry="5" fill="#4CAF50"/>
-                <circle cx="20" cy="58" r="6" fill="#2D2D2D"/>
-                <circle cx="20" cy="58" r="4" fill="#1A1A1A"/>
-                <circle cx="44" cy="58" r="6" fill="#2D2D2D"/>
-                <circle cx="44" cy="58" r="4" fill="#1A1A1A"/>
-                <path d="M46 50 Q55 40 62 28 Q65 22 68 18" stroke="#9E9E9E" strokeWidth="4" strokeLinecap="round" fill="none"/>
-                <path d="M46 50 Q55 40 62 28 Q65 22 68 18" stroke="#BDBDBD" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                <rect x="60" y="12" width="14" height="10" rx="3" fill="#2D2D2D" transform="rotate(-20 60 12)"/>
-                <rect x="61" y="13" width="12" height="8" rx="2" fill="#3D3D3D" transform="rotate(-20 60 12)"/>
-                <ellipse cx="36" cy="48" rx="6" ry="3" fill="#81C784" opacity="0.6"/>
-            </svg>
-        ),
-    },
-    { key: 'hearing', slug: 'hearing', emoji: '🦻', bg: '#FAF5FF', strip: '#8B5CF6', count: '5 brands · 20+ models', svg: null },
-    { key: 'hvac', slug: 'hvac', emoji: '❄️', bg: '#F0F9FF', strip: '#0EA5E9', count: '7 brands · 35+ models', svg: null },
-    { key: 'electronics', slug: 'electronics', emoji: '🔌', bg: '#FDF2F8', strip: '#EC4899', count: '10 brands · 50+ models', svg: null },
-    { key: 'walking', slug: 'walking', emoji: '🦯', bg: '#FEFCE8', strip: '#EAB308', count: '4 brands · 15+ models', svg: null },
+    { key: 'tv', slug: 'tv', emoji: '📺', bg: '#EFF6FF', strip: '#3B82F6', count: '8 brands · 60+ models' },
+    { key: 'kitchen', slug: 'kitchen', emoji: '🍳', bg: '#FFF1F2', strip: '#EF4444', count: '12 brands · 80+ models' },
+    { key: 'laundry', slug: 'laundry', emoji: '🫧', bg: '#F0FDF4', strip: '#10B981', count: '6 brands · 40+ models' },
+    { key: 'vacuum', slug: 'vacuum', emoji: '🧹', bg: '#EEF2FF', strip: '#6366F1', count: '6 brands · 30+ models' },
+    { key: 'hearing', slug: 'hearing', emoji: '🦻', bg: '#FAF5FF', strip: '#8B5CF6', count: '5 brands · 20+ models' },
+    { key: 'hvac', slug: 'hvac', emoji: '❄️', bg: '#F0F9FF', strip: '#0EA5E9', count: '7 brands · 35+ models' },
+    { key: 'electronics', slug: 'electronics', emoji: '🔌', bg: '#FDF2F8', strip: '#EC4899', count: '10 brands · 50+ models' },
+    { key: 'walking', slug: 'walking', emoji: '🦯', bg: '#FEFCE8', strip: '#EAB308', count: '4 brands · 15+ models' },
 ];
 
 export default async function HomePage({
@@ -51,25 +26,37 @@ export default async function HomePage({
         <div style={{ background: '#F5A623', minHeight: '100vh' }}>
 
             {/* Hero */}
-            <div className="hero-section">
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                padding: '20px 40px 0',
+                alignItems: 'end',
+                gap: 20,
+            }}>
                 <div style={{ paddingBottom: 32 }}>
                     <div style={{
                         display: 'inline-flex', alignItems: 'center', gap: 6,
                         background: '#fff', border: '2px solid #1A1A1A',
                         borderRadius: 20, padding: '4px 14px',
-                        fontSize: 12, fontWeight: 600, color: '#1A1A1A', marginBottom: 16,
+                        fontSize: 12, fontWeight: 600,
+                        color: '#1A1A1A', marginBottom: 16,
                     }}>
-                        <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#22C55E' }} />
+                        <div style={{
+                            width: 8, height: 8,
+                            borderRadius: '50%', background: '#22C55E',
+                        }} />
                         {t('home.tag')}
                     </div>
 
-                    <h1 className="hero-title" style={{
-                        fontWeight: 800, color: '#1A1A1A',
+                    <h1 style={{
+                        fontSize: 48, fontWeight: 800, color: '#1A1A1A',
+                        lineHeight: 1.1, marginBottom: 12, letterSpacing: '-1.5px',
                     }}>
                         {t('home.titleLine1')}<br />
                         <span style={{
                             background: '#1A1A1A', color: '#F5A623',
-                            padding: '0 12px', borderRadius: 10, display: 'inline-block',
+                            padding: '0 12px', borderRadius: 10,
+                            display: 'inline-block',
                         }}>
               {t('home.titleLine2')}
             </span><br />
@@ -77,16 +64,16 @@ export default async function HomePage({
                     </h1>
 
                     <p style={{
-                        fontSize: 15, color: '#4A3000', lineHeight: 1.6,
-                        marginBottom: 24, maxWidth: 380,
+                        fontSize: 15, color: '#4A3000',
+                        lineHeight: 1.6, marginBottom: 24, maxWidth: 380,
                     }}>
                         {t('home.subtitle')}
                     </p>
 
-                    <div className="hero-search" style={{
+                    <div style={{
                         display: 'flex', background: '#fff',
                         border: '2.5px solid #1A1A1A', borderRadius: 50,
-                        overflow: 'hidden',
+                        overflow: 'hidden', maxWidth: 420,
                         boxShadow: '4px 4px 0 #1A1A1A',
                     }}>
                         <input
@@ -109,7 +96,11 @@ export default async function HomePage({
                 </div>
 
                 {/* Cartoon Illustration */}
-                <div className="hero-illustration">
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'flex-end',
+                }}>
                     <svg width="360" height="300" viewBox="0 0 360 300" fill="none">
                         <rect x="60" y="20" width="240" height="180" rx="14" fill="#fff" stroke="#1A1A1A" strokeWidth="3"/>
                         <rect x="75" y="35" width="100" height="75" rx="8" fill="#DBEAFE" stroke="#1A1A1A" strokeWidth="2"/>
@@ -142,19 +133,26 @@ export default async function HomePage({
                 </div>
             </div>
 
+            {/* TTS Bar */}
             <TTSBar text={ttsText} />
 
-            <div className="page-x-pad" style={{ paddingTop: 20, paddingBottom: 8 }}>
+            {/* Section label */}
+            <div style={{ padding: '20px 40px 8px' }}>
                 <p style={{
                     fontSize: 12, fontWeight: 700, color: '#4A3000',
-                    textTransform: 'uppercase', letterSpacing: '0.1em',
+                    textTransform: 'uppercase' as const, letterSpacing: '0.1em',
                 }}>
                     {t('home.categories')}
                 </p>
             </div>
 
             {/* Category Grid */}
-            <div className="grid-4">
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: 14,
+                padding: '0 40px 40px',
+            }}>
                 {categories.map((cat) => (
                     <Link
                         key={cat.key}
@@ -164,10 +162,14 @@ export default async function HomePage({
                         <div
                             className="card-hover"
                             style={{
-                                background: '#fff', border: '2.5px solid #1A1A1A',
-                                borderRadius: 20, overflow: 'hidden', cursor: 'pointer',
+                                background: '#fff',
+                                border: '2.5px solid #1A1A1A',
+                                borderRadius: 20,
+                                overflow: 'hidden',
+                                cursor: 'pointer',
                                 transition: 'transform 0.15s, box-shadow 0.15s',
-                                boxShadow: '4px 4px 0 #1A1A1A', position: 'relative',
+                                boxShadow: '4px 4px 0 #1A1A1A',
+                                position: 'relative',
                             }}
                         >
                             <div style={{ height: 6, background: cat.strip }} />
@@ -175,7 +177,8 @@ export default async function HomePage({
                                 position: 'absolute', top: 14, right: 12,
                                 width: 24, height: 24, borderRadius: '50%',
                                 background: '#F5A623', border: '2px solid #1A1A1A',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                display: 'flex', alignItems: 'center',
+                                justifyContent: 'center',
                                 fontSize: 12, fontWeight: 800, color: '#1A1A1A',
                             }}>↗</div>
                             <div style={{
@@ -187,10 +190,16 @@ export default async function HomePage({
                                 fontSize: 72,
                                 filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.15))',
                             }}>
-                                {cat.svg ? cat.svg : cat.emoji}
+                                {cat.emoji}
                             </div>
-                            <div style={{ padding: '10px 14px 14px', borderTop: '2px solid #1A1A1A' }}>
-                                <div style={{ fontSize: 14, fontWeight: 800, color: '#1A1A1A', marginBottom: 3 }}>
+                            <div style={{
+                                padding: '10px 14px 14px',
+                                borderTop: '2px solid #1A1A1A',
+                            }}>
+                                <div style={{
+                                    fontSize: 14, fontWeight: 800,
+                                    color: '#1A1A1A', marginBottom: 3,
+                                }}>
                                     {t(`categories.${cat.key}`)}
                                 </div>
                                 <div style={{ fontSize: 11, fontWeight: 600, color: '#888' }}>
@@ -201,19 +210,30 @@ export default async function HomePage({
                     </Link>
                 ))}
 
-                {/* Coming soon card */}
+                {/* Coming soon */}
                 <div style={{
-                    background: '#fff', border: '2.5px dashed #D1D5DB',
-                    borderRadius: 20, overflow: 'hidden', opacity: 0.5,
+                    background: '#fff',
+                    border: '2.5px dashed #D1D5DB',
+                    borderRadius: 20,
+                    overflow: 'hidden',
+                    opacity: 0.5,
                 }}>
                     <div style={{ height: 6, background: '#D1D5DB' }} />
                     <div style={{
-                        height: 110, display: 'flex', alignItems: 'center',
-                        justifyContent: 'center', background: '#F9FAFB', fontSize: 56,
+                        height: 110, display: 'flex',
+                        alignItems: 'center', justifyContent: 'center',
+                        background: '#F9FAFB', fontSize: 56,
                     }}>➕</div>
-                    <div style={{ padding: '10px 14px 14px', borderTop: '2px dashed #D1D5DB' }}>
-                        <div style={{ fontSize: 14, fontWeight: 800, color: '#9CA3AF' }}>More soon</div>
-                        <div style={{ fontSize: 11, fontWeight: 600, color: '#D1D5DB' }}>coming soon</div>
+                    <div style={{
+                        padding: '10px 14px 14px',
+                        borderTop: '2px dashed #D1D5DB',
+                    }}>
+                        <div style={{ fontSize: 14, fontWeight: 800, color: '#9CA3AF' }}>
+                            More soon
+                        </div>
+                        <div style={{ fontSize: 11, fontWeight: 600, color: '#D1D5DB' }}>
+                            coming soon
+                        </div>
                     </div>
                 </div>
             </div>

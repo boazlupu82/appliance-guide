@@ -2,18 +2,13 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Navbar';
 import ContactBanner from '@/components/ContactBanner';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: 'HomeGuide',
     description: 'Simple step-by-step guides for every appliance in your home',
-};
-
-export const viewport = {
-    width: 'device-width',
-    initialScale: 1,
 };
 
 export default async function LocaleLayout({
@@ -29,14 +24,16 @@ export default async function LocaleLayout({
     return (
         <html lang={locale} dir={locale === 'he' ? 'rtl' : 'ltr'}>
         <body style={{ margin: 0, padding: 0 }}>
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
 
-            {/* Single top bar — contact + language */}
+            {/* Sticky contact + language bar */}
             <ContactBanner />
 
             {/* Logo bar */}
-            <div className="logo-bar-pad" style={{
+            <div style={{
                 background: '#F5A623',
+                padding: '12px 40px',
                 display: 'flex',
                 alignItems: 'center',
                 borderBottom: '2.5px solid #1A1A1A',
@@ -67,9 +64,6 @@ export default async function LocaleLayout({
 
             {/* Page content */}
             {children}
-
-            {/* Navbar — returns null now */}
-            <Navbar locale={locale} />
 
         </NextIntlClientProvider>
         </body>

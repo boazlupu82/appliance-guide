@@ -1,199 +1,230 @@
-import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import TTSBar from '@/components/TTSBar';
+import { getTranslations } from 'next-intl/server';
 import BrandLogo from '@/components/BrandLogo';
 
-const categoryConfig: Record<string, { strip: string; bg: string; emoji: string }> = {
-    tv:          { strip: '#3B82F6', bg: '#EFF6FF', emoji: '📺' },
-    kitchen:     { strip: '#EF4444', bg: '#FFF1F1', emoji: '🍳' },
-    laundry:     { strip: '#10B981', bg: '#F0FDF4', emoji: '🫧' },
-    vacuum:      { strip: '#6366F1', bg: '#F0FDF4', emoji: '🧹' },
-    hearing:     { strip: '#8B5CF6', bg: '#FAF5FF', emoji: '🦻' },
-    hvac:        { strip: '#0EA5E9', bg: '#F0F9FF', emoji: '❄️' },
-    electronics: { strip: '#EC4899', bg: '#FDF2F8', emoji: '🔌' },
-    walking:     { strip: '#EAB308', bg: '#FEFCE8', emoji: '🦯' },
-};
-
-const brandsData: Record<string, { name: string; slug: string; domain: string; models: number }[]> = {
+const brandsData: Record<string, { name: string; color: string; models: number }[]> = {
     tv: [
-        { name: 'Samsung',   slug: 'samsung',   domain: 'samsung.com',   models: 12 },
-        { name: 'LG',        slug: 'lg',        domain: 'lg.com',        models: 9  },
-        { name: 'Sony',      slug: 'sony',      domain: 'sony.com',      models: 8  },
-        { name: 'Philips',   slug: 'philips',   domain: 'philips.com',   models: 6  },
-        { name: 'Hisense',   slug: 'hisense',   domain: 'hisense.com',   models: 5  },
-        { name: 'TCL',       slug: 'tcl',       domain: 'tcl.com',       models: 4  },
-        { name: 'Panasonic', slug: 'panasonic', domain: 'panasonic.com', models: 4  },
-        { name: 'Toshiba',   slug: 'toshiba',   domain: 'toshiba.com',   models: 3  },
+        { name: 'Samsung', color: '#1428A0', models: 12 },
+        { name: 'LG', color: '#A50034', models: 9 },
+        { name: 'Sony', color: '#000000', models: 8 },
+        { name: 'Philips', color: '#0066CC', models: 6 },
+        { name: 'Hisense', color: '#E4000F', models: 5 },
+        { name: 'TCL', color: '#D0021B', models: 4 },
+        { name: 'Panasonic', color: '#003087', models: 4 },
+        { name: 'Toshiba', color: '#FF0000', models: 3 },
     ],
     kitchen: [
-        { name: 'Bosch',     slug: 'bosch',     domain: 'bosch.com',     models: 8  },
-        { name: 'Samsung',   slug: 'samsung',   domain: 'samsung.com',   models: 6  },
-        { name: 'Whirlpool', slug: 'whirlpool', domain: 'whirlpool.com', models: 7  },
-        { name: 'Siemens',   slug: 'siemens',   domain: 'siemens.com',   models: 5  },
-        { name: 'Electrolux',slug: 'electrolux',domain: 'electrolux.com',models: 6  },
-        { name: 'LG',        slug: 'lg',        domain: 'lg.com',        models: 5  },
-        { name: 'AEG',       slug: 'aeg',       domain: 'aeg.com',       models: 4  },
-        { name: 'Miele',     slug: 'miele',     domain: 'miele.com',     models: 5  },
-        { name: 'Nespresso', slug: 'nespresso', domain: 'nespresso.com', models: 4  },
-        { name: 'Beko',      slug: 'beko',      domain: 'beko.com',      models: 4  },
+        { name: 'Bosch', color: '#005691', models: 8 },
+        { name: 'Samsung', color: '#1428A0', models: 6 },
+        { name: 'Whirlpool', color: '#003087', models: 5 },
+        { name: 'Siemens', color: '#009999', models: 5 },
+        { name: 'Electrolux', color: '#006AA7', models: 4 },
+        { name: 'LG', color: '#A50034', models: 4 },
+        { name: 'AEG', color: '#C8002D', models: 4 },
+        { name: 'Miele', color: '#1C1C1B', models: 3 },
+        { name: 'Nespresso', color: '#1B3A2D', models: 3 },
+        { name: 'Beko', color: '#005691', models: 3 },
     ],
     laundry: [
-        { name: 'Bosch',     slug: 'bosch',     domain: 'bosch.com',     models: 7  },
-        { name: 'Samsung',   slug: 'samsung',   domain: 'samsung.com',   models: 6  },
-        { name: 'LG',        slug: 'lg',        domain: 'lg.com',        models: 5  },
-        { name: 'Miele',     slug: 'miele',     domain: 'miele.com',     models: 4  },
-        { name: 'AEG',       slug: 'aeg',       domain: 'aeg.com',       models: 4  },
-        { name: 'Whirlpool', slug: 'whirlpool', domain: 'whirlpool.com', models: 5  },
-    ],
-    vacuum: [
-        { name: 'Dyson',     slug: 'dyson',     domain: 'dyson.com',     models: 8  },
-        { name: 'iRobot',    slug: 'irobot',    domain: 'irobot.com',    models: 6  },
-        { name: 'Shark',     slug: 'shark',     domain: 'sharkclean.com',models: 5  },
-        { name: 'Miele',     slug: 'miele',     domain: 'miele.com',     models: 4  },
-        { name: 'Bosch',     slug: 'bosch',     domain: 'bosch.com',     models: 3  },
-        { name: 'Electrolux',slug: 'electrolux',domain: 'electrolux.com',models: 4  },
-    ],
-    hearing: [
-        { name: 'Phonak',    slug: 'phonak',    domain: 'phonak.com',    models: 5  },
-        { name: 'Oticon',    slug: 'oticon',    domain: 'oticon.com',    models: 4  },
-        { name: 'Signia',    slug: 'signia',    domain: 'signia.pro',    models: 4  },
-        { name: 'Widex',     slug: 'widex',     domain: 'widex.com',     models: 3  },
-        { name: 'ReSound',   slug: 'resound',   domain: 'resound.com',   models: 4  },
+        { name: 'Bosch', color: '#005691', models: 10 },
+        { name: 'Samsung', color: '#1428A0', models: 8 },
+        { name: 'LG', color: '#A50034', models: 7 },
+        { name: 'Miele', color: '#1C1C1B', models: 6 },
+        { name: 'Siemens', color: '#009999', models: 5 },
+        { name: 'Electrolux', color: '#006AA7', models: 4 },
+        { name: 'AEG', color: '#C8002D', models: 4 },
+        { name: 'Whirlpool', color: '#003087', models: 4 },
+        { name: 'Beko', color: '#005691', models: 3 },
+        { name: 'Hotpoint', color: '#003087', models: 3 },
     ],
     hvac: [
-        { name: 'Daikin',    slug: 'daikin',    domain: 'daikin.com',    models: 6  },
-        { name: 'Mitsubishi',slug: 'mitsubishi',domain: 'mitsubishi.com',models: 5  },
-        { name: 'LG',        slug: 'lg',        domain: 'lg.com',        models: 5  },
-        { name: 'Samsung',   slug: 'samsung',   domain: 'samsung.com',   models: 4  },
-        { name: 'Panasonic', slug: 'panasonic', domain: 'panasonic.com', models: 5  },
-        { name: 'Carrier',   slug: 'carrier',   domain: 'carrier.com',   models: 4  },
-        { name: 'Toshiba',   slug: 'toshiba',   domain: 'toshiba.com',   models: 4  },
+        { name: 'Daikin', color: '#0067B1', models: 10 },
+        { name: 'Mitsubishi', color: '#E60012', models: 8 },
+        { name: 'LG', color: '#A50034', models: 7 },
+        { name: 'Samsung', color: '#1428A0', models: 6 },
+        { name: 'Carrier', color: '#004B87', models: 5 },
+        { name: 'Panasonic', color: '#003087', models: 4 },
+        { name: 'Bosch', color: '#005691', models: 4 },
+        { name: 'Sharp', color: '#003087', models: 3 },
     ],
     electronics: [
-        { name: 'Apple',     slug: 'apple',     domain: 'apple.com',     models: 8  },
-        { name: 'Samsung',   slug: 'samsung',   domain: 'samsung.com',   models: 7  },
-        { name: 'Sony',      slug: 'sony',      domain: 'sony.com',      models: 6  },
-        { name: 'Philips',   slug: 'philips',   domain: 'philips.com',   models: 5  },
-        { name: 'Bose',      slug: 'bose',      domain: 'bose.com',      models: 5  },
-        { name: 'JBL',       slug: 'jbl',       domain: 'jbl.com',       models: 4  },
-        { name: 'Panasonic', slug: 'panasonic', domain: 'panasonic.com', models: 4  },
-        { name: 'LG',        slug: 'lg',        domain: 'lg.com',        models: 5  },
-        { name: 'Xiaomi',    slug: 'xiaomi',    domain: 'xiaomi.com',    models: 6  },
-        { name: 'Huawei',    slug: 'huawei',    domain: 'huawei.com',    models: 4  },
+        { name: 'Apple', color: '#555555', models: 12 },
+        { name: 'Samsung', color: '#1428A0', models: 10 },
+        { name: 'Sony', color: '#000000', models: 8 },
+        { name: 'Philips', color: '#0066CC', models: 7 },
+        { name: 'Panasonic', color: '#003087', models: 5 },
+        { name: 'JBL', color: '#FF6600', models: 4 },
+        { name: 'Braun', color: '#1A1A1A', models: 4 },
+        { name: 'Dyson', color: '#CC3300', models: 3 },
+    ],
+    hearing: [
+        { name: 'Phonak', color: '#E4032E', models: 8 },
+        { name: 'Oticon', color: '#003C71', models: 7 },
+        { name: 'Siemens', color: '#009999', models: 6 },
+        { name: 'Widex', color: '#00539F', models: 5 },
+        { name: 'ReSound', color: '#E4032E', models: 4 },
+        { name: 'Starkey', color: '#003087', models: 3 },
     ],
     walking: [
-        { name: 'Rollz',     slug: 'rollz',     domain: 'rollz.eu',      models: 4  },
-        { name: 'Drive',     slug: 'drive',     domain: 'drivemedical.com', models: 5 },
-        { name: 'Invacare',  slug: 'invacare',  domain: 'invacare.com',  models: 3  },
-        { name: 'Topro',     slug: 'topro',     domain: 'topro.no',      models: 3  },
+        { name: 'Drive Medical', color: '#005691', models: 6 },
+        { name: 'Invacare', color: '#003087', models: 5 },
+        { name: 'Rollator', color: '#006400', models: 4 },
+        { name: 'Nova', color: '#8B0000', models: 3 },
     ],
+    vacuum: [
+        { name: 'Dyson', color: '#CC3300', models: 8 },
+        { name: 'Miele', color: '#1C1C1B', models: 6 },
+        { name: 'Bosch', color: '#005691', models: 5 },
+        { name: 'Samsung', color: '#1428A0', models: 4 },
+        { name: 'LG', color: '#A50034', models: 4 },
+        { name: 'iRobot', color: '#E4000F', models: 6 },
+    ],
+};
+
+const categoryEmoji: Record<string, string> = {
+    tv: '📺', kitchen: '🍳', laundry: '🫧', hvac: '❄️',
+    electronics: '🔌', hearing: '🦻', walking: '🦯', vacuum: '🧹',
+};
+
+const categoryStrip: Record<string, string> = {
+    tv: '#3B82F6', kitchen: '#EF4444', laundry: '#10B981',
+    hvac: '#0EA5E9', electronics: '#EC4899', hearing: '#8B5CF6',
+    walking: '#EAB308', vacuum: '#6366F1',
 };
 
 export default async function CategoryPage({
-    params,
-}: {
+                                               params,
+                                           }: {
     params: Promise<{ locale: string; category: string }>;
 }) {
     const { locale, category } = await params;
     const t = await getTranslations({ locale });
-
-    const config = categoryConfig[category] ?? { strip: '#888', bg: '#F9FAFB', emoji: '📦' };
-    const brands = brandsData[category] ?? [];
+    const brands = brandsData[category] || [];
+    const emoji = categoryEmoji[category] || '🏠';
+    const strip = categoryStrip[category] || '#6366F1';
     const categoryName = t(`categories.${category}`);
-    const ttsText = `${categoryName}. ${brands.length} brands available.`;
 
     return (
-        <div style={{ background: '#F5A623', minHeight: '100vh' }}>
-            {/* Header */}
-            <div className="cat-header-pad">
-                <Link
-                    href={`/${locale}`}
-                    style={{
-                        display: 'inline-flex', alignItems: 'center', gap: 6,
-                        background: '#fff', border: '2px solid #1A1A1A',
-                        borderRadius: 20, padding: '6px 14px',
-                        fontSize: 13, fontWeight: 600, color: '#1A1A1A',
-                        textDecoration: 'none', marginBottom: 20,
-                        boxShadow: '2px 2px 0 #1A1A1A',
-                    }}
-                >
+        <div style={{ background: '#F5A623', minHeight: '100vh', paddingBottom: 40 }}>
+
+            {/* Breadcrumb */}
+            <div style={{
+                padding: '12px 40px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8,
+                fontSize: 13,
+                fontWeight: 600,
+            }}>
+                <Link href={`/${locale}`} style={{
+                    color: '#1A1A1A', textDecoration: 'none',
+                    background: '#fff', border: '2px solid #1A1A1A',
+                    borderRadius: 20, padding: '4px 12px',
+                    fontSize: 12, fontWeight: 700,
+                    boxShadow: '2px 2px 0 #1A1A1A',
+                }}>
                     ← {t('nav.home')}
                 </Link>
+                <span style={{ opacity: 0.5 }}>›</span>
+                <span style={{ fontWeight: 800 }}>{emoji} {categoryName}</span>
+            </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 8 }}>
+            {/* Header card */}
+            <div style={{
+                margin: '0 40px 24px',
+                background: '#fff',
+                border: '2.5px solid #1A1A1A',
+                borderRadius: 20,
+                padding: '20px 28px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 20,
+                boxShadow: '4px 4px 0 #1A1A1A',
+            }}>
+                <div style={{
+                    fontSize: 56, lineHeight: 1,
+                    filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.15))',
+                }}>
+                    {emoji}
+                </div>
+                <div>
                     <div style={{
-                        width: 56, height: 56, borderRadius: 16,
-                        background: config.bg, border: '2.5px solid #1A1A1A',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: 32,
+                        fontSize: 11, fontWeight: 700, color: '#888',
+                        textTransform: 'uppercase' as const,
+                        letterSpacing: '0.1em', marginBottom: 4,
                     }}>
-                        {config.emoji}
+                        {t('brand.category')}
                     </div>
-                    <div>
-                        <h1 style={{
-                            fontSize: 36, fontWeight: 800, color: '#1A1A1A',
-                            lineHeight: 1.1, letterSpacing: '-1px', margin: 0,
-                        }}>
-                            {categoryName}
-                        </h1>
-                        <p style={{ fontSize: 14, color: '#4A3000', margin: '4px 0 0', fontWeight: 500 }}>
-                            {brands.length} brands available
-                        </p>
+                    <div style={{ fontSize: 26, fontWeight: 800, color: '#1A1A1A', marginBottom: 4 }}>
+                        {categoryName}
+                    </div>
+                    <div style={{ fontSize: 13, color: '#666', fontWeight: 500 }}>
+                        {brands.length} {t('brand.models')} — {t('brand.selectBelow')}
                     </div>
                 </div>
             </div>
 
-            <TTSBar text={ttsText} />
-
-            <div className="cat-section-pad">
+            {/* Section label */}
+            <div style={{ padding: '0 40px 12px' }}>
                 <p style={{
                     fontSize: 12, fontWeight: 700, color: '#4A3000',
-                    textTransform: 'uppercase', letterSpacing: '0.1em',
+                    textTransform: 'uppercase' as const, letterSpacing: '0.1em',
                 }}>
-                    {t('home.categories')}
+                    {t('brand.selectModel')}
                 </p>
             </div>
 
             {/* Brand Grid */}
-            <div className="grid-4">
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: 14,
+                padding: '0 40px',
+            }}>
                 {brands.map((brand) => (
                     <Link
-                        key={brand.slug}
-                        href={`/${locale}/${category}/${brand.slug}`}
+                        key={brand.name}
+                        href={`/${locale}/${category}/${brand.name.toLowerCase().replace(/[\s']+/g, '-')}`}
                         style={{ textDecoration: 'none' }}
                     >
                         <div
                             className="card-hover"
                             style={{
-                                background: '#fff', border: '2.5px solid #1A1A1A',
-                                borderRadius: 20, overflow: 'hidden', cursor: 'pointer',
+                                background: '#fff',
+                                border: '2.5px solid #1A1A1A',
+                                borderRadius: 20,
+                                overflow: 'hidden',
+                                cursor: 'pointer',
                                 transition: 'transform 0.15s, box-shadow 0.15s',
-                                boxShadow: '4px 4px 0 #1A1A1A', position: 'relative',
+                                boxShadow: '4px 4px 0 #1A1A1A',
+                                position: 'relative',
                             }}
                         >
-                            <div style={{ height: 6, background: config.strip }} />
+                            <div style={{ height: 6, background: strip }} />
+
                             <div style={{
                                 position: 'absolute', top: 14, right: 12,
                                 width: 24, height: 24, borderRadius: '50%',
                                 background: '#F5A623', border: '2px solid #1A1A1A',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                display: 'flex', alignItems: 'center',
+                                justifyContent: 'center',
                                 fontSize: 12, fontWeight: 800, color: '#1A1A1A',
                             }}>↗</div>
+
+                            <BrandLogo brand={brand} />
+
                             <div style={{
-                                height: 110,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                background: config.bg,
+                                padding: '10px 14px 14px',
+                                borderTop: '2px solid #1A1A1A',
                             }}>
-                                <BrandLogo brand={{ name: brand.name, color: config.strip }} />
-                            </div>
-                            <div style={{ padding: '10px 14px 14px', borderTop: '2px solid #1A1A1A' }}>
-                                <div style={{ fontSize: 14, fontWeight: 800, color: '#1A1A1A', marginBottom: 3 }}>
+                                <div style={{
+                                    fontSize: 15, fontWeight: 800,
+                                    color: '#1A1A1A', marginBottom: 3,
+                                }}>
                                     {brand.name}
                                 </div>
                                 <div style={{ fontSize: 11, fontWeight: 600, color: '#888' }}>
-                                    {brand.models} models
+                                    {brand.models} {t('brand.models')}
                                 </div>
                             </div>
                         </div>

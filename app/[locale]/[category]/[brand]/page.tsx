@@ -67,7 +67,6 @@ const modelsData: Record<string, Record<string, {
         ],
         nespresso: [
             { name: 'Vertuo Next', year: '2023', instructionKey: 'instructions.kitchen.bosch.serie4microwave' },
-            { name: 'Vertuo Pop', year: '2022', instructionKey: 'instructions.kitchen.bosch.serie4microwave' },
         ],
         beko: [
             { name: 'AeroPerfect Oven', year: '2022', instructionKey: 'instructions.kitchen.bosch.serie6oven' },
@@ -204,7 +203,6 @@ const modelsData: Record<string, Record<string, {
     },
     vacuum: {
         dyson: [
-            { name: 'V16 Piston Animal™', year: '2026', videoId: 'eaNQbJW1RwU', instructionKey: 'instructions.vacuum.dyson.v15' },
             { name: 'V15 Detect', year: '2023', instructionKey: 'instructions.vacuum.dyson.v15' },
             { name: 'V12 Slim', year: '2022', instructionKey: 'instructions.vacuum.dyson.v12' },
             { name: 'V11 Outsize', year: '2022', instructionKey: 'instructions.vacuum.dyson.v15' },
@@ -277,33 +275,56 @@ export default async function BrandPage({
         <div style={{ background: '#F5A623', minHeight: '100vh', paddingBottom: 40 }}>
 
             {/* Breadcrumb */}
-            <div className="breadcrumb-pad" style={{
-                display: 'flex', alignItems: 'center', gap: 8,
-                fontSize: 13, fontWeight: 600, flexWrap: 'wrap',
+            <div style={{
+                padding: '12px 40px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8,
+                fontSize: 13,
+                fontWeight: 600,
+                flexWrap: 'wrap' as const,
             }}>
-                <Link href={`/${locale}`} style={{ color: '#1A1A1A', textDecoration: 'none', opacity: 0.6 }}>
-                    {t('nav.home')}
+                <Link href={`/${locale}`} style={{
+                    color: '#1A1A1A', textDecoration: 'none',
+                    background: '#fff', border: '2px solid #1A1A1A',
+                    borderRadius: 20, padding: '4px 12px',
+                    fontSize: 12, fontWeight: 700,
+                    boxShadow: '2px 2px 0 #1A1A1A',
+                }}>
+                    ← {t('nav.home')}
                 </Link>
-                <span style={{ opacity: 0.4 }}>›</span>
-                <Link href={`/${locale}/${category}`} style={{ color: '#1A1A1A', textDecoration: 'none', opacity: 0.6 }}>
+                <span style={{ opacity: 0.5 }}>›</span>
+                <Link href={`/${locale}/${category}`} style={{
+                    color: '#1A1A1A', textDecoration: 'none',
+                    background: '#fff', border: '2px solid #1A1A1A',
+                    borderRadius: 20, padding: '4px 12px',
+                    fontSize: 12, fontWeight: 700,
+                    boxShadow: '2px 2px 0 #1A1A1A',
+                }}>
                     {emoji} {categoryName}
                 </Link>
-                <span style={{ opacity: 0.4 }}>›</span>
-                <span style={{ color: '#1A1A1A' }}>{brandName}</span>
+                <span style={{ opacity: 0.5 }}>›</span>
+                <span style={{ fontWeight: 800 }}>{brandName}</span>
             </div>
 
-            {/* Header */}
-            <div className="brand-header-margin" style={{
-                background: '#fff', border: '2.5px solid #1A1A1A',
-                borderRadius: 20, padding: '20px 28px',
-                display: 'flex', alignItems: 'center', gap: 20,
+            {/* Header card */}
+            <div style={{
+                margin: '0 40px 24px',
+                background: '#fff',
+                border: '2.5px solid #1A1A1A',
+                borderRadius: 20,
+                padding: '20px 28px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 20,
                 boxShadow: '4px 4px 0 #1A1A1A',
             }}>
                 <div style={{ fontSize: 48, lineHeight: 1 }}>{emoji}</div>
                 <div>
                     <div style={{
                         fontSize: 11, fontWeight: 700, color: '#888',
-                        textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4,
+                        textTransform: 'uppercase' as const,
+                        letterSpacing: '0.1em', marginBottom: 4,
                     }}>
                         {t('brand.category')} — {categoryName}
                     </div>
@@ -317,36 +338,47 @@ export default async function BrandPage({
             </div>
 
             {/* Section label */}
-            <div className="section-label-pad">
+            <div style={{ padding: '0 40px 12px' }}>
                 <p style={{
                     fontSize: 12, fontWeight: 700, color: '#4A3000',
-                    textTransform: 'uppercase', letterSpacing: '0.1em',
+                    textTransform: 'uppercase' as const, letterSpacing: '0.1em',
                 }}>
                     {t('brand.selectModel')}
                 </p>
             </div>
 
-            {/* Models */}
+            {/* Models Grid */}
             {modelsWithVideos.length > 0 ? (
-                <div className="grid-3">
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(3, 1fr)',
+                    gap: 14,
+                    padding: '0 40px',
+                }}>
                     {modelsWithVideos.map((model, index) => (
-                        <div key={index} style={{
-                            background: '#fff',
-                            border: '2.5px solid #1A1A1A',
-                            borderRadius: 20,
-                            overflow: 'hidden',
-                            boxShadow: '4px 4px 0 #1A1A1A',
-                        }}>
+                        <div
+                            key={index}
+                            style={{
+                                background: '#fff',
+                                border: '2.5px solid #1A1A1A',
+                                borderRadius: 20,
+                                overflow: 'hidden',
+                                boxShadow: '4px 4px 0 #1A1A1A',
+                            }}
+                        >
                             <div style={{ height: 6, background: strip }} />
 
                             {model.resolvedVideoId ? (
-                                <YouTubeEmbed videoId={model.resolvedVideoId} title={model.name} />
+                                <YouTubeEmbed
+                                    videoId={model.resolvedVideoId}
+                                    title={model.name}
+                                />
                             ) : (
                                 <div style={{
                                     height: 160, background: '#F3F4F6',
                                     display: 'flex', alignItems: 'center',
-                                    justifyContent: 'center', fontSize: 13,
-                                    color: '#9CA3AF', fontWeight: 600,
+                                    justifyContent: 'center',
+                                    fontSize: 13, color: '#9CA3AF', fontWeight: 600,
                                 }}>
                                     {t('brand.videoComingSoon')}
                                 </div>
@@ -365,10 +397,8 @@ export default async function BrandPage({
                                     border: '1.5px solid #1A1A1A',
                                     borderRadius: 20,
                                     padding: '2px 10px',
-                                    fontSize: 11,
-                                    fontWeight: 700,
-                                    color: '#1A1A1A',
-                                    marginBottom: 14,
+                                    fontSize: 11, fontWeight: 700,
+                                    color: '#1A1A1A', marginBottom: 14,
                                 }}>
                                     {model.year}
                                 </div>
@@ -377,8 +407,8 @@ export default async function BrandPage({
                             <div style={{ padding: '0 16px 16px' }}>
                                 <div style={{
                                     fontSize: 11, fontWeight: 700, color: '#888',
-                                    textTransform: 'uppercase', letterSpacing: '0.08em',
-                                    marginBottom: 10,
+                                    textTransform: 'uppercase' as const,
+                                    letterSpacing: '0.08em', marginBottom: 10,
                                 }}>
                                     {t('brand.steps')}
                                 </div>
@@ -391,9 +421,9 @@ export default async function BrandPage({
                                             width: 24, height: 24, borderRadius: '50%',
                                             background: strip, border: '2px solid #1A1A1A',
                                             display: 'flex', alignItems: 'center',
-                                            justifyContent: 'center', fontSize: 11,
-                                            fontWeight: 800, color: '#fff',
-                                            flexShrink: 0, marginTop: 1,
+                                            justifyContent: 'center',
+                                            fontSize: 11, fontWeight: 800,
+                                            color: '#fff', flexShrink: 0, marginTop: 1,
                                         }}>
                                             {i + 1}
                                         </div>
@@ -410,9 +440,13 @@ export default async function BrandPage({
                     ))}
                 </div>
             ) : (
-                <div className="coming-soon-margin" style={{
-                    background: '#fff', border: '2.5px dashed #D1D5DB',
-                    borderRadius: 20, padding: '40px', textAlign: 'center',
+                <div style={{
+                    margin: '0 40px',
+                    background: '#fff',
+                    border: '2.5px dashed #D1D5DB',
+                    borderRadius: 20,
+                    padding: '40px',
+                    textAlign: 'center',
                 }}>
                     <div style={{ fontSize: 48, marginBottom: 12 }}>🔧</div>
                     <div style={{ fontSize: 18, fontWeight: 800, color: '#1A1A1A', marginBottom: 6 }}>
@@ -425,7 +459,8 @@ export default async function BrandPage({
             )}
 
             {/* Legal disclaimer */}
-            <div className="disclaimer-margin" style={{
+            <div style={{
+                margin: '32px 40px 0',
                 padding: '16px 20px',
                 background: 'rgba(255,255,255,0.5)',
                 borderRadius: 12,

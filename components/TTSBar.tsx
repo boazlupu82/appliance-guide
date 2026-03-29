@@ -21,11 +21,11 @@ export default function TTSBar({ text }: { text: string }) {
 
     return (
         <div style={{
-            margin: '0 40px',
+            margin: '14px 40px 0',
             background: '#fff',
             border: '2px solid #1A1A1A',
-            borderRadius: 12,
-            padding: '10px 18px',
+            borderRadius: 10,
+            padding: '8px 16px',
             display: 'flex',
             alignItems: 'center',
             gap: 12,
@@ -37,8 +37,8 @@ export default function TTSBar({ text }: { text: string }) {
                     background: speaking ? '#EF4444' : '#1A1A1A',
                     color: speaking ? '#fff' : '#F5A623',
                     border: 'none',
-                    borderRadius: 20,
-                    padding: '6px 16px',
+                    borderRadius: 16,
+                    padding: '5px 14px',
                     fontSize: 12,
                     fontWeight: 700,
                     cursor: 'pointer',

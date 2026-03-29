@@ -30,3 +30,65 @@ body {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 #1A1A1A;
 }
+
+/* ===== RESPONSIVE LAYOUT ===== */
+
+.logo-bar-pad       { padding: 12px 40px; }
+.banner-pad         { padding: 8px 40px; }
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 40px 0;
+    align-items: end;
+    gap: 20px;
+}
+.hero-title {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -1.5px;
+}
+.hero-illustration   { display: flex; justify-content: center; align-items: flex-end; }
+.hero-search         { max-width: 420px; }
+
+.page-x-pad          { padding-left: 40px; padding-right: 40px; }
+.grid-4              { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 0 40px 40px; }
+.grid-3              { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 0 40px; }
+
+.breadcrumb-pad      { padding: 12px 40px; }
+.brand-header-margin { margin: 0 40px 24px; }
+.section-label-pad   { padding: 0 40px 12px; }
+.coming-soon-margin  { margin: 0 40px; }
+.disclaimer-margin   { margin: 32px 40px 0; }
+.cat-header-pad      { padding: 28px 40px 0; }
+.cat-section-pad     { padding: 16px 40px 8px; }
+
+/* Tablet ≤ 1024px */
+@media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile ≤ 640px */
+@media (max-width: 640px) {
+    .logo-bar-pad        { padding: 10px 16px; }
+    .banner-pad          { padding: 8px 16px; }
+
+    .hero-section        { grid-template-columns: 1fr; padding: 16px 16px 0; }
+    .hero-illustration   { display: none; }
+    .hero-title          { font-size: 30px; letter-spacing: -0.5px; }
+    .hero-search         { max-width: 100%; }
+
+    .page-x-pad          { padding-left: 16px; padding-right: 16px; }
+    .grid-4              { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 16px 24px; }
+    .grid-3              { grid-template-columns: 1fr; padding: 0 16px; }
+
+    .breadcrumb-pad      { padding: 12px 16px; }
+    .brand-header-margin { margin: 0 16px 16px; }
+    .section-label-pad   { padding: 0 16px 12px; }
+    .coming-soon-margin  { margin: 0 16px; }
+    .disclaimer-margin   { margin: 24px 16px 0; }
+    .cat-header-pad      { padding: 16px 16px 0; }
+    .cat-section-pad     { padding: 12px 16px 8px; }
+}

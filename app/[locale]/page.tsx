@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import TTSBar from '@/components/TTSBar';
 
@@ -6,7 +6,14 @@ const categories = [
     { key: 'tv', slug: 'tv', emoji: '📺', bg: '#EFF6FF', strip: '#3B82F6', count: '8 brands · 60+ models', svg: null },
     { key: 'kitchen', slug: 'kitchen', emoji: '🍳', bg: '#FFF1F1', strip: '#EF4444', count: '12 brands · 80+ models', svg: null },
     { key: 'laundry', slug: 'laundry', emoji: '🫧', bg: '#F0FDF4', strip: '#10B981', count: '6 brands · 40+ models', svg: null },
-    { key: 'vacuum', slug: 'vacuum', emoji: '', bg: '#F0FDF4', strip: '#6366F1', count: '6 brands · 30+ models', svg: (
+    {
+        key: 'vacuum',
+        slug: 'vacuum',
+        emoji: '',
+        bg: '#F0FDF4',
+        strip: '#6366F1',
+        count: '6 brands · 30+ models',
+        svg: (
             <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
                 <ellipse cx="32" cy="58" rx="22" ry="10" fill="#2D2D2D"/>
                 <ellipse cx="32" cy="55" rx="22" ry="10" fill="#3D3D3D"/>
@@ -23,59 +30,28 @@ const categories = [
                 <rect x="61" y="13" width="12" height="8" rx="2" fill="#3D3D3D" transform="rotate(-20 60 12)"/>
                 <ellipse cx="36" cy="48" rx="6" ry="3" fill="#81C784" opacity="0.6"/>
             </svg>
-        )},
+        ),
+    },
     { key: 'hearing', slug: 'hearing', emoji: '🦻', bg: '#FAF5FF', strip: '#8B5CF6', count: '5 brands · 20+ models', svg: null },
     { key: 'hvac', slug: 'hvac', emoji: '❄️', bg: '#F0F9FF', strip: '#0EA5E9', count: '7 brands · 35+ models', svg: null },
     { key: 'electronics', slug: 'electronics', emoji: '🔌', bg: '#FDF2F8', strip: '#EC4899', count: '10 brands · 50+ models', svg: null },
     { key: 'walking', slug: 'walking', emoji: '🦯', bg: '#FEFCE8', strip: '#EAB308', count: '4 brands · 15+ models', svg: null },
 ];
 
-export default function HomePage({
-                                     params,
-                                 }: {
+export default async function HomePage({
+                                           params,
+                                       }: {
     params: Promise<{ locale: string }>;
 }) {
-    const t = useTranslations();
+    const { locale } = await params;
+    const t = await getTranslations({ locale });
     const ttsText = `Welcome to HomeGuide. ${t('home.subtitle')}`;
 
     return (
         <div style={{ background: '#F5A623', minHeight: '100vh' }}>
 
-            {/* Contact Us Banner — TOP */}
-            <div style={{
-                background: '#1A1A1A',
-                padding: '10px 40px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                flexWrap: 'wrap',
-                gap: 10,
-            }}>
-        <span style={{ fontSize: 13, color: '#9CA3AF', fontWeight: 500 }}>
-          🔍 {t('brand.notFound')} — {t('brand.notFoundDesc')}
-        </span>
-                <Link href="/en/contact" style={{
-                    background: '#F5A623',
-                    color: '#1A1A1A',
-                    borderRadius: 20,
-                    padding: '6px 18px',
-                    fontSize: 12,
-                    fontWeight: 800,
-                    textDecoration: 'none',
-                    whiteSpace: 'nowrap',
-                }}>
-                    {t('brand.contactUs')} ↗
-                </Link>
-            </div>
-
             {/* Hero */}
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                padding: '20px 40px 0',
-                alignItems: 'end',
-                gap: 20,
-            }}>
+            <div className="hero-section">
                 <div style={{ paddingBottom: 32 }}>
                     <div style={{
                         display: 'inline-flex', alignItems: 'center', gap: 6,
@@ -86,9 +62,9 @@ export default function HomePage({
                         <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#22C55E' }} />
                         {t('home.tag')}
                     </div>
-                    <h1 style={{
-                        fontSize: 48, fontWeight: 800, color: '#1A1A1A',
-                        lineHeight: 1.1, marginBottom: 12, letterSpacing: '-1.5px',
+
+                    <h1 className="hero-title" style={{
+                        fontWeight: 800, color: '#1A1A1A',
                     }}>
                         {t('home.titleLine1')}<br />
                         <span style={{
@@ -99,16 +75,18 @@ export default function HomePage({
             </span><br />
                         {t('home.titleLine3')}
                     </h1>
+
                     <p style={{
                         fontSize: 15, color: '#4A3000', lineHeight: 1.6,
                         marginBottom: 24, maxWidth: 380,
                     }}>
                         {t('home.subtitle')}
                     </p>
-                    <div style={{
+
+                    <div className="hero-search" style={{
                         display: 'flex', background: '#fff',
                         border: '2.5px solid #1A1A1A', borderRadius: 50,
-                        overflow: 'hidden', maxWidth: 420,
+                        overflow: 'hidden',
                         boxShadow: '4px 4px 0 #1A1A1A',
                     }}>
                         <input
@@ -130,8 +108,8 @@ export default function HomePage({
                     </div>
                 </div>
 
-                {/* Illustration */}
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+                {/* Cartoon Illustration */}
+                <div className="hero-illustration">
                     <svg width="360" height="300" viewBox="0 0 360 300" fill="none">
                         <rect x="60" y="20" width="240" height="180" rx="14" fill="#fff" stroke="#1A1A1A" strokeWidth="3"/>
                         <rect x="75" y="35" width="100" height="75" rx="8" fill="#DBEAFE" stroke="#1A1A1A" strokeWidth="2"/>
@@ -166,7 +144,7 @@ export default function HomePage({
 
             <TTSBar text={ttsText} />
 
-            <div style={{ padding: '20px 40px 8px' }}>
+            <div className="page-x-pad" style={{ paddingTop: 20, paddingBottom: 8 }}>
                 <p style={{
                     fontSize: 12, fontWeight: 700, color: '#4A3000',
                     textTransform: 'uppercase', letterSpacing: '0.1em',
@@ -175,14 +153,14 @@ export default function HomePage({
                 </p>
             </div>
 
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: 14,
-                padding: '0 40px 40px',
-            }}>
+            {/* Category Grid */}
+            <div className="grid-4">
                 {categories.map((cat) => (
-                    <Link key={cat.key} href={`/en/${cat.slug}`} style={{ textDecoration: 'none' }}>
+                    <Link
+                        key={cat.key}
+                        href={`/${locale}/${cat.slug}`}
+                        style={{ textDecoration: 'none' }}
+                    >
                         <div
                             className="card-hover"
                             style={{
@@ -201,8 +179,11 @@ export default function HomePage({
                                 fontSize: 12, fontWeight: 800, color: '#1A1A1A',
                             }}>↗</div>
                             <div style={{
-                                height: 110, display: 'flex', alignItems: 'center',
-                                justifyContent: 'center', background: cat.bg,
+                                height: 110,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                background: cat.bg,
                                 fontSize: 72,
                                 filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.15))',
                             }}>
@@ -219,6 +200,8 @@ export default function HomePage({
                         </div>
                     </Link>
                 ))}
+
+                {/* Coming soon card */}
                 <div style={{
                     background: '#fff', border: '2.5px dashed #D1D5DB',
                     borderRadius: 20, overflow: 'hidden', opacity: 0.5,

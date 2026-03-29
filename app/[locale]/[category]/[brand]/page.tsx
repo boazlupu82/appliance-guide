@@ -275,13 +275,11 @@ export default async function BrandPage({
         <div style={{ background: '#F5A623', minHeight: '100vh', paddingBottom: 40 }}>
 
             {/* Breadcrumb */}
-            <div style={{
-                padding: '12px 40px',
+            <div className="page-pad" style={{
+                paddingTop: 12, paddingBottom: 12,
                 display: 'flex',
                 alignItems: 'center',
                 gap: 8,
-                fontSize: 13,
-                fontWeight: 600,
                 flexWrap: 'wrap' as const,
             }}>
                 <Link href={`/${locale}`} style={{
@@ -290,6 +288,7 @@ export default async function BrandPage({
                     borderRadius: 20, padding: '4px 12px',
                     fontSize: 12, fontWeight: 700,
                     boxShadow: '2px 2px 0 #1A1A1A',
+                    whiteSpace: 'nowrap' as const,
                 }}>
                     ← {t('nav.home')}
                 </Link>
@@ -300,45 +299,50 @@ export default async function BrandPage({
                     borderRadius: 20, padding: '4px 12px',
                     fontSize: 12, fontWeight: 700,
                     boxShadow: '2px 2px 0 #1A1A1A',
+                    whiteSpace: 'nowrap' as const,
                 }}>
                     {emoji} {categoryName}
                 </Link>
                 <span style={{ opacity: 0.5 }}>›</span>
-                <span style={{ fontWeight: 800 }}>{brandName}</span>
+                <span style={{ fontWeight: 800, fontSize: 13 }}>{brandName}</span>
             </div>
 
             {/* Header card */}
-            <div style={{
-                margin: '0 40px 24px',
-                background: '#fff',
-                border: '2.5px solid #1A1A1A',
-                borderRadius: 20,
-                padding: '20px 28px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 20,
-                boxShadow: '4px 4px 0 #1A1A1A',
-            }}>
-                <div style={{ fontSize: 48, lineHeight: 1 }}>{emoji}</div>
-                <div>
-                    <div style={{
-                        fontSize: 11, fontWeight: 700, color: '#888',
-                        textTransform: 'uppercase' as const,
-                        letterSpacing: '0.1em', marginBottom: 4,
-                    }}>
-                        {t('brand.category')} — {categoryName}
-                    </div>
-                    <div style={{ fontSize: 26, fontWeight: 800, color: '#1A1A1A', marginBottom: 4 }}>
-                        {brandName}
-                    </div>
-                    <div style={{ fontSize: 13, color: '#666', fontWeight: 500 }}>
-                        {modelsWithVideos.length} {t('brand.models')} — {t('brand.selectBelow')}
+            <div className="page-pad" style={{ marginBottom: 24 }}>
+                <div style={{
+                    background: '#fff',
+                    border: '2.5px solid #1A1A1A',
+                    borderRadius: 20,
+                    padding: '16px 20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 16,
+                    boxShadow: '4px 4px 0 #1A1A1A',
+                }}>
+                    <div style={{ fontSize: 44, lineHeight: 1, flexShrink: 0 }}>{emoji}</div>
+                    <div style={{ minWidth: 0 }}>
+                        <div style={{
+                            fontSize: 11, fontWeight: 700, color: '#888',
+                            textTransform: 'uppercase' as const,
+                            letterSpacing: '0.1em', marginBottom: 4,
+                        }}>
+                            {t('brand.category')} — {categoryName}
+                        </div>
+                        <div style={{
+                            fontSize: 'clamp(18px, 4vw, 26px)',
+                            fontWeight: 800, color: '#1A1A1A', marginBottom: 4,
+                        }}>
+                            {brandName}
+                        </div>
+                        <div style={{ fontSize: 13, color: '#666', fontWeight: 500 }}>
+                            {modelsWithVideos.length} {t('brand.models')} — {t('brand.selectBelow')}
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* Section label */}
-            <div style={{ padding: '0 40px 12px' }}>
+            <div className="page-pad" style={{ paddingBottom: 12 }}>
                 <p style={{
                     fontSize: 12, fontWeight: 700, color: '#4A3000',
                     textTransform: 'uppercase' as const, letterSpacing: '0.1em',
@@ -347,14 +351,9 @@ export default async function BrandPage({
                 </p>
             </div>
 
-            {/* Models Grid */}
+            {/* Models Grid — 1 col mobile, 2 col tablet, 3 col desktop */}
             {modelsWithVideos.length > 0 ? (
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(3, 1fr)',
-                    gap: 14,
-                    padding: '0 40px',
-                }}>
+                <div className="model-grid page-pad">
                     {modelsWithVideos.map((model, index) => (
                         <div
                             key={index}
@@ -375,7 +374,7 @@ export default async function BrandPage({
                                 />
                             ) : (
                                 <div style={{
-                                    height: 160, background: '#F3F4F6',
+                                    height: 180, background: '#F3F4F6',
                                     display: 'flex', alignItems: 'center',
                                     justifyContent: 'center',
                                     fontSize: 13, color: '#9CA3AF', fontWeight: 600,
@@ -386,7 +385,8 @@ export default async function BrandPage({
 
                             <div style={{ padding: '14px 16px 6px' }}>
                                 <div style={{
-                                    fontSize: 16, fontWeight: 800,
+                                    fontSize: 'clamp(14px, 3vw, 16px)',
+                                    fontWeight: 800,
                                     color: '#1A1A1A', marginBottom: 6,
                                 }}>
                                     {model.name}
@@ -415,21 +415,22 @@ export default async function BrandPage({
                                 {model.instructions?.map((step: string, i: number) => (
                                     <div key={i} style={{
                                         display: 'flex', gap: 10,
-                                        marginBottom: 8, alignItems: 'flex-start',
+                                        marginBottom: 10, alignItems: 'flex-start',
                                     }}>
                                         <div style={{
-                                            width: 24, height: 24, borderRadius: '50%',
+                                            width: 26, height: 26, borderRadius: '50%',
                                             background: strip, border: '2px solid #1A1A1A',
                                             display: 'flex', alignItems: 'center',
                                             justifyContent: 'center',
-                                            fontSize: 11, fontWeight: 800,
+                                            fontSize: 12, fontWeight: 800,
                                             color: '#fff', flexShrink: 0, marginTop: 1,
                                         }}>
                                             {i + 1}
                                         </div>
                                         <div style={{
-                                            fontSize: 13, color: '#374151',
-                                            lineHeight: 1.5, fontWeight: 500,
+                                            fontSize: 'clamp(13px, 2vw, 14px)',
+                                            color: '#374151',
+                                            lineHeight: 1.6, fontWeight: 500,
                                         }}>
                                             {step}
                                         </div>
@@ -440,36 +441,38 @@ export default async function BrandPage({
                     ))}
                 </div>
             ) : (
-                <div style={{
-                    margin: '0 40px',
-                    background: '#fff',
-                    border: '2.5px dashed #D1D5DB',
-                    borderRadius: 20,
-                    padding: '40px',
-                    textAlign: 'center',
-                }}>
-                    <div style={{ fontSize: 48, marginBottom: 12 }}>🔧</div>
-                    <div style={{ fontSize: 18, fontWeight: 800, color: '#1A1A1A', marginBottom: 6 }}>
-                        {t('brand.comingSoon')}
-                    </div>
-                    <div style={{ fontSize: 14, color: '#888' }}>
-                        {t('brand.comingSoonDesc')}
+                <div className="page-pad">
+                    <div style={{
+                        background: '#fff',
+                        border: '2.5px dashed #D1D5DB',
+                        borderRadius: 20,
+                        padding: '40px',
+                        textAlign: 'center',
+                    }}>
+                        <div style={{ fontSize: 48, marginBottom: 12 }}>🔧</div>
+                        <div style={{ fontSize: 18, fontWeight: 800, color: '#1A1A1A', marginBottom: 6 }}>
+                            {t('brand.comingSoon')}
+                        </div>
+                        <div style={{ fontSize: 14, color: '#888' }}>
+                            {t('brand.comingSoonDesc')}
+                        </div>
                     </div>
                 </div>
             )}
 
             {/* Legal disclaimer */}
-            <div style={{
-                margin: '32px 40px 0',
-                padding: '16px 20px',
-                background: 'rgba(255,255,255,0.5)',
-                borderRadius: 12,
-                fontSize: 11,
-                color: '#4A3000',
-                lineHeight: 1.6,
-                border: '1px solid rgba(0,0,0,0.1)',
-            }}>
-                📋 {t('brand.disclaimer')}
+            <div className="page-pad" style={{ marginTop: 32 }}>
+                <div style={{
+                    padding: '16px 20px',
+                    background: 'rgba(255,255,255,0.5)',
+                    borderRadius: 12,
+                    fontSize: 11,
+                    color: '#4A3000',
+                    lineHeight: 1.6,
+                    border: '1px solid rgba(0,0,0,0.1)',
+                }}>
+                    📋 {t('brand.disclaimer')}
+                </div>
             </div>
         </div>
     );

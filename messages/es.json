@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Inicio"
+  },
+  "home": {
+    "tag": "Guías simples para todos",
+    "titleLine1": "Tu guía de",
+    "titleLine2": "Electrodomésticos",
+    "titleLine3": "del hogar",
+    "subtitle": "Guías de video paso a paso para cada electrodoméstico en tu hogar. Fácil de seguir, en 4 idiomas.",
+    "searchPlaceholder": "Buscar ej. Samsung TV, microondas...",
+    "search": "Buscar",
+    "categories": "Elige tu categoría"
+  },
+  "categories": {
+    "tv": "Televisión",
+    "kitchen": "Horno y Cocina",
+    "laundry": "Lavandería",
+    "vacuum": "Aspiradoras",
+    "hearing": "Audífonos",
+    "hvac": "Calefacción y Aire",
+    "electronics": "Pequeños Electrónicos",
+    "walking": "Ayudas para Caminar",
+    "car": "Mantenimiento Auto"
+  },
+  "brand": {
+    "category": "Categoría",
+    "selectModel": "Selecciona tu modelo",
+    "models": "modelos",
+    "selectBelow": "selecciona abajo",
+    "steps": "Instrucciones paso a paso",
+    "comingSoon": "Próximamente",
+    "comingSoonDesc": "Estamos trabajando en agregar guías para esta marca.",
+    "videoComingSoon": "Video próximamente",
+    "notFound": "¿No encontraste tu electrodoméstico?",
+    "notFoundDesc": "¿No encuentras tu marca o modelo? ¡Contáctanos y lo agregaremos!",
+    "contactUs": "Contáctanos",
+    "disclaimer": "Todos los videos están incrustados de YouTube y pertenecen a sus respectivos propietarios. Los nombres de marcas y logos son marcas registradas de sus respectivas empresas. HomeGuide no está afiliado ni respaldado por ninguna marca listada en este sitio."
+  },
+  "car": {
+    "selectPart": "Selecciona una pieza",
+    "stepsLabel": "Instrucciones paso a paso",
+    "disclaimer": "Consulta siempre el manual del propietario de tu vehículo antes de realizar cualquier mantenimiento. Si no estás seguro, visita a un mecánico profesional. HomeGuide no es responsable de ningún daño.",
+    "tires": {
+      "title": "Neumáticos",
+      "steps": [
+        "Estaciona en una superficie plana y aplica el freno de mano.",
+        "Afloja un poco las tuercas de la rueda antes de levantar el auto.",
+        "Coloca el gato bajo el punto de levantamiento cerca del neumático.",
+        "Levanta el auto hasta que el neumático esté a unos 15 cm del suelo.",
+        "Retira las tuercas completamente y saca el neumático pinchado.",
+        "Monta el neumático de repuesto y aprieta las tuercas en estrella.",
+        "Baja el auto y aprieta completamente las tuercas al torque correcto.",
+        "Verifica la presión del neumático de repuesto antes de conducir."
+      ]
+    },
+    "wipers": {
+      "title": "Limpiaparabrisas",
+      "steps": [
+        "Levanta el brazo del limpiaparabrisas hasta que se bloquee en posición.",
+        "Busca la pestaña de liberación donde la escobilla se conecta al brazo.",
+        "Presiona la pestaña y desliza la escobilla vieja hacia abajo.",
+        "Anota el tipo de conector antes de comprar escobillas nuevas.",
+        "Desliza la escobilla nueva en el brazo hasta escuchar un clic.",
+        "Baja suavemente el brazo del limpiaparabrisas al parabrisas.",
+        "Repite el mismo proceso con la otra escobilla.",
+        "Prueba los limpiaparabrisas con líquido lavaparabrisas."
+      ]
+    },
+    "front-headlights": {
+      "title": "Faros Delanteros",
+      "steps": [
+        "Apaga el motor y deja que el auto se enfríe completamente.",
+        "Abre el capó y localiza el conjunto del faro desde atrás.",
+        "Desconecta el arnés de cableado presionando el clip de liberación.",
+        "Gira el soporte de la bombilla en sentido antihorario para retirarlo.",
+        "Saca la bombilla vieja — evita tocar la nueva con las manos.",
+        "Inserta la bombilla nueva y gira en sentido horario para bloquear.",
+        "Vuelve a conectar el arnés hasta escuchar un clic.",
+        "Prueba el faro antes de cerrar el capó."
+      ]
+    },
+    "back-headlights": {
+      "title": "Luces Traseras",
+      "steps": [
+        "Abre el maletero y localiza el panel de acceso detrás de la luz trasera.",
+        "Retira los tornillos o clips del panel para acceder al portalámparas.",
+        "Gira el zócalo en sentido antihorario y sácalo.",
+        "Presiona y gira la bombilla vieja para retirarla del zócalo.",
+        "Inserta la bombilla nueva — asegúrate de que sea el tipo correcto.",
+        "Vuelve a poner el zócalo y gira en sentido horario para bloquear.",
+        "Reemplaza el panel de acceso y cierra el maletero.",
+        "Pide a alguien que se coloque detrás del auto mientras pruebas las luces."
+      ]
+    }
+  },
+  "instructions": {
+    "tv": {
+      "samsung": {
+        "frame55": ["Enciende tu Samsung TV y presiona el botón Inicio.", "Navega a Configuración.", "Selecciona General y Funciones inteligentes.", "Inicia sesión con tu cuenta Samsung.", "Sigue el asistente de configuración."],
+        "crystal43": ["Conecta la alimentación y enciende.", "Selecciona idioma y país.", "Conéctate al WiFi.", "Inicia sesión en Samsung.", "Completa el asistente."],
+        "neoqled65": ["Posiciona y conecta.", "Presiona Encendido y sigue la guía.", "Conecta WiFi y cuenta Samsung.", "Calibra la imagen.", "Configura asistentes de voz."]
+      },
+      "lg": {
+        "oledc3": ["Enciende y elige idioma.", "Conéctate al WiFi.", "Inicia sesión en LG ThinQ.", "Completa el asistente.", "Ajusta el modo de imagen."],
+        "nanocell50": ["Conecta y enciende.", "Sigue la guía inicial.", "Conecta a la red.", "Crea cuenta LG.", "Disfruta tu TV."]
+      },
+      "sony": {
+        "bravia55": ["Conecta y enciende.", "Elige idioma y región.", "Conecta WiFi.", "Inicia sesión Google.", "Completa Android TV."]
+      }
+    },
+    "kitchen": {
+      "bosch": {
+        "serie6oven": ["Lee el manual antes del primer uso.", "Retira embalajes internos.", "Configura el reloj.", "Haz un ciclo vacío a 200°C.", "Tu horno está listo."],
+        "serie4microwave": ["Coloca en superficie estable.", "Conecta la alimentación.", "Configura el reloj.", "Prueba con agua.", "Tu microondas está listo."]
+      },
+      "samsung": {
+        "bespokefridge": ["Deja vertical 2 horas antes de enchufar.", "Configura temperatura.", "Conecta al WiFi via Family Hub.", "Usa el dispensador de hielo.", "Limpia el filtro cada 6 meses."]
+      }
+    },
+    "laundry": {
+      "bosch": {
+        "serie6washing": ["Conecta las mangueras.", "Nivela la máquina.", "Haz un ciclo vacío a 90°C.", "Agrega detergente.", "Selecciona programa."]
+      },
+      "samsung": {
+        "ecobubble": ["Instala y nivela.", "Conecta las mangueras.", "Haz un ciclo de limpieza.", "Usa EcoBubble para delicados.", "Descarga SmartThings."]
+      }
+    },
+    "hvac": {
+      "daikin": {
+        "perfera": ["Monta la unidad interior.", "Conecta tuberías.", "Instala la unidad exterior.", "Enciende y prueba.", "Configura temperatura."]
+      },
+      "mitsubishi": {
+        "mszap": ["Instala a 2.5m del suelo.", "Conecta tuberías.", "Instala unidad exterior.", "Enciende y prueba.", "Configura el control remoto."]
+      }
+    },
+    "hearing": {
+      "phonak": {
+        "audeo": ["Carga completamente.", "Inserta suavemente.", "Ajusta el volumen.", "Descarga myPhonak.", "Visita un audiólogo."]
+      },
+      "oticon": {
+        "more1": ["Carga 3 horas.", "Descarga Oticon ON.", "Empareja por Bluetooth.", "Inserta y ajusta.", "Programa seguimiento."]
+      }
+    },
+    "electronics": {
+      "apple": {
+        "iphone15": ["Presiona el botón lateral.", "Elige idioma.", "Conecta WiFi y Apple ID.", "Configura Face ID.", "Restaura o configura como nuevo."]
+      },
+      "samsung": {
+        "galaxys23": ["Inserta la SIM.", "Enciende y sigue el asistente.", "Conecta cuentas.", "Configura biometría.", "Transfiere datos."]
+      }
+    },
+    "walking": {
+      "drivemedical": {
+        "nitro": ["Despliega el andador.", "Ajusta altura de manijas.", "Prueba los frenos.", "Bloquea frenos al sentarse.", "Dobla presionando el pestillo."]
+      },
+      "invacare": {
+        "alurehab": ["Ensambla según el manual.", "Ajusta las manijas.", "Verifica los tornillos.", "Prueba los frenos.", "Consulta a tu fisioterapeuta."]
+      }
+    },
+    "vacuum": {
+      "dyson": {
+        "v15": ["Carga 4.5 horas antes.", "Adjunta la cabeza correcta.", "Presiona el gatillo.", "Vacía el depósito al MAX.", "Limpia el filtro mensual."],
+        "v12": ["Carga 3.5 horas.", "Elige la cabeza adecuada.", "Usa boost para suciedad.", "Vacía tras cada uso.", "Lava el filtro mensual."]
+      },
+      "miele": {
+        "completec3": ["Adjunta la cabeza correcta.", "Ajusta la potencia.", "Cambia la bolsa al rojo.", "Limpia el filtro del motor.", "Usa filtro higiénico."]
+      },
+      "irobot": {
+        "roombaj7": ["Carga 2 horas.", "Descarga iRobot HOME.", "Conecta al WiFi.", "Configura zonas.", "Programa la limpieza."]
+      }
+    }
+  }
+}

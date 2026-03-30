@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Home"
+  },
+  "home": {
+    "tag": "Simple guides for everyone",
+    "titleLine1": "Your Home",
+    "titleLine2": "Appliance",
+    "titleLine3": "Helper",
+    "subtitle": "Step-by-step video guides for every appliance in your home. Easy to follow, in 4 languages.",
+    "searchPlaceholder": "Search e.g. Samsung TV, microwave...",
+    "search": "Search",
+    "categories": "Choose your appliance category"
+  },
+  "categories": {
+    "tv": "Television",
+    "kitchen": "Oven & Kitchen",
+    "laundry": "Laundry",
+    "vacuum": "Vacuum Cleaners",
+    "hearing": "Hearing Aids",
+    "hvac": "Heating & Cooling",
+    "electronics": "Small Electronics",
+    "walking": "Walking Aids",
+    "car": "Car Maintenance"
+  },
+  "brand": {
+    "category": "Category",
+    "selectModel": "Select your model",
+    "models": "models",
+    "selectBelow": "select yours below",
+    "steps": "Step-by-step instructions",
+    "comingSoon": "Coming Soon",
+    "comingSoonDesc": "We are working on adding guides for this brand.",
+    "videoComingSoon": "Video coming soon",
+    "notFound": "Didn't find your appliance?",
+    "notFoundDesc": "Can't find your brand or model? Contact us and we'll add it!",
+    "contactUs": "Contact Us",
+    "disclaimer": "All videos are embedded from YouTube and belong to their respective owners. Brand names and logos are trademarks of their respective companies. HomeGuide is not affiliated with or endorsed by any brand listed on this site."
+  },
+  "car": {
+    "selectPart": "Select a part",
+    "stepsLabel": "Step-by-step instructions",
+    "disclaimer": "Always consult your vehicle's owner manual before performing any maintenance. If unsure, visit a professional mechanic. HomeGuide is not responsible for any damage.",
+    "tires": {
+      "title": "Tires",
+      "steps": [
+        "Park on a flat surface and apply the handbrake.",
+        "Loosen the wheel nuts slightly before jacking up the car.",
+        "Place the jack under the vehicle's jack point near the flat tire.",
+        "Raise the car until the tire is about 6 inches off the ground.",
+        "Remove the wheel nuts fully and pull off the flat tire.",
+        "Mount the spare tire and hand-tighten the nuts in a star pattern.",
+        "Lower the car and fully tighten the nuts to the correct torque.",
+        "Check the spare tire pressure before driving."
+      ]
+    },
+    "wipers": {
+      "title": "Wipers",
+      "steps": [
+        "Lift the wiper arm away from the windshield until it locks in position.",
+        "Look for the release tab where the blade connects to the arm.",
+        "Press the tab and slide the old blade downward to remove it.",
+        "Note the connector type before buying new blades.",
+        "Slide the new blade onto the arm until you hear a click.",
+        "Gently lower the wiper arm back onto the windshield.",
+        "Repeat the same process for the other wiper blade.",
+        "Test the wipers with washer fluid to confirm they work."
+      ]
+    },
+    "front-headlights": {
+      "title": "Front Headlights",
+      "steps": [
+        "Turn off the engine and let the car cool down completely.",
+        "Open the hood and locate the headlight assembly from behind.",
+        "Disconnect the wiring harness by pressing the release clip.",
+        "Rotate the bulb holder counterclockwise to remove it.",
+        "Pull out the old bulb — avoid touching the new bulb with bare hands.",
+        "Insert the new bulb and rotate clockwise to lock it.",
+        "Reconnect the wiring harness until you hear a click.",
+        "Test the headlight before closing the hood."
+      ]
+    },
+    "back-headlights": {
+      "title": "Back Headlights",
+      "steps": [
+        "Open the trunk and locate the access panel behind the tail light.",
+        "Remove the panel screws or clips to access the bulb holder.",
+        "Twist the bulb socket counterclockwise and pull it out.",
+        "Press and twist the old bulb to remove it from the socket.",
+        "Insert the new bulb — make sure it's the correct type.",
+        "Push the socket back in and twist clockwise to lock.",
+        "Replace the access panel and close the trunk.",
+        "Ask someone to stand behind the car while you test the lights."
+      ]
+    }
+  },
+  "instructions": {
+    "tv": {
+      "samsung": {
+        "frame55": ["Turn on your Samsung TV and press the Home button on your remote.", "Navigate to Settings using the directional pad.", "Select General and then Smart Features.", "Sign in with your Samsung account or create one.", "Follow the on-screen setup wizard to complete installation."],
+        "crystal43": ["Connect the power cable and turn on the TV.", "Select your language and country from the setup menu.", "Connect to your WiFi network.", "Sign in to your Samsung account.", "Complete the guided setup wizard."],
+        "neoqled65": ["Position the TV and connect all cables.", "Press Power and follow the initial setup guide.", "Connect to WiFi and sign into Samsung account.", "Calibrate picture settings using the auto-calibration tool.", "Set up voice assistants if desired."]
+      },
+      "lg": {
+        "oledc3": ["Power on and select language.", "Connect to WiFi network.", "Sign in to LG ThinQ account.", "Complete the setup wizard.", "Adjust picture mode to your preference."],
+        "nanocell50": ["Connect power and press the power button.", "Follow the initial setup guide.", "Connect to your home network.", "Sign in or create LG account.", "Enjoy your TV."]
+      },
+      "sony": {
+        "bravia55": ["Connect cables and power on.", "Select language and region.", "Connect to WiFi.", "Sign into Google account.", "Complete Android TV setup."]
+      }
+    },
+    "kitchen": {
+      "bosch": {
+        "serie6oven": ["Read the manual before first use.", "Remove all packaging and stickers from inside.", "Set the clock using the control panel buttons.", "Run an empty burn-off cycle at 200°C for 1 hour.", "Your oven is now ready to use."],
+        "serie4microwave": ["Place the microwave on a stable surface.", "Connect to power outlet.", "Set the clock by pressing the clock button.", "Test with a cup of water on medium power for 1 minute.", "Your microwave is ready to use."]
+      },
+      "samsung": {
+        "bespokefridge": ["Allow the fridge to stand upright for 2 hours before plugging in.", "Set temperature to 4C for fridge and -18C for freezer.", "Connect to WiFi via the Family Hub screen.", "Use the ice maker by pressing the ice type button.", "Clean water filter every 6 months."]
+      }
+    },
+    "laundry": {
+      "bosch": {
+        "serie6washing": ["Connect water inlet and outlet hoses.", "Level the machine using the adjustable feet.", "Run an empty cycle at 90°C to clean the drum.", "Add detergent to the correct drawer compartment.", "Select your wash program and press Start."]
+      },
+      "samsung": {
+        "ecobubble": ["Install and level the machine.", "Connect water hoses securely.", "Run a drum clean cycle first.", "Use the EcoBubble setting for delicate fabrics.", "Download Samsung SmartThings app to control remotely."]
+      }
+    },
+    "hvac": {
+      "daikin": {
+        "perfera": ["Mount the indoor unit on the wall bracket.", "Connect refrigerant pipes and electrical cables.", "Install the outdoor unit on a stable base.", "Power on and run the test operation mode.", "Set your preferred temperature and fan speed."]
+      },
+      "mitsubishi": {
+        "mszap": ["Install indoor unit at least 2.5m from the floor.", "Connect pipes and drain hose.", "Install outdoor unit with adequate clearance.", "Power on and press the test run button.", "Set temperature and mode on the remote."]
+      }
+    },
+    "hearing": {
+      "phonak": {
+        "audeo": ["Insert the battery or charge the hearing aid fully.", "Insert the hearing aid gently into your ear canal.", "Adjust the volume using the button on the device.", "Download the myPhonak app to fine-tune settings.", "Visit your audiologist for professional fitting."]
+      },
+      "oticon": {
+        "more1": ["Charge the device for 3 hours before first use.", "Download the Oticon ON app on your smartphone.", "Pair the hearing aid via Bluetooth in the app.", "Insert gently into the ear and adjust the dome.", "Schedule a follow-up with your hearing care professional."]
+      }
+    },
+    "electronics": {
+      "apple": {
+        "iphone15": ["Press the side button to power on.", "Select your language and region.", "Connect to WiFi and sign in with Apple ID.", "Set up Face ID by following the on-screen guide.", "Restore from backup or set up as new iPhone."]
+      },
+      "samsung": {
+        "galaxys23": ["Insert SIM card using the ejector tool.", "Power on and follow setup wizard.", "Sign in with Samsung and Google accounts.", "Set up fingerprint and face recognition.", "Transfer data from old device using Smart Switch."]
+      }
+    },
+    "walking": {
+      "drivemedical": {
+        "nitro": ["Unfold the rollator by pulling up on the seat.", "Adjust handle height to wrist level when standing.", "Test both hand brakes before use.", "Lock brakes when sitting on the seat.", "Fold by pressing the latch and lifting the frame."]
+      },
+      "invacare": {
+        "alurehab": ["Assemble according to the included manual.", "Adjust handle height for comfortable grip.", "Check that all screws are tightened securely.", "Test the brakes before first use.", "Consult your physiotherapist for correct walking technique."]
+      }
+    },
+    "vacuum": {
+      "dyson": {
+        "v15": ["Charge fully before first use — 4.5 hours.", "Attach the correct head for your floor type.", "Press the trigger to start and release to stop.", "Empty the bin when the MAX line is reached.", "Clean the filter monthly under cold water."],
+        "v12": ["Charge for 3.5 hours before first use.", "Select the correct floor head attachment.", "Use boost mode for stubborn dirt.", "Empty bin after each use for best performance.", "Wash filter every month and replace annually."]
+      },
+      "miele": {
+        "completec3": ["Attach the correct floorhead for your surface.", "Set suction power using the rotary dial.", "Replace the bag when the indicator light turns red.", "Clean or replace the motor filter every 50 hours.", "Use the hygiene filter for allergy sufferers."]
+      },
+      "irobot": {
+        "roombaj7": ["Charge the Roomba on its Home Base for 2 hours.", "Download the iRobot HOME app and create an account.", "Connect to WiFi by following the app instructions.", "Set up Clean Zones and Keep Out Zones on the map.", "Schedule automatic cleaning from the app."]
+      }
+    }
+  }
+}

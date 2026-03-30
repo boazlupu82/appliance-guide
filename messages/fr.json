@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Accueil"
+  },
+  "home": {
+    "tag": "Guides simples pour tous",
+    "titleLine1": "Votre guide",
+    "titleLine2": "Électroménager",
+    "titleLine3": "à la maison",
+    "subtitle": "Guides vidéo étape par étape pour chaque appareil de votre maison. Facile à suivre, en 4 langues.",
+    "searchPlaceholder": "Rechercher ex. Samsung TV, micro-ondes...",
+    "search": "Rechercher",
+    "categories": "Choisissez votre catégorie"
+  },
+  "categories": {
+    "tv": "Télévision",
+    "kitchen": "Four & Cuisine",
+    "laundry": "Lessive",
+    "vacuum": "Aspirateurs",
+    "hearing": "Aides Auditives",
+    "hvac": "Chauffage & Climatisation",
+    "electronics": "Petits Électroniques",
+    "walking": "Aides à la Marche",
+    "car": "Entretien Auto"
+  },
+  "brand": {
+    "category": "Catégorie",
+    "selectModel": "Sélectionnez votre modèle",
+    "models": "modèles",
+    "selectBelow": "sélectionnez ci-dessous",
+    "steps": "Instructions étape par étape",
+    "comingSoon": "Bientôt disponible",
+    "comingSoonDesc": "Nous travaillons à l'ajout de guides pour cette marque.",
+    "videoComingSoon": "Vidéo bientôt disponible",
+    "notFound": "Vous n'avez pas trouvé votre appareil?",
+    "notFoundDesc": "Vous ne trouvez pas votre marque ou modèle? Contactez-nous et nous l'ajouterons!",
+    "contactUs": "Contactez-nous",
+    "disclaimer": "Toutes les vidéos sont intégrées depuis YouTube et appartiennent à leurs propriétaires respectifs. Les noms de marques et logos sont des marques déposées de leurs sociétés respectives. HomeGuide n'est affilié à aucune marque listée sur ce site."
+  },
+  "car": {
+    "selectPart": "Sélectionnez une pièce",
+    "stepsLabel": "Instructions étape par étape",
+    "disclaimer": "Consultez toujours le manuel du propriétaire de votre véhicule avant d'effectuer toute maintenance. En cas de doute, consultez un mécanicien professionnel. HomeGuide n'est pas responsable des dommages.",
+    "tires": {
+      "title": "Pneus",
+      "steps": [
+        "Garez-vous sur une surface plane et appliquez le frein à main.",
+        "Desserrez légèrement les écrous de roue avant de soulever la voiture.",
+        "Placez le cric sous le point de levage du véhicule près du pneu crevé.",
+        "Soulevez la voiture jusqu'à ce que le pneu soit à environ 15 cm du sol.",
+        "Retirez complètement les écrous et décrochez le pneu crevé.",
+        "Montez le pneu de secours et serrez les écrous en étoile à la main.",
+        "Abaissez la voiture et serrez complètement les écrous au couple correct.",
+        "Vérifiez la pression du pneu de secours avant de conduire."
+      ]
+    },
+    "wipers": {
+      "title": "Essuie-glaces",
+      "steps": [
+        "Levez le bras d'essuie-glace du pare-brise jusqu'à ce qu'il se verrouille.",
+        "Cherchez l'onglet de dégagement où la lame se connecte au bras.",
+        "Appuyez sur l'onglet et faites glisser l'ancienne lame vers le bas.",
+        "Notez le type de connecteur avant d'acheter de nouvelles lames.",
+        "Faites glisser la nouvelle lame sur le bras jusqu'à entendre un clic.",
+        "Abaissez doucement le bras d'essuie-glace sur le pare-brise.",
+        "Répétez le même processus pour l'autre lame d'essuie-glace.",
+        "Testez les essuie-glaces avec du liquide lave-glace."
+      ]
+    },
+    "front-headlights": {
+      "title": "Phares Avant",
+      "steps": [
+        "Coupez le moteur et laissez la voiture refroidir complètement.",
+        "Ouvrez le capot et localisez l'ensemble du phare par l'arrière.",
+        "Débranchez le faisceau de câblage en appuyant sur l'agrafe de dégagement.",
+        "Faites tourner le porte-ampoule dans le sens antihoraire pour le retirer.",
+        "Retirez l'ancienne ampoule — évitez de toucher la nouvelle avec les mains nues.",
+        "Insérez la nouvelle ampoule et tournez dans le sens horaire pour verrouiller.",
+        "Rebranchez le faisceau de câblage jusqu'à entendre un clic.",
+        "Testez le phare avant de fermer le capot."
+      ]
+    },
+    "back-headlights": {
+      "title": "Feux Arrière",
+      "steps": [
+        "Ouvrez le coffre et localisez le panneau d'accès derrière le feu arrière.",
+        "Retirez les vis ou les clips du panneau pour accéder au porte-ampoule.",
+        "Tournez la douille dans le sens antihoraire et retirez-la.",
+        "Appuyez et tournez l'ancienne ampoule pour la retirer de la douille.",
+        "Insérez la nouvelle ampoule — assurez-vous que c'est le bon type.",
+        "Remettez la douille et tournez dans le sens horaire pour verrouiller.",
+        "Remplacez le panneau d'accès et fermez le coffre.",
+        "Demandez à quelqu'un de se placer derrière la voiture pendant le test."
+      ]
+    }
+  },
+  "instructions": {
+    "tv": {
+      "samsung": {
+        "frame55": ["Allumez votre Samsung TV et appuyez sur le bouton Accueil.", "Naviguez vers Paramètres.", "Sélectionnez Général puis Fonctionnalités intelligentes.", "Connectez-vous avec votre compte Samsung.", "Suivez l'assistant de configuration."],
+        "crystal43": ["Branchez l'alimentation et allumez.", "Sélectionnez la langue et le pays.", "Connectez-vous au WiFi.", "Connectez-vous au compte Samsung.", "Terminez l'assistant."],
+        "neoqled65": ["Positionnez et branchez.", "Appuyez sur Marche et suivez le guide.", "Connectez WiFi et compte Samsung.", "Calibrez l'image.", "Configurez les assistants vocaux."]
+      },
+      "lg": {
+        "oledc3": ["Mettez sous tension et choisissez la langue.", "Connectez-vous au WiFi.", "Connectez-vous à LG ThinQ.", "Terminez l'assistant.", "Réglez le mode image."],
+        "nanocell50": ["Branchez et allumez.", "Suivez le guide initial.", "Connectez au réseau.", "Créez un compte LG.", "Profitez de votre TV."]
+      },
+      "sony": {
+        "bravia55": ["Branchez et allumez.", "Choisissez langue et région.", "Connectez WiFi.", "Connectez compte Google.", "Terminez Android TV."]
+      }
+    },
+    "kitchen": {
+      "bosch": {
+        "serie6oven": ["Lisez le manuel avant la première utilisation.", "Retirez les emballages intérieurs.", "Réglez l'horloge.", "Faites un cycle à vide à 200°C pendant 1 heure.", "Votre four est prêt."],
+        "serie4microwave": ["Placez sur une surface stable.", "Branchez l'alimentation.", "Réglez l'horloge.", "Testez avec de l'eau.", "Votre micro-ondes est prêt."]
+      },
+      "samsung": {
+        "bespokefridge": ["Laissez debout 2 heures avant de brancher.", "Réglez la température.", "Connectez au WiFi via Family Hub.", "Utilisez le distributeur de glaçons.", "Nettoyez le filtre tous les 6 mois."]
+      }
+    },
+    "laundry": {
+      "bosch": {
+        "serie6washing": ["Branchez les tuyaux.", "Nivelez la machine.", "Faites un cycle à vide à 90°C.", "Ajoutez la lessive.", "Sélectionnez le programme."]
+      },
+      "samsung": {
+        "ecobubble": ["Installez et nivelez.", "Branchez les tuyaux.", "Faites un cycle de nettoyage.", "Utilisez EcoBubble pour les délicats.", "Téléchargez SmartThings."]
+      }
+    },
+    "hvac": {
+      "daikin": {
+        "perfera": ["Montez l'unité intérieure.", "Branchez les tuyaux.", "Installez l'unité extérieure.", "Allumez et testez.", "Réglez la température."]
+      },
+      "mitsubishi": {
+        "mszap": ["Installez à 2.5m du sol.", "Branchez les tuyaux.", "Installez l'unité extérieure.", "Allumez et testez.", "Réglez la télécommande."]
+      }
+    },
+    "hearing": {
+      "phonak": {
+        "audeo": ["Chargez complètement.", "Insérez doucement.", "Réglez le volume.", "Téléchargez myPhonak.", "Consultez un audiologiste."]
+      },
+      "oticon": {
+        "more1": ["Chargez 3 heures.", "Téléchargez Oticon ON.", "Associez via Bluetooth.", "Insérez et ajustez.", "Planifiez un suivi."]
+      }
+    },
+    "electronics": {
+      "apple": {
+        "iphone15": ["Appuyez sur le bouton latéral.", "Choisissez la langue.", "Connectez WiFi et Apple ID.", "Configurez Face ID.", "Restaurez ou configurez comme neuf."]
+      },
+      "samsung": {
+        "galaxys23": ["Insérez la carte SIM.", "Allumez et suivez l'assistant.", "Connectez les comptes.", "Configurez biométrie.", "Transférez les données."]
+      }
+    },
+    "walking": {
+      "drivemedical": {
+        "nitro": ["Dépliez le rollator.", "Ajustez la hauteur des poignées.", "Testez les freins.", "Verrouillez les freins en position assise.", "Pliez en appuyant sur le loquet."]
+      },
+      "invacare": {
+        "alurehab": ["Assemblez selon le manuel.", "Ajustez les poignées.", "Vérifiez les vis.", "Testez les freins.", "Consultez votre physiothérapeute."]
+      }
+    },
+    "vacuum": {
+      "dyson": {
+        "v15": ["Chargez 4.5 heures avant.", "Attachez la bonne tête.", "Appuyez sur la gâchette.", "Videz le bac au MAX.", "Nettoyez le filtre mensuellement."],
+        "v12": ["Chargez 3.5 heures.", "Choisissez la tête adaptée.", "Utilisez boost pour les saletés.", "Videz après chaque usage.", "Lavez le filtre mensuel."]
+      },
+      "miele": {
+        "completec3": ["Attachez la bonne tête.", "Réglez la puissance.", "Changez le sac au voyant rouge.", "Nettoyez le filtre moteur.", "Utilisez le filtre hygiène."]
+      },
+      "irobot": {
+        "roombaj7": ["Chargez 2 heures.", "Téléchargez iRobot HOME.", "Connectez au WiFi.", "Configurez les zones.", "Planifiez le nettoyage."]
+      }
+    }
+  }
+}

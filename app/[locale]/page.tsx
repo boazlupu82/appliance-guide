@@ -11,6 +11,7 @@ const categories = [
     { key: 'hvac', slug: 'hvac', emoji: '❄️', bg: '#F0F9FF', strip: '#0EA5E9', count: '7 brands · 35+ models' },
     { key: 'electronics', slug: 'electronics', emoji: '🔌', bg: '#FDF2F8', strip: '#EC4899', count: '10 brands · 50+ models' },
     { key: 'walking', slug: 'walking', emoji: '🦯', bg: '#FEFCE8', strip: '#EAB308', count: '4 brands · 15+ models' },
+    { key: 'car', slug: 'car', emoji: '🚗', bg: '#FFF7ED', strip: '#F97316', count: '10 brands · 4 parts' },
 ];
 
 export default async function HomePage({
@@ -70,8 +71,7 @@ export default async function HomePage({
                     <div style={{
                         display: 'flex', background: '#fff',
                         border: '2.5px solid #1A1A1A', borderRadius: 50,
-                        overflow: 'hidden',
-                        maxWidth: '100%',
+                        overflow: 'hidden', maxWidth: '100%',
                         boxShadow: '4px 4px 0 #1A1A1A',
                     }}>
                         <input
@@ -82,8 +82,7 @@ export default async function HomePage({
                                 padding: '12px 16px',
                                 fontSize: 14, outline: 'none',
                                 background: 'transparent',
-                                fontWeight: 500,
-                                minWidth: 0,
+                                fontWeight: 500, minWidth: 0,
                             }}
                         />
                         <button style={{
@@ -180,8 +179,7 @@ export default async function HomePage({
                             }}>↗</div>
                             <div style={{
                                 height: 'clamp(80px, 12vw, 110px)',
-                                display: 'flex',
-                                alignItems: 'center',
+                                display: 'flex', alignItems: 'center',
                                 justifyContent: 'center',
                                 background: cat.bg,
                                 fontSize: 'clamp(48px, 8vw, 72px)',
@@ -195,8 +193,7 @@ export default async function HomePage({
                             }}>
                                 <div style={{
                                     fontSize: 'clamp(11px, 1.5vw, 14px)',
-                                    fontWeight: 800,
-                                    color: '#1A1A1A', marginBottom: 2,
+                                    fontWeight: 800, color: '#1A1A1A', marginBottom: 2,
                                 }}>
                                     {t(`categories.${cat.key}`)}
                                 </div>
@@ -215,29 +212,19 @@ export default async function HomePage({
                 <div style={{
                     background: '#fff',
                     border: '2.5px dashed #D1D5DB',
-                    borderRadius: 16,
-                    overflow: 'hidden',
-                    opacity: 0.5,
+                    borderRadius: 16, overflow: 'hidden', opacity: 0.5,
                 }}>
                     <div style={{ height: 6, background: '#D1D5DB' }} />
                     <div style={{
                         height: 'clamp(80px, 12vw, 110px)',
-                        display: 'flex',
-                        alignItems: 'center',
+                        display: 'flex', alignItems: 'center',
                         justifyContent: 'center',
                         background: '#F9FAFB',
                         fontSize: 'clamp(36px, 6vw, 56px)',
                     }}>➕</div>
-                    <div style={{
-                        padding: '8px 10px 12px',
-                        borderTop: '2px dashed #D1D5DB',
-                    }}>
-                        <div style={{ fontSize: 13, fontWeight: 800, color: '#9CA3AF' }}>
-                            More soon
-                        </div>
-                        <div style={{ fontSize: 11, fontWeight: 600, color: '#D1D5DB' }}>
-                            coming soon
-                        </div>
+                    <div style={{ padding: '8px 10px 12px', borderTop: '2px dashed #D1D5DB' }}>
+                        <div style={{ fontSize: 13, fontWeight: 800, color: '#9CA3AF' }}>More soon</div>
+                        <div style={{ fontSize: 11, fontWeight: 600, color: '#D1D5DB' }}>coming soon</div>
                     </div>
                 </div>
             </div>

@@ -79,17 +79,30 @@ const brandsData: Record<string, { name: string; color: string; models: number }
         { name: 'LG', color: '#A50034', models: 4 },
         { name: 'iRobot', color: '#E4000F', models: 6 },
     ],
+    car: [
+        { name: 'Toyota', color: '#EB0A1E', models: 4 },
+        { name: 'Honda', color: '#CC0000', models: 4 },
+        { name: 'Ford', color: '#003476', models: 4 },
+        { name: 'BMW', color: '#0066B1', models: 4 },
+        { name: 'Mercedes', color: '#00ADEF', models: 4 },
+        { name: 'Volkswagen', color: '#001E50', models: 4 },
+        { name: 'Hyundai', color: '#002C5F', models: 4 },
+        { name: 'Kia', color: '#C4172C', models: 4 },
+        { name: 'Mazda', color: '#1C1C1C', models: 4 },
+        { name: 'Nissan', color: '#C3002F', models: 4 },
+    ],
 };
 
 const categoryEmoji: Record<string, string> = {
     tv: '📺', kitchen: '🍳', laundry: '🫧', hvac: '❄️',
     electronics: '🔌', hearing: '🦻', walking: '🦯', vacuum: '🧹',
+    car: '🚗',
 };
 
 const categoryStrip: Record<string, string> = {
     tv: '#3B82F6', kitchen: '#EF4444', laundry: '#10B981',
     hvac: '#0EA5E9', electronics: '#EC4899', hearing: '#8B5CF6',
-    walking: '#EAB308', vacuum: '#6366F1',
+    walking: '#EAB308', vacuum: '#6366F1', car: '#F97316',
 };
 
 export default async function CategoryPage({
@@ -110,12 +123,8 @@ export default async function CategoryPage({
             {/* Breadcrumb */}
             <div className="page-pad" style={{
                 paddingTop: 12, paddingBottom: 12,
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8,
-                fontSize: 13,
-                fontWeight: 600,
-                flexWrap: 'wrap' as const,
+                display: 'flex', alignItems: 'center',
+                gap: 8, flexWrap: 'wrap' as const,
             }}>
                 <Link href={`/${locale}`} style={{
                     color: '#1A1A1A', textDecoration: 'none',
@@ -202,7 +211,6 @@ export default async function CategoryPage({
                             }}
                         >
                             <div style={{ height: 6, background: strip }} />
-
                             <div style={{
                                 position: 'absolute', top: 10, right: 8,
                                 width: 22, height: 22, borderRadius: '50%',
@@ -211,17 +219,14 @@ export default async function CategoryPage({
                                 justifyContent: 'center',
                                 fontSize: 11, fontWeight: 800, color: '#1A1A1A',
                             }}>↗</div>
-
                             <BrandLogo brand={brand} />
-
                             <div style={{
                                 padding: '8px 10px 12px',
                                 borderTop: '2px solid #1A1A1A',
                             }}>
                                 <div style={{
                                     fontSize: 'clamp(12px, 1.5vw, 15px)',
-                                    fontWeight: 800,
-                                    color: '#1A1A1A', marginBottom: 3,
+                                    fontWeight: 800, color: '#1A1A1A', marginBottom: 3,
                                 }}>
                                     {brand.name}
                                 </div>

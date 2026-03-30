@@ -1,255 +1,173 @@
 {
   "nav": {
-    "home": "Accueil",
-    "categories": "Catégories",
-    "search": "Rechercher"
+    "home": "Accueil"
   },
   "home": {
     "tag": "Guides simples pour tous",
-    "titleLine1": "Votre Guide",
+    "titleLine1": "Votre guide",
     "titleLine2": "Électroménager",
-    "titleLine3": "à la Maison",
-    "subtitle": "Guides vidéo étape par étape pour chaque appareil. Facile à suivre, en 4 langues.",
+    "titleLine3": "à la maison",
+    "subtitle": "Guides vidéo étape par étape pour chaque appareil de votre maison. Facile à suivre, en 4 langues.",
     "searchPlaceholder": "Rechercher ex. Samsung TV, micro-ondes...",
-    "search": "Chercher",
-    "categories": "Choisissez une catégorie"
+    "search": "Rechercher",
+    "categories": "Choisissez votre catégorie"
   },
   "categories": {
+    "tv": "Télévision",
     "kitchen": "Four & Cuisine",
     "laundry": "Lessive",
-    "hvac": "Chauffage & Climatisation",
-    "electronics": "Petits Appareils",
-    "tv": "Télévision",
+    "vacuum": "Aspirateurs",
     "hearing": "Aides Auditives",
+    "hvac": "Chauffage & Climatisation",
+    "electronics": "Petits Électroniques",
     "walking": "Aides à la Marche",
-    "vacuum": "Aspirateurs"
+    "car": "Entretien Auto"
   },
   "brand": {
     "category": "Catégorie",
     "selectModel": "Sélectionnez votre modèle",
     "models": "modèles",
-    "selectBelow": "choisissez ci-dessous",
+    "selectBelow": "sélectionnez ci-dessous",
     "steps": "Instructions étape par étape",
     "comingSoon": "Bientôt disponible",
-    "comingSoonDesc": "Nous ajoutons des modèles. Revenez bientôt!",
+    "comingSoonDesc": "Nous travaillons à l'ajout de guides pour cette marque.",
     "videoComingSoon": "Vidéo bientôt disponible",
     "notFound": "Vous n'avez pas trouvé votre appareil?",
     "notFoundDesc": "Vous ne trouvez pas votre marque ou modèle? Contactez-nous et nous l'ajouterons!",
     "contactUs": "Contactez-nous",
-    "disclaimer": "Toutes les vidéos sont intégrées depuis YouTube et appartiennent à leurs propriétaires. Les noms de marques sont des marques déposées. HomeGuide n'est pas affilié à aucune marque listée sur ce site."
+    "disclaimer": "Toutes les vidéos sont intégrées depuis YouTube et appartiennent à leurs propriétaires respectifs. Les noms de marques et logos sont des marques déposées de leurs sociétés respectives. HomeGuide n'est affilié à aucune marque listée sur ce site."
+  },
+  "car": {
+    "selectPart": "Sélectionnez une pièce",
+    "stepsLabel": "Instructions étape par étape",
+    "disclaimer": "Consultez toujours le manuel du propriétaire de votre véhicule avant d'effectuer toute maintenance. En cas de doute, consultez un mécanicien professionnel. HomeGuide n'est pas responsable des dommages.",
+    "tires": {
+      "title": "Pneus",
+      "steps": [
+        "Garez-vous sur une surface plane et appliquez le frein à main.",
+        "Desserrez légèrement les écrous de roue avant de soulever la voiture.",
+        "Placez le cric sous le point de levage du véhicule près du pneu crevé.",
+        "Soulevez la voiture jusqu'à ce que le pneu soit à environ 15 cm du sol.",
+        "Retirez complètement les écrous et décrochez le pneu crevé.",
+        "Montez le pneu de secours et serrez les écrous en étoile à la main.",
+        "Abaissez la voiture et serrez complètement les écrous au couple correct.",
+        "Vérifiez la pression du pneu de secours avant de conduire."
+      ]
+    },
+    "wipers": {
+      "title": "Essuie-glaces",
+      "steps": [
+        "Levez le bras d'essuie-glace du pare-brise jusqu'à ce qu'il se verrouille.",
+        "Cherchez l'onglet de dégagement où la lame se connecte au bras.",
+        "Appuyez sur l'onglet et faites glisser l'ancienne lame vers le bas.",
+        "Notez le type de connecteur avant d'acheter de nouvelles lames.",
+        "Faites glisser la nouvelle lame sur le bras jusqu'à entendre un clic.",
+        "Abaissez doucement le bras d'essuie-glace sur le pare-brise.",
+        "Répétez le même processus pour l'autre lame d'essuie-glace.",
+        "Testez les essuie-glaces avec du liquide lave-glace."
+      ]
+    },
+    "front-headlights": {
+      "title": "Phares Avant",
+      "steps": [
+        "Coupez le moteur et laissez la voiture refroidir complètement.",
+        "Ouvrez le capot et localisez l'ensemble du phare par l'arrière.",
+        "Débranchez le faisceau de câblage en appuyant sur l'agrafe de dégagement.",
+        "Faites tourner le porte-ampoule dans le sens antihoraire pour le retirer.",
+        "Retirez l'ancienne ampoule — évitez de toucher la nouvelle avec les mains nues.",
+        "Insérez la nouvelle ampoule et tournez dans le sens horaire pour verrouiller.",
+        "Rebranchez le faisceau de câblage jusqu'à entendre un clic.",
+        "Testez le phare avant de fermer le capot."
+      ]
+    },
+    "back-headlights": {
+      "title": "Feux Arrière",
+      "steps": [
+        "Ouvrez le coffre et localisez le panneau d'accès derrière le feu arrière.",
+        "Retirez les vis ou les clips du panneau pour accéder au porte-ampoule.",
+        "Tournez la douille dans le sens antihoraire et retirez-la.",
+        "Appuyez et tournez l'ancienne ampoule pour la retirer de la douille.",
+        "Insérez la nouvelle ampoule — assurez-vous que c'est le bon type.",
+        "Remettez la douille et tournez dans le sens horaire pour verrouiller.",
+        "Remplacez le panneau d'accès et fermez le coffre.",
+        "Demandez à quelqu'un de se placer derrière la voiture pendant le test."
+      ]
+    }
   },
   "instructions": {
     "tv": {
       "samsung": {
-        "frame55": [
-          "Connectez le câble d'alimentation à l'arrière du téléviseur",
-          "Appuyez sur le bouton d'alimentation de la télécommande",
-          "Suivez l'assistant de configuration pour vous connecter au WiFi",
-          "Utilisez le bouton Home pour accéder aux fonctions Smart TV",
-          "Ajustez les paramètres d'image via Menu → Image → Paramètres experts"
-        ],
-        "crystal43": [
-          "Connectez le câble HDMI de votre appareil au port HDMI du téléviseur",
-          "Appuyez sur Source pour sélectionner la bonne entrée",
-          "Utilisez les boutons de volume sur le côté du téléviseur",
-          "Accédez au mode image via Paramètres → Général → Accessibilité",
-          "Configurez les sous-titres via Menu → Général → Accessibilité"
-        ],
-        "neoqled65": [
-          "Montez le téléviseur au mur avec le support VESA inclus",
-          "Connectez la boîte One Connect avec le câble fourni",
-          "Allumez et complétez la configuration Smart Hub",
-          "Connectez-vous à Bixby en maintenant le bouton microphone",
-          "Utilisez Multi View pour regarder deux sources simultanément"
-        ]
+        "frame55": ["Allumez votre Samsung TV et appuyez sur le bouton Accueil.", "Naviguez vers Paramètres.", "Sélectionnez Général puis Fonctionnalités intelligentes.", "Connectez-vous avec votre compte Samsung.", "Suivez l'assistant de configuration."],
+        "crystal43": ["Branchez l'alimentation et allumez.", "Sélectionnez la langue et le pays.", "Connectez-vous au WiFi.", "Connectez-vous au compte Samsung.", "Terminez l'assistant."],
+        "neoqled65": ["Positionnez et branchez.", "Appuyez sur Marche et suivez le guide.", "Connectez WiFi et compte Samsung.", "Calibrez l'image.", "Configurez les assistants vocaux."]
       },
       "lg": {
-        "oledc3": [
-          "Fixez le support en l'alignant avec le bas du téléviseur",
-          "Connectez l'alimentation et appuyez sur le bouton marche",
-          "Suivez la configuration initiale pour vous connecter au réseau",
-          "Accédez à webOS Home en appuyant sur le bouton Home",
-          "Activez les fonctions ThinQ AI dans les paramètres"
-        ],
-        "nanocell50": [
-          "Placez le téléviseur sur le support et connectez le câble d'alimentation",
-          "Appuyez sur marche de la télécommande",
-          "Sélectionnez votre langue et région",
-          "Connectez-vous au réseau WiFi",
-          "Connectez-vous au compte LG pour accès complet"
-        ]
+        "oledc3": ["Mettez sous tension et choisissez la langue.", "Connectez-vous au WiFi.", "Connectez-vous à LG ThinQ.", "Terminez l'assistant.", "Réglez le mode image."],
+        "nanocell50": ["Branchez et allumez.", "Suivez le guide initial.", "Connectez au réseau.", "Créez un compte LG.", "Profitez de votre TV."]
       },
       "sony": {
-        "bravia55": [
-          "Connectez le cordon d'alimentation et tous les câbles avant d'allumer",
-          "Appuyez sur le bouton d'alimentation de la télécommande",
-          "Sélectionnez votre langue sur l'écran d'accueil",
-          "Connectez-vous à votre réseau WiFi",
-          "Connectez-vous à votre compte Google pour Android TV"
-        ]
+        "bravia55": ["Branchez et allumez.", "Choisissez langue et région.", "Connectez WiFi.", "Connectez compte Google.", "Terminez Android TV."]
       }
     },
     "kitchen": {
       "bosch": {
-        "serie6oven": [
-          "Avant la première utilisation, chauffez le four vide à 250C pendant 1 heure",
-          "Tournez le sélecteur de fonction pour choisir le mode de cuisson",
-          "Réglez la température avec le bouton température",
-          "Appuyez sur le bouton horloge pour régler la durée de cuisson",
-          "Le four bipe quand il atteint la température réglée"
-        ],
-        "serie4microwave": [
-          "Placez les aliments dans un récipient adapté au micro-ondes",
-          "Réglez la puissance avec le bouton de puissance",
-          "Entrez le temps de cuisson avec le pavé numérique",
-          "Appuyez sur Démarrer pour commencer la cuisson",
-          "Laissez les aliments reposer 1-2 minutes avant de servir"
-        ]
+        "serie6oven": ["Lisez le manuel avant la première utilisation.", "Retirez les emballages intérieurs.", "Réglez l'horloge.", "Faites un cycle à vide à 200°C pendant 1 heure.", "Votre four est prêt."],
+        "serie4microwave": ["Placez sur une surface stable.", "Branchez l'alimentation.", "Réglez l'horloge.", "Testez avec de l'eau.", "Votre micro-ondes est prêt."]
       },
       "samsung": {
-        "bespokefridge": [
-          "Laissez le réfrigérateur debout 2 heures avant de brancher",
-          "Réglez la température à 4C pour le réfrigérateur et -18C pour le congélateur",
-          "Connectez-vous au WiFi via l'écran Family Hub",
-          "Utilisez le machine à glaçons en appuyant sur le bouton type de glace",
-          "Nettoyez le filtre à eau tous les 6 mois"
-        ]
+        "bespokefridge": ["Laissez debout 2 heures avant de brancher.", "Réglez la température.", "Connectez au WiFi via Family Hub.", "Utilisez le distributeur de glaçons.", "Nettoyez le filtre tous les 6 mois."]
       }
     },
     "laundry": {
       "bosch": {
-        "serie6washing": [
-          "Triez le linge par couleur et type de tissu",
-          "Chargez le linge sans trop remplir",
-          "Ajoutez la lessive dans le bon compartiment du tiroir",
-          "Sélectionnez le programme de lavage avec le cadran",
-          "Appuyez sur Démarrer/Pause pour commencer le cycle"
-        ]
+        "serie6washing": ["Branchez les tuyaux.", "Nivelez la machine.", "Faites un cycle à vide à 90°C.", "Ajoutez la lessive.", "Sélectionnez le programme."]
       },
       "samsung": {
-        "ecobubble": [
-          "Chargez les vêtements sans trop remplir le tambour",
-          "Ajoutez la lessive dans le tiroir à lessive",
-          "Sélectionnez la température et la vitesse d'essorage",
-          "Choisissez votre cycle de lavage",
-          "Appuyez sur Démarrer pour commencer le lavage"
-        ]
+        "ecobubble": ["Installez et nivelez.", "Branchez les tuyaux.", "Faites un cycle de nettoyage.", "Utilisez EcoBubble pour les délicats.", "Téléchargez SmartThings."]
       }
     },
     "hvac": {
       "daikin": {
-        "perfera": [
-          "Pointez la télécommande vers l'unité et appuyez sur ON/OFF",
-          "Appuyez sur MODE pour sélectionner Froid, Chaud, Ventilateur ou Sec",
-          "Utilisez les flèches température pour régler la température souhaitée",
-          "Appuyez sur FAN pour ajuster la vitesse du ventilateur",
-          "Utilisez TIMER pour programmer les heures marche/arrêt"
-        ]
+        "perfera": ["Montez l'unité intérieure.", "Branchez les tuyaux.", "Installez l'unité extérieure.", "Allumez et testez.", "Réglez la température."]
       },
       "mitsubishi": {
-        "mszap": [
-          "Appuyez sur le bouton ON/OFF de la télécommande pour démarrer",
-          "Sélectionnez le mode de fonctionnement avec le bouton MODE",
-          "Ajustez la température avec les boutons TEMP",
-          "Appuyez sur FAN pour changer la vitesse du ventilateur",
-          "Utilisez le WEEKLY TIMER pour une opération programmée"
-        ]
+        "mszap": ["Installez à 2.5m du sol.", "Branchez les tuyaux.", "Installez l'unité extérieure.", "Allumez et testez.", "Réglez la télécommande."]
       }
     },
     "hearing": {
       "phonak": {
-        "audeo": [
-          "Ouvrez le couvercle de la pile pour éteindre quand non utilisé",
-          "Insérez une pile de taille 312 côté plat vers le haut",
-          "Fermez doucement le couvercle pour allumer",
-          "Attendez 1 minute avant d'insérer dans l'oreille",
-          "Nettoyez quotidiennement avec le chiffon sec fourni"
-        ]
+        "audeo": ["Chargez complètement.", "Insérez doucement.", "Réglez le volume.", "Téléchargez myPhonak.", "Consultez un audiologiste."]
       },
       "oticon": {
-        "more1": [
-          "Placez l'appareil auditif sur le chargeur chaque nuit",
-          "La lumière verte indique une charge complète",
-          "Insérez dans l'oreille avec le dôme pointant vers le canal auditif",
-          "Appuyez une fois sur le bouton pour changer de programme",
-          "Utilisez l'appli Oticon ON pour régler le volume"
-        ]
+        "more1": ["Chargez 3 heures.", "Téléchargez Oticon ON.", "Associez via Bluetooth.", "Insérez et ajustez.", "Planifiez un suivi."]
       }
     },
     "electronics": {
       "apple": {
-        "iphone15": [
-          "Appuyez longuement sur le bouton latéral pour allumer",
-          "Suivez l'assistant de configuration pour la langue et le WiFi",
-          "Connectez-vous avec votre Apple ID ou créez-en un",
-          "Activez Face ID en suivant les instructions à l'écran",
-          "Restaurez depuis une sauvegarde ou configurez comme nouvel appareil"
-        ]
+        "iphone15": ["Appuyez sur le bouton latéral.", "Choisissez la langue.", "Connectez WiFi et Apple ID.", "Configurez Face ID.", "Restaurez ou configurez comme neuf."]
       },
       "samsung": {
-        "galaxys23": [
-          "Appuyez longuement sur la touche latérale pour allumer",
-          "Suivez l'assistant de configuration",
-          "Connectez-vous à votre réseau WiFi",
-          "Connectez-vous à vos comptes Samsung et Google",
-          "Transférez les données de l'ancien téléphone avec Smart Switch"
-        ]
+        "galaxys23": ["Insérez la carte SIM.", "Allumez et suivez l'assistant.", "Connectez les comptes.", "Configurez biométrie.", "Transférez les données."]
       }
     },
     "walking": {
       "drivemedical": {
-        "nitro": [
-          "Dépliez le déambulateur en tirant le siège vers le haut",
-          "Ajustez la hauteur des poignées au niveau du poignet",
-          "Serrez les poignées de frein pour ralentir ou s'arrêter",
-          "Bloquez les freins en poussant les poignées vers le bas en position assise",
-          "Pliez en soulevant le siège et en poussant le cadre vers le bas"
-        ]
+        "nitro": ["Dépliez le rollator.", "Ajustez la hauteur des poignées.", "Testez les freins.", "Verrouillez les freins en position assise.", "Pliez en appuyant sur le loquet."]
       },
       "invacare": {
-        "alurehab": [
-          "Ouvrez en tirant les deux côtés l'un de l'autre",
-          "Réglez la hauteur des poignées avec les boutons d'ajustement",
-          "Marchez à un rythme confortable derrière le déambulateur",
-          "Utilisez les freins à boucle pour contrôler la vitesse en pente",
-          "Rangez les articles dans le panier fourni"
-        ]
+        "alurehab": ["Assemblez selon le manuel.", "Ajustez les poignées.", "Vérifiez les vis.", "Testez les freins.", "Consultez votre physiothérapeute."]
       }
     },
     "vacuum": {
       "dyson": {
-        "v15": [
-          "Chargez l'aspirateur complètement avant la première utilisation (4.5 heures)",
-          "Fixez la tête de nettoyage adaptée à votre type de sol",
-          "Appuyez une fois sur le bouton d'alimentation pour démarrer",
-          "Utilisez le bouton MAX pour une aspiration puissante",
-          "Videz le bac quand l'indicateur rouge indique qu'il est plein"
-        ],
-        "v12": [
-          "Chargez complètement avant la première utilisation",
-          "Cliquez la tige dans le corps principal",
-          "Sélectionnez votre mode de nettoyage préféré",
-          "Guidez la tête aspirante sur le sol",
-          "Appuyez sur la libération du bac pour vider après utilisation"
-        ]
+        "v15": ["Chargez 4.5 heures avant.", "Attachez la bonne tête.", "Appuyez sur la gâchette.", "Videz le bac au MAX.", "Nettoyez le filtre mensuellement."],
+        "v12": ["Chargez 3.5 heures.", "Choisissez la tête adaptée.", "Utilisez boost pour les saletés.", "Videz après chaque usage.", "Lavez le filtre mensuel."]
       },
       "miele": {
-        "completec3": [
-          "Déroulez complètement le cordon avant utilisation",
-          "Sélectionnez la bonne brosse pour votre surface",
-          "Utilisez le sélecteur rotatif pour régler la puissance d'aspiration",
-          "Guidez l'aspirateur lentement pour de meilleurs résultats",
-          "Changez le sac quand l'indicateur devient rouge"
-        ]
+        "completec3": ["Attachez la bonne tête.", "Réglez la puissance.", "Changez le sac au voyant rouge.", "Nettoyez le filtre moteur.", "Utilisez le filtre hygiène."]
       },
       "irobot": {
-        "roombaj7": [
-          "Placez la base de charge contre un mur avec de l'espace libre",
-          "Chargez le Roomba pendant 3 heures avant la première utilisation",
-          "Appuyez sur CLEAN pour démarrer un nettoyage",
-          "Utilisez l'appli iRobot pour programmer le nettoyage automatique",
-          "Videz le bac après chaque 1-2 sessions de nettoyage"
-        ]
+        "roombaj7": ["Chargez 2 heures.", "Téléchargez iRobot HOME.", "Connectez au WiFi.", "Configurez les zones.", "Planifiez le nettoyage."]
       }
     }
   }

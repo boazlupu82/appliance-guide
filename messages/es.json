@@ -1,255 +1,173 @@
 {
   "nav": {
-    "home": "Inicio",
-    "categories": "Categorías",
-    "search": "Buscar"
+    "home": "Inicio"
   },
   "home": {
     "tag": "Guías simples para todos",
-    "titleLine1": "Tu Guía de",
+    "titleLine1": "Tu guía de",
     "titleLine2": "Electrodomésticos",
-    "titleLine3": "en Casa",
-    "subtitle": "Guías de video paso a paso para cada electrodoméstico. Fácil de seguir, en 4 idiomas.",
+    "titleLine3": "del hogar",
+    "subtitle": "Guías de video paso a paso para cada electrodoméstico en tu hogar. Fácil de seguir, en 4 idiomas.",
     "searchPlaceholder": "Buscar ej. Samsung TV, microondas...",
     "search": "Buscar",
-    "categories": "Elige una categoría"
+    "categories": "Elige tu categoría"
   },
   "categories": {
-    "kitchen": "Horno & Cocina",
-    "laundry": "Lavandería",
-    "hvac": "Calefacción & Refrigeración",
-    "electronics": "Pequeños Electrodomésticos",
     "tv": "Televisión",
+    "kitchen": "Horno y Cocina",
+    "laundry": "Lavandería",
+    "vacuum": "Aspiradoras",
     "hearing": "Audífonos",
+    "hvac": "Calefacción y Aire",
+    "electronics": "Pequeños Electrónicos",
     "walking": "Ayudas para Caminar",
-    "vacuum": "Aspiradoras"
+    "car": "Mantenimiento Auto"
   },
   "brand": {
     "category": "Categoría",
     "selectModel": "Selecciona tu modelo",
     "models": "modelos",
-    "selectBelow": "elige el tuyo abajo",
+    "selectBelow": "selecciona abajo",
     "steps": "Instrucciones paso a paso",
     "comingSoon": "Próximamente",
-    "comingSoonDesc": "Estamos añadiendo modelos. ¡Vuelve pronto!",
+    "comingSoonDesc": "Estamos trabajando en agregar guías para esta marca.",
     "videoComingSoon": "Video próximamente",
     "notFound": "¿No encontraste tu electrodoméstico?",
-    "notFoundDesc": "¿No encuentras tu marca o modelo? ¡Contáctanos y lo añadiremos!",
+    "notFoundDesc": "¿No encuentras tu marca o modelo? ¡Contáctanos y lo agregaremos!",
     "contactUs": "Contáctanos",
-    "disclaimer": "Todos los videos están incrustados desde YouTube y pertenecen a sus propietarios. Los nombres de marcas son marcas registradas. HomeGuide no está afiliado a ninguna marca listada en este sitio."
+    "disclaimer": "Todos los videos están incrustados de YouTube y pertenecen a sus respectivos propietarios. Los nombres de marcas y logos son marcas registradas de sus respectivas empresas. HomeGuide no está afiliado ni respaldado por ninguna marca listada en este sitio."
+  },
+  "car": {
+    "selectPart": "Selecciona una pieza",
+    "stepsLabel": "Instrucciones paso a paso",
+    "disclaimer": "Consulta siempre el manual del propietario de tu vehículo antes de realizar cualquier mantenimiento. Si no estás seguro, visita a un mecánico profesional. HomeGuide no es responsable de ningún daño.",
+    "tires": {
+      "title": "Neumáticos",
+      "steps": [
+        "Estaciona en una superficie plana y aplica el freno de mano.",
+        "Afloja un poco las tuercas de la rueda antes de levantar el auto.",
+        "Coloca el gato bajo el punto de levantamiento cerca del neumático.",
+        "Levanta el auto hasta que el neumático esté a unos 15 cm del suelo.",
+        "Retira las tuercas completamente y saca el neumático pinchado.",
+        "Monta el neumático de repuesto y aprieta las tuercas en estrella.",
+        "Baja el auto y aprieta completamente las tuercas al torque correcto.",
+        "Verifica la presión del neumático de repuesto antes de conducir."
+      ]
+    },
+    "wipers": {
+      "title": "Limpiaparabrisas",
+      "steps": [
+        "Levanta el brazo del limpiaparabrisas hasta que se bloquee en posición.",
+        "Busca la pestaña de liberación donde la escobilla se conecta al brazo.",
+        "Presiona la pestaña y desliza la escobilla vieja hacia abajo.",
+        "Anota el tipo de conector antes de comprar escobillas nuevas.",
+        "Desliza la escobilla nueva en el brazo hasta escuchar un clic.",
+        "Baja suavemente el brazo del limpiaparabrisas al parabrisas.",
+        "Repite el mismo proceso con la otra escobilla.",
+        "Prueba los limpiaparabrisas con líquido lavaparabrisas."
+      ]
+    },
+    "front-headlights": {
+      "title": "Faros Delanteros",
+      "steps": [
+        "Apaga el motor y deja que el auto se enfríe completamente.",
+        "Abre el capó y localiza el conjunto del faro desde atrás.",
+        "Desconecta el arnés de cableado presionando el clip de liberación.",
+        "Gira el soporte de la bombilla en sentido antihorario para retirarlo.",
+        "Saca la bombilla vieja — evita tocar la nueva con las manos.",
+        "Inserta la bombilla nueva y gira en sentido horario para bloquear.",
+        "Vuelve a conectar el arnés hasta escuchar un clic.",
+        "Prueba el faro antes de cerrar el capó."
+      ]
+    },
+    "back-headlights": {
+      "title": "Luces Traseras",
+      "steps": [
+        "Abre el maletero y localiza el panel de acceso detrás de la luz trasera.",
+        "Retira los tornillos o clips del panel para acceder al portalámparas.",
+        "Gira el zócalo en sentido antihorario y sácalo.",
+        "Presiona y gira la bombilla vieja para retirarla del zócalo.",
+        "Inserta la bombilla nueva — asegúrate de que sea el tipo correcto.",
+        "Vuelve a poner el zócalo y gira en sentido horario para bloquear.",
+        "Reemplaza el panel de acceso y cierra el maletero.",
+        "Pide a alguien que se coloque detrás del auto mientras pruebas las luces."
+      ]
+    }
   },
   "instructions": {
     "tv": {
       "samsung": {
-        "frame55": [
-          "Conecta el cable de alimentación a la parte trasera del televisor",
-          "Presiona el botón de encendido en el control remoto",
-          "Sigue el asistente de configuración para conectarte al WiFi",
-          "Usa el botón Home para acceder a las funciones Smart TV",
-          "Ajusta la configuración de imagen en Menú → Imagen → Configuración experta"
-        ],
-        "crystal43": [
-          "Conecta el cable HDMI de tu dispositivo al puerto HDMI del televisor",
-          "Presiona Fuente en el control remoto para seleccionar la entrada correcta",
-          "Usa los botones de volumen en el lado del televisor o el control",
-          "Accede al modo de imagen en Configuración → General → Accesibilidad",
-          "Configura subtítulos en Menú → General → Accesibilidad → Configuración de subtítulos"
-        ],
-        "neoqled65": [
-          "Monta el televisor en la pared con el soporte VESA incluido",
-          "Conecta la caja One Connect con el cable suministrado",
-          "Enciende y completa la configuración de Smart Hub",
-          "Conecta con el asistente de voz Bixby manteniendo el botón micrófono",
-          "Usa Multi View para ver dos fuentes simultáneamente"
-        ]
+        "frame55": ["Enciende tu Samsung TV y presiona el botón Inicio.", "Navega a Configuración.", "Selecciona General y Funciones inteligentes.", "Inicia sesión con tu cuenta Samsung.", "Sigue el asistente de configuración."],
+        "crystal43": ["Conecta la alimentación y enciende.", "Selecciona idioma y país.", "Conéctate al WiFi.", "Inicia sesión en Samsung.", "Completa el asistente."],
+        "neoqled65": ["Posiciona y conecta.", "Presiona Encendido y sigue la guía.", "Conecta WiFi y cuenta Samsung.", "Calibra la imagen.", "Configura asistentes de voz."]
       },
       "lg": {
-        "oledc3": [
-          "Fija el soporte alineándolo con la parte inferior del televisor",
-          "Conecta la alimentación y presiona el botón de encendido",
-          "Sigue la configuración inicial para conectarte a tu red",
-          "Accede a webOS Home presionando el botón Home",
-          "Activa las funciones ThinQ AI en el menú de configuración"
-        ],
-        "nanocell50": [
-          "Coloca el televisor en el soporte y conecta el cable de alimentación",
-          "Presiona encendido en el control remoto",
-          "Selecciona tu idioma y región",
-          "Conéctate a la red WiFi",
-          "Inicia sesión en la cuenta LG para acceso completo"
-        ]
+        "oledc3": ["Enciende y elige idioma.", "Conéctate al WiFi.", "Inicia sesión en LG ThinQ.", "Completa el asistente.", "Ajusta el modo de imagen."],
+        "nanocell50": ["Conecta y enciende.", "Sigue la guía inicial.", "Conecta a la red.", "Crea cuenta LG.", "Disfruta tu TV."]
       },
       "sony": {
-        "bravia55": [
-          "Conecta el cable de alimentación y todos los cables antes de encender",
-          "Presiona el botón de encendido en el control remoto",
-          "Selecciona tu idioma en la pantalla de bienvenida",
-          "Conéctate a tu red WiFi",
-          "Inicia sesión en tu cuenta Google para funciones Android TV"
-        ]
+        "bravia55": ["Conecta y enciende.", "Elige idioma y región.", "Conecta WiFi.", "Inicia sesión Google.", "Completa Android TV."]
       }
     },
     "kitchen": {
       "bosch": {
-        "serie6oven": [
-          "Antes del primer uso, calienta el horno vacío a 250C durante 1 hora",
-          "Gira el selector de función para elegir el modo de cocción",
-          "Ajusta la temperatura con el mando de temperatura",
-          "Presiona el botón del reloj para establecer la duración de cocción",
-          "El horno pitará cuando alcance la temperatura establecida"
-        ],
-        "serie4microwave": [
-          "Coloca la comida en un recipiente apto para microondas",
-          "Ajusta la potencia con el botón de potencia",
-          "Introduce el tiempo de cocción con el teclado numérico",
-          "Presiona Iniciar para comenzar la cocción",
-          "Deja reposar la comida 1-2 minutos antes de servir"
-        ]
+        "serie6oven": ["Lee el manual antes del primer uso.", "Retira embalajes internos.", "Configura el reloj.", "Haz un ciclo vacío a 200°C.", "Tu horno está listo."],
+        "serie4microwave": ["Coloca en superficie estable.", "Conecta la alimentación.", "Configura el reloj.", "Prueba con agua.", "Tu microondas está listo."]
       },
       "samsung": {
-        "bespokefridge": [
-          "Deja el refrigerador en posición vertical 2 horas antes de enchufar",
-          "Ajusta la temperatura a 4C para el refrigerador y -18C para el congelador",
-          "Conéctate al WiFi a través de la pantalla Family Hub",
-          "Usa la máquina de hielo presionando el botón de tipo de hielo",
-          "Limpia el filtro de agua cada 6 meses"
-        ]
+        "bespokefridge": ["Deja vertical 2 horas antes de enchufar.", "Configura temperatura.", "Conecta al WiFi via Family Hub.", "Usa el dispensador de hielo.", "Limpia el filtro cada 6 meses."]
       }
     },
     "laundry": {
       "bosch": {
-        "serie6washing": [
-          "Clasifica la ropa por color y tipo de tela",
-          "Carga la ropa sin llenar demasiado",
-          "Añade detergente en el compartimento correcto del cajón",
-          "Selecciona el programa de lavado con el dial",
-          "Presiona el botón Inicio/Pausa para comenzar el ciclo"
-        ]
+        "serie6washing": ["Conecta las mangueras.", "Nivela la máquina.", "Haz un ciclo vacío a 90°C.", "Agrega detergente.", "Selecciona programa."]
       },
       "samsung": {
-        "ecobubble": [
-          "Carga la ropa en el tambor sin llenarlo demasiado",
-          "Añade detergente en el cajón de detergente",
-          "Selecciona temperatura y velocidad de centrifugado",
-          "Elige tu ciclo de lavado",
-          "Presiona Inicio para comenzar el lavado"
-        ]
+        "ecobubble": ["Instala y nivela.", "Conecta las mangueras.", "Haz un ciclo de limpieza.", "Usa EcoBubble para delicados.", "Descarga SmartThings."]
       }
     },
     "hvac": {
       "daikin": {
-        "perfera": [
-          "Apunta el control remoto a la unidad y presiona ON/OFF",
-          "Presiona MODE para seleccionar Frío, Calor, Ventilador o Seco",
-          "Usa las flechas de temperatura para ajustar la temperatura deseada",
-          "Presiona FAN para ajustar la velocidad del ventilador",
-          "Usa TIMER para programar tiempos automáticos de encendido/apagado"
-        ]
+        "perfera": ["Monta la unidad interior.", "Conecta tuberías.", "Instala la unidad exterior.", "Enciende y prueba.", "Configura temperatura."]
       },
       "mitsubishi": {
-        "mszap": [
-          "Presiona el botón ON/OFF del control remoto para iniciar",
-          "Selecciona el modo de operación con el botón MODE",
-          "Ajusta la temperatura con los botones TEMP",
-          "Presiona FAN para cambiar la velocidad del ventilador",
-          "Usa el WEEKLY TIMER para operación programada"
-        ]
+        "mszap": ["Instala a 2.5m del suelo.", "Conecta tuberías.", "Instala unidad exterior.", "Enciende y prueba.", "Configura el control remoto."]
       }
     },
     "hearing": {
       "phonak": {
-        "audeo": [
-          "Abre la puerta de la batería para apagar cuando no se use",
-          "Inserta una batería tamaño 312 con el lado plano hacia arriba",
-          "Cierra suavemente la puerta para encender",
-          "Espera 1 minuto antes de insertar en el oído",
-          "Limpia diariamente con el paño seco proporcionado"
-        ]
+        "audeo": ["Carga completamente.", "Inserta suavemente.", "Ajusta el volumen.", "Descarga myPhonak.", "Visita un audiólogo."]
       },
       "oticon": {
-        "more1": [
-          "Coloca el audífono en el cargador cada noche",
-          "La luz verde indica carga completa",
-          "Inserta en el oído con el domo apuntando al canal auditivo",
-          "Presiona el botón una vez para cambiar de programa",
-          "Usa la app Oticon ON para ajustar el volumen"
-        ]
+        "more1": ["Carga 3 horas.", "Descarga Oticon ON.", "Empareja por Bluetooth.", "Inserta y ajusta.", "Programa seguimiento."]
       }
     },
     "electronics": {
       "apple": {
-        "iphone15": [
-          "Mantén presionado el botón lateral para encender",
-          "Sigue el asistente de configuración para idioma y WiFi",
-          "Inicia sesión con tu Apple ID o crea uno nuevo",
-          "Activa Face ID siguiendo las instrucciones en pantalla",
-          "Restaura desde copia de seguridad o configura como dispositivo nuevo"
-        ]
+        "iphone15": ["Presiona el botón lateral.", "Elige idioma.", "Conecta WiFi y Apple ID.", "Configura Face ID.", "Restaura o configura como nuevo."]
       },
       "samsung": {
-        "galaxys23": [
-          "Mantén presionada la tecla lateral para encender",
-          "Sigue el asistente de configuración",
-          "Conéctate a tu red WiFi",
-          "Inicia sesión en tus cuentas Samsung y Google",
-          "Transfiere datos del teléfono antiguo con Smart Switch"
-        ]
+        "galaxys23": ["Inserta la SIM.", "Enciende y sigue el asistente.", "Conecta cuentas.", "Configura biometría.", "Transfiere datos."]
       }
     },
     "walking": {
       "drivemedical": {
-        "nitro": [
-          "Despliega el andador tirando del asiento hacia arriba",
-          "Ajusta la altura de los mangos al nivel de la muñeca de pie",
-          "Aprieta los mangos de freno para frenar o detenerse",
-          "Bloquea los frenos empujando los mangos hacia abajo al sentarse",
-          "Dobla levantando el asiento y empujando el marco hacia abajo"
-        ]
+        "nitro": ["Despliega el andador.", "Ajusta altura de manijas.", "Prueba los frenos.", "Bloquea frenos al sentarse.", "Dobla presionando el pestillo."]
       },
       "invacare": {
-        "alurehab": [
-          "Abre tirando los dos lados separados",
-          "Ajusta la altura de los mangos con los botones de ajuste",
-          "Camina a un ritmo cómodo detrás del andador",
-          "Usa los frenos de bucle para controlar la velocidad en pendientes",
-          "Guarda artículos en la cesta proporcionada"
-        ]
+        "alurehab": ["Ensambla según el manual.", "Ajusta las manijas.", "Verifica los tornillos.", "Prueba los frenos.", "Consulta a tu fisioterapeuta."]
       }
     },
     "vacuum": {
       "dyson": {
-        "v15": [
-          "Carga la aspiradora completamente antes del primer uso (4.5 horas)",
-          "Coloca el cabezal de limpieza adecuado para tu tipo de suelo",
-          "Presiona el botón de encendido una vez para comenzar",
-          "Usa el botón MAX para succión potente en suciedad difícil",
-          "Vacía el depósito cuando el indicador rojo muestre que está lleno"
-        ],
-        "v12": [
-          "Carga completamente antes del primer uso",
-          "Encaja la varilla en el cuerpo principal",
-          "Selecciona tu modo de limpieza preferido",
-          "Guía el cabezal limpiador por el suelo",
-          "Presiona la liberación del depósito para vaciar después del uso"
-        ]
+        "v15": ["Carga 4.5 horas antes.", "Adjunta la cabeza correcta.", "Presiona el gatillo.", "Vacía el depósito al MAX.", "Limpia el filtro mensual."],
+        "v12": ["Carga 3.5 horas.", "Elige la cabeza adecuada.", "Usa boost para suciedad.", "Vacía tras cada uso.", "Lava el filtro mensual."]
       },
       "miele": {
-        "completec3": [
-          "Desenrolla el cable de alimentación completamente antes del uso",
-          "Selecciona el cabezal correcto para tu superficie",
-          "Usa el dial rotatorio para ajustar la potencia de succión",
-          "Guía la aspiradora lentamente para mejores resultados",
-          "Cambia la bolsa cuando el indicador se vuelva rojo"
-        ]
+        "completec3": ["Adjunta la cabeza correcta.", "Ajusta la potencia.", "Cambia la bolsa al rojo.", "Limpia el filtro del motor.", "Usa filtro higiénico."]
       },
       "irobot": {
-        "roombaj7": [
-          "Coloca la base de carga junto a una pared con espacio libre",
-          "Carga el Roomba durante 3 horas antes del primer uso",
-          "Presiona CLEAN para iniciar una limpieza",
-          "Usa la app iRobot para programar limpieza automática",
-          "Vacía el depósito después de cada 1-2 sesiones de limpieza"
-        ]
+        "roombaj7": ["Carga 2 horas.", "Descarga iRobot HOME.", "Conecta al WiFi.", "Configura zonas.", "Programa la limpieza."]
       }
     }
   }

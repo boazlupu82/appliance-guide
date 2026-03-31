@@ -80,16 +80,20 @@ const brandsData: Record<string, { name: string; color: string; models: number }
         { name: 'iRobot', color: '#E4000F', models: 6 },
     ],
     car: [
-        { name: 'Toyota', color: '#EB0A1E', models: 4 },
-        { name: 'Honda', color: '#CC0000', models: 4 },
-        { name: 'Ford', color: '#003476', models: 4 },
-        { name: 'BMW', color: '#0066B1', models: 4 },
-        { name: 'Mercedes', color: '#00ADEF', models: 4 },
-        { name: 'Volkswagen', color: '#001E50', models: 4 },
-        { name: 'Hyundai', color: '#002C5F', models: 4 },
-        { name: 'Kia', color: '#C4172C', models: 4 },
-        { name: 'Mazda', color: '#1C1C1C', models: 4 },
-        { name: 'Nissan', color: '#C3002F', models: 4 },
+        { name: 'Toyota',      color: '#EB0A1E', models: 4 },
+        { name: 'Honda',       color: '#CC0000', models: 4 },
+        { name: 'Ford',        color: '#003476', models: 4 },
+        { name: 'BMW',         color: '#0066B1', models: 4 },
+        { name: 'Mercedes',    color: '#00ADEF', models: 4 },
+        { name: 'Volkswagen',  color: '#001E50', models: 4 },
+        { name: 'Hyundai',     color: '#002C5F', models: 4 },
+        { name: 'Kia',         color: '#C4172C', models: 4 },
+        { name: 'Mazda',       color: '#1C1C1C', models: 4 },
+        { name: 'Nissan',      color: '#C3002F', models: 4 },
+        { name: 'Mitsubishi',  color: '#E60012', models: 4 }, // 👈 new
+        { name: 'Volvo',       color: '#003057', models: 4 }, // 👈 new
+        { name: 'Expeng',      color: '#FF6600', models: 4 }, // 👈 new
+        { name: 'BYD',         color: '#1DB954', models: 4 }, // 👈 new
     ],
 };
 

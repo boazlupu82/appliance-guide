@@ -35,12 +35,12 @@
     "notFound": "¿No encontraste tu electrodoméstico?",
     "notFoundDesc": "¿No encuentras tu marca o modelo? ¡Contáctanos y lo agregaremos!",
     "contactUs": "Contáctanos",
-    "disclaimer": "Todos los videos están incrustados de YouTube y pertenecen a sus respectivos propietarios. Los nombres de marcas y logos son marcas registradas de sus respectivas empresas. HomeGuide no está afiliado ni respaldado por ninguna marca listada en este sitio."
+    "disclaimer": "Todos los videos están incrustados de YouTube y pertenecen a sus respectivos propietarios. Los nombres de marcas y logos son marcas registradas de sus respectivas empresas. HomeGuido no está afiliado ni respaldado por ninguna marca listada en este sitio."
   },
   "car": {
     "selectPart": "Selecciona una pieza",
     "stepsLabel": "Instrucciones paso a paso",
-    "disclaimer": "Consulta siempre el manual del propietario de tu vehículo antes de realizar cualquier mantenimiento. Si no estás seguro, visita a un mecánico profesional. HomeGuide no es responsable de ningún daño.",
+    "disclaimer": "Consulta siempre el manual del propietario de tu vehículo antes de realizar cualquier mantenimiento. Si no estás seguro, visita a un mecánico profesional. HomeGuido no es responsable de ningún daño.",
     "tires": {
       "title": "Neumáticos",
       "steps": [

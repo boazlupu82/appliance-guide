@@ -35,12 +35,12 @@
     "notFound": "Vous n'avez pas trouvé votre appareil?",
     "notFoundDesc": "Vous ne trouvez pas votre marque ou modèle? Contactez-nous et nous l'ajouterons!",
     "contactUs": "Contactez-nous",
-    "disclaimer": "Toutes les vidéos sont intégrées depuis YouTube et appartiennent à leurs propriétaires respectifs. Les noms de marques et logos sont des marques déposées de leurs sociétés respectives. HomeGuide n'est affilié à aucune marque listée sur ce site."
+    "disclaimer": "Toutes les vidéos sont intégrées depuis YouTube et appartiennent à leurs propriétaires respectifs. Les noms de marques et logos sont des marques déposées de leurs sociétés respectives. HomeGuido n'est affilié à aucune marque listée sur ce site."
   },
   "car": {
     "selectPart": "Sélectionnez une pièce",
     "stepsLabel": "Instructions étape par étape",
-    "disclaimer": "Consultez toujours le manuel du propriétaire de votre véhicule avant d'effectuer toute maintenance. En cas de doute, consultez un mécanicien professionnel. HomeGuide n'est pas responsable des dommages.",
+    "disclaimer": "Consultez toujours le manuel du propriétaire de votre véhicule avant d'effectuer toute maintenance. En cas de doute, consultez un mécanicien professionnel. HomeGuido n'est pas responsable des dommages.",
     "tires": {
       "title": "Pneus",
       "steps": [

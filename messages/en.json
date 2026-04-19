@@ -35,12 +35,12 @@
     "notFound": "Didn't find your appliance?",
     "notFoundDesc": "Can't find your brand or model? Contact us and we'll add it!",
     "contactUs": "Contact Us",
-    "disclaimer": "All videos are embedded from YouTube and belong to their respective owners. Brand names and logos are trademarks of their respective companies. HomeGuide is not affiliated with or endorsed by any brand listed on this site."
+    "disclaimer": "All videos are embedded from YouTube and belong to their respective owners. Brand names and logos are trademarks of their respective companies. HomeGuido is not affiliated with or endorsed by any brand listed on this site."
   },
   "car": {
     "selectPart": "Select a part",
     "stepsLabel": "Step-by-step instructions",
-    "disclaimer": "Always consult your vehicle's owner manual before performing any maintenance. If unsure, visit a professional mechanic. HomeGuide is not responsible for any damage.",
+    "disclaimer": "Always consult your vehicle's owner manual before performing any maintenance. If unsure, visit a professional mechanic. HomeGuido is not responsible for any damage.",
     "tires": {
       "title": "Tires",
       "steps": [

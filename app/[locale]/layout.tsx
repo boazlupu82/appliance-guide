@@ -8,7 +8,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'HomeGuide',
+    title: 'HomeGuido',
     description: 'Simple step-by-step guides for every appliance in your home',
 };
 
@@ -60,7 +60,7 @@ export default async function LocaleLayout({
                             borderRadius: 6,
                             marginLeft: 2,
                         }}>
-                  Guide
+                  Guido
                 </span>
                     </div>
                 </Link>

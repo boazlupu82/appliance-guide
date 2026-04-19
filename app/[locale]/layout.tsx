@@ -6,6 +6,7 @@ import AccessibilityBar from '@/components/AccessibilityBar';
 import ContactBanner from '@/components/ContactBanner';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Link from 'next/link';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
     title: 'HomeGuido',
@@ -71,6 +72,7 @@ export default async function LocaleLayout({
             {children}
 
         </NextIntlClientProvider>
+        <Analytics />
         </body>
         </html>
     );

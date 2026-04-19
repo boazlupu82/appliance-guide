@@ -51,6 +51,7 @@ export default async function LocaleLayout({
                         display: 'flex',
                         alignItems: 'center',
                         gap: 2,
+                        direction: 'ltr',
                     }}>
                         Home
                         <span style={{
